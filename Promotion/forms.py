@@ -1,6 +1,7 @@
 from django.forms import ModelForm
 from  . models import Contact
 from django.utils.translation import gettext_lazy as _
+#  Form不再使用静态HTML写法,使用Django-bootstrap3取而代之
 class ContactForm(ModelForm):
     class Meta:
         model = Contact
