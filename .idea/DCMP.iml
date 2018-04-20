@@ -21,7 +21,7 @@
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
     <option name="TEMPLATE_FOLDERS">
       <list>
-        <option value="$MODULE_DIR$/../DCMP\templates" />
+        <option value="$MODULE_DIR$/Dashboard/templates" />
       </list>
     </option>
   </component>

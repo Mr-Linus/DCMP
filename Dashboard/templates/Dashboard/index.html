@@ -38,14 +38,14 @@
 </head>
 <body>
 
+ {% csrf_token %}
+
 <div class="wrapper">
     <div class="sidebar" data-background-color="white" data-active-color="danger">
-
     <!--
 		Tip 1: you can change the color of the sidebar's background using: data-background-color="white | black"
 		Tip 2: you can change the color of the active button using the data-active-color="primary | info | success | warning | danger"
 	-->
-
     	<div class="sidebar-wrapper">
             <div class="logo">
                 <a href="#" class="simple-text">
@@ -169,14 +169,13 @@
                                 <div class="row">
                                     <div class="col-xs-5">
                                         <div class="icon-big icon-warning text-center">
-                                            <i class="ti-pannel"></i>
+                                            <i class="ti-panel"></i>
                                         </div>
                                     </div>
                                     <div class="col-xs-7">
                                         <div class="numbers">
-                                            <p>CPU Using:</p>
-                                            
-                                           <a>80%</a>
+                                            <p>Containers</p>
+                                            <a>{{ sysinfo.con_num | default:"(N/A)" }} </a>
                                         </div>
                                     </div>
                                 </div>
@@ -189,15 +188,17 @@
                                 <div class="row">
                                     <div class="col-xs-5">
                                         <div class="icon-big icon-success text-center">
-                                            <i class="ti-wallet"></i>
+                                            <i class="ti-pie-chart"></i>
                                         </div>
                                     </div>
-                                    <div class="col-xs-7">
+                                     <div class="col-xs-7">
                                         <div class="numbers">
-                                            <p>Containers</p>
-                                            30
+                                            <p>CPU Using:</p>
+
+                                           <a>{{ sysinfo.cpu_percent | default:"(N/A)" }} %</a>
                                         </div>
                                     </div>
+
                                 </div>
                                 
                             </div>
@@ -214,8 +215,8 @@
                                     </div>
                                     <div class="col-xs-7">
                                         <div class="numbers">
-                                            <p>Memory</p>
-                                            23 %
+                                            <p>Memory Using:</p>
+                                            <a>{{ sysinfo.mem_persent | default:"(N/A)" }} %</a>
                                         </div>
                                     </div>
                                 </div>
@@ -229,22 +230,17 @@
                                 <div class="row">
                                     <div class="col-xs-5">
                                         <div class="icon-big icon-info text-center">
-                                            <i class="ti-round"></i>
+                                            <i class="ti-shield"></i>
                                         </div>
                                     </div>
                                     <div class="col-xs-7">
                                         <div class="numbers">
-                                            <p>Followers</p>
-                                            +45
+                                            <p>Uptime</p>
+                                            <a>{{ sysinfo.uptime | default:"(N/A)" }} Hours</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="footer">
-                                    <hr />
-                                    <div class="stats">
-                                        <i class="ti-reload"></i> Updated now
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </div>

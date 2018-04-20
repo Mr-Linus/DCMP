@@ -1,166 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="704d3cb6-c922-4c9f-8685-50210977ba6d" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/Dashboard/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/css/animate.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/css/demo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/css/owl.carousel.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/css/owl.theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/css/paper-dashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/css/prettyPhoto.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/css/responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/css/themify-icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/less/animated.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/less/bordered-pulled.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/less/core.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/less/fixed-width.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/less/font-awesome.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/less/icons.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/less/larger.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/less/list.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/less/mixins.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/less/path.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/less/rotated-flipped.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/less/stacked.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/less/variables.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/scss/_animated.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/scss/_bordered-pulled.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/scss/_core.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/scss/_fixed-width.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/scss/_icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/scss/_larger.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/scss/_list.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/scss/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/scss/_path.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/scss/_rotated-flipped.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/scss/_stacked.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/font-awesome/scss/font-awesome.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/themify.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/themify.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/themify.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/fonts/themify.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/about.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/apple-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/faces/face-0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/faces/face-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/faces/face-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/faces/face-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/header-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/new_logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/portfolio/01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/portfolio/02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/portfolio/03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/portfolio/04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/portfolio/05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/portfolio/06.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/portfolio/07.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/portfolio/08.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/dark_rounded/btnNext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/dark_rounded/btnPrevious.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/dark_rounded/contentPattern.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/dark_rounded/default_thumbnail.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/dark_rounded/loader.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/dark_rounded/sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/dark_square/btnNext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/dark_square/btnPrevious.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/dark_square/contentPattern.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/dark_square/default_thumbnail.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/dark_square/loader.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/dark_square/sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/default/default_thumb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/default/loader.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/default/sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/default/sprite_next.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/default/sprite_prev.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/default/sprite_x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/default/sprite_y.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/facebook/btnNext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/facebook/btnPrevious.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/facebook/contentPatternBottom.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/facebook/contentPatternLeft.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/facebook/contentPatternRight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/facebook/contentPatternTop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/facebook/default_thumbnail.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/facebook/loader.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/facebook/sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/light_rounded/btnNext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/light_rounded/btnPrevious.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/light_rounded/default_thumbnail.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/light_rounded/loader.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/light_rounded/sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/light_square/btnNext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/light_square/btnPrevious.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/light_square/default_thumbnail.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/light_square/loader.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/prettyPhoto/light_square/sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/team/01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/team/02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/team/03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/team/04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/testimonial-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/img/tim_80x80.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/js/SmoothScroll.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/js/bootstrap-checkbox-radio.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/js/bootstrap-notify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/js/chartist.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/js/demo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/js/jquery-1.10.2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/js/jquery.1.11.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/js/jquery.isotope.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/js/jquery.prettyPhoto.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/js/modernizr.custom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/js/owl.carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/static/Dashboard/js/paper-dashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/templates/Dashboard/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/templates/Dashboard/icons.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/templates/Dashboard/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/templates/Dashboard/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/templates/Dashboard/maps.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/templates/Dashboard/notifications.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/templates/Dashboard/table.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/templates/Dashboard/template.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/templates/Dashboard/typography.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/templates/Dashboard/upgrade.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/templates/Dashboard/user.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashboard/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard.png" afterDir="false" />
+    <list default="true" id="90c048e5-c101-4b2b-bd63-7cdb919e1a11" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/DCMP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DCMP.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DCMP/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/DCMP/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DCMP/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DCMP/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Promotion/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Promotion/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Promotion/templates/Promotion/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Promotion/templates/Promotion/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Promotion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Promotion/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard/templates/Dashboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/templates/Dashboard/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard/templates/Dashboard/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/templates/Dashboard/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -170,13 +21,28 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="DCMP" />
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dashboard/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2">
+              <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#92#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dashboard/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+            <state relative-caret-position="133">
+              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -184,52 +50,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dashboard/views.py">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-24">
-              <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#65#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-456">
+              <caret line="189" column="82" selection-start-line="189" selection-start-column="82" selection-end-line="189" selection-end-column="82" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/index.html">
+      <file leaf-file-name="sys.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Dashboard/sys.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="222" column="34" lean-forward="true" selection-start-line="222" selection-start-column="34" selection-end-line="222" selection-end-column="34" />
+            <state relative-caret-position="76">
+              <caret line="4" column="42" lean-forward="true" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>/statics/css/</find>
-      <find>/statics/js/</find>
-      <find>Promotion/js/main.js</find>
-      <find>/static/Promotion</find>
-      <find>font-awesome.css</find>
-      <find>aj</find>
-      <find>Promotion</find>
-      <find>header-bg</find>
-    </findStrings>
-    <replaceStrings>
-      <replace />
-      <replace />
-      <replace>Dashboard</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -237,21 +76,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Promotion/urls.py" />
-        <option value="$PROJECT_DIR$/Promotion/admin.py" />
-        <option value="$PROJECT_DIR$/Promotion/apps.py" />
-        <option value="$PROJECT_DIR$/Promotion/models.py" />
-        <option value="$PROJECT_DIR$/Promotion/views.py" />
-        <option value="$PROJECT_DIR$/Promotion/forms.py" />
-        <option value="$PROJECT_DIR$/DCMP/settings.py" />
-        <option value="$PROJECT_DIR$/DCMP/urls.py" />
-        <option value="$PROJECT_DIR$/Promotion/templates/Promotion/index.html" />
         <option value="$PROJECT_DIR$/Dashboard/templates/Dashboard/login.html" />
-        <option value="$PROJECT_DIR$/Dashboard/templates/Dashboard/icons.html" />
-        <option value="$PROJECT_DIR$/Dashboard/templates/Dashboard/dashboard.html" />
+        <option value="$PROJECT_DIR$/DCMP/urls.py" />
+        <option value="$PROJECT_DIR$/DCMP/settings.py" />
         <option value="$PROJECT_DIR$/Dashboard/urls.py" />
         <option value="$PROJECT_DIR$/Dashboard/views.py" />
         <option value="$PROJECT_DIR$/Dashboard/templates/Dashboard/index.html" />
+        <option value="$PROJECT_DIR$/Dashboard/sys.py" />
       </list>
     </option>
   </component>
@@ -265,13 +96,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="470" />
-    <option name="y" value="58" />
+    <option name="x" value="-23" />
+    <option name="y" value="52" />
     <option name="width" value="1253" />
     <option name="height" value="837" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="添加" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -282,44 +110,39 @@
         <subPane>
           <expand>
             <path>
-              <item name="DCMP-dev" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DCMP-dev" type="462c0819:PsiDirectoryNode" />
+              <item name="DCMP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DCMP" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="DCMP-dev" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DCMP-dev" type="462c0819:PsiDirectoryNode" />
+              <item name="DCMP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DCMP" type="462c0819:PsiDirectoryNode" />
               <item name="Dashboard" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="DCMP-dev" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DCMP-dev" type="462c0819:PsiDirectoryNode" />
+              <item name="DCMP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DCMP" type="462c0819:PsiDirectoryNode" />
+              <item name="Dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DCMP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DCMP" type="462c0819:PsiDirectoryNode" />
+              <item name="Dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="Dashboard" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DCMP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DCMP" type="462c0819:PsiDirectoryNode" />
               <item name="Dashboard" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="DCMP-dev" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DCMP-dev" type="462c0819:PsiDirectoryNode" />
+              <item name="DCMP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DCMP" type="462c0819:PsiDirectoryNode" />
               <item name="Dashboard" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="Dashboard" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DCMP-dev" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DCMP-dev" type="462c0819:PsiDirectoryNode" />
-              <item name="Promotion" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DCMP-dev" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DCMP-dev" type="462c0819:PsiDirectoryNode" />
-              <item name="Promotion" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DCMP-dev" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DCMP-dev" type="462c0819:PsiDirectoryNode" />
-              <item name="Promotion" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="Promotion" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -329,9 +152,13 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../syslib" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.selected.package.stylelint" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -369,243 +196,47 @@
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
     </configuration>
-    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="DCMP" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="TARGET" value="" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
-      <node-interpreter value="project" />
-      <working-dir value="" />
-      <envs />
-      <scope-kind value="ALL" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
-      <config-file value="" />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="DCMP" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="DCMP" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="DCMP" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="DCMP" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <module name="DCMP" />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run" />
-      <scripts />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="DCMP" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <module name="DCMP" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;.&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="704d3cb6-c922-4c9f-8685-50210977ba6d" name="默认的" comment="" />
-      <created>1523547847316</created>
+      <changelist id="90c048e5-c101-4b2b-bd63-7cdb919e1a11" name="默认的" comment="" />
+      <created>1524210953661</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1523547847316</updated>
+      <updated>1524210953661</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="调试" order="7" weight="0.3934611" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.33489582" side_tool="true" weight="0.32468995" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49635416" weight="0.3427283" />
-      <window_info anchor="bottom" id="运行" order="7" sideWeight="0.66510415" weight="0.0800451" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17083333" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="调试" order="14" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Python Console" order="13" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.32969433" />
+      <window_info anchor="bottom" id="运行" order="7" weight="0.25873363" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4984127" visible="true" weight="0.1296875" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Favorites" order="2" show_stripe_button="false" sideWeight="0.50158733" side_tool="true" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="right" id="Data View" order="3" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
-    <layout-to-restore>
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" id="Data View" order="4" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="运行" order="7" sideWeight="0.66510415" visible="true" weight="0.32468995" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17083333" />
-      <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49635416" weight="0.3427283" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.33489582" side_tool="true" weight="0.32468995" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="bottom" id="调试" order="11" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -613,170 +244,38 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="3" />
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Dashboard/views.py">
+    <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#65#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="266">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/dashboard.html">
+    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="14" column="95" selection-start-line="14" selection-start-column="95" selection-end-line="14" selection-end-column="95" />
+        <state relative-caret-position="1786">
+          <caret line="94" column="13" lean-forward="true" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Promotion/models.py">
+    <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="266">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DCMP/settings.py">
+    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3870">
-          <caret line="129" column="15" selection-start-line="129" selection-end-line="129" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promotion/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promotion/templates/Promotion/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5880">
-          <caret line="196" column="26" selection-start-line="196" selection-start-column="26" selection-end-line="196" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promotion/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promotion/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DCMP/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3870">
-          <caret line="129" column="15" selection-start-line="129" selection-end-line="129" selection-end-column="18" />
+        <state relative-caret-position="1076">
+          <caret line="62" column="29" lean-forward="true" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Promotion/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promotion/templates/Promotion/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5880">
-          <caret line="196" column="26" selection-start-line="196" selection-start-column="26" selection-end-line="196" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promotion/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promotion/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DCMP/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3870">
-          <caret line="129" column="15" lean-forward="true" selection-start-line="129" selection-end-line="129" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promotion/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promotion/templates/Promotion/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5880">
-          <caret line="196" column="26" selection-start-line="196" selection-start-column="26" selection-end-line="196" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promotion/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promotion/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promotion/templates/Promotion/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5880">
-          <caret line="196" column="26" selection-start-line="196" selection-start-column="26" selection-end-line="196" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promotion/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promotion/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
+        <state relative-caret-position="589">
           <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="e#0#52#0" expanded="true" />
@@ -786,229 +285,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Promotion/templates/Promotion/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5880">
-          <caret line="196" column="26" selection-start-line="196" selection-start-column="26" selection-end-line="196" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promotion/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promotion/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promotion/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promotion/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DCMP/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3840">
-          <caret line="128" column="2" selection-start-line="128" selection-end-line="128" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promotion/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="62" lean-forward="true" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promotion/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promotion/templates/Promotion/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1380">
-          <caret line="46" column="67" lean-forward="true" selection-start-line="46" selection-start-column="67" selection-end-line="46" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/Python3/Lib/site-packages/django/views/generic/list.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promotion/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promotion/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/Python3/Lib/site-packages/django/db/models/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="514" column="8" selection-start-line="514" selection-start-column="8" selection-end-line="514" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promotion/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dashboard/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promotion/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="15" lean-forward="true" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promotion/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DCMP/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="124" column="21" lean-forward="true" selection-start-line="124" selection-start-column="21" selection-end-line="124" selection-end-column="21" />
-        </state>
+        <state relative-caret-position="-912" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DCMP/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="361">
+          <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DCMP/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="126" column="16" lean-forward="true" selection-start-line="126" selection-start-column="16" selection-end-line="126" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dashboard/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2">
+          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
           <folding>
-            <element signature="e#628#660#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promotion/templates/Promotion/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="58" column="64" selection-start-line="58" selection-start-column="64" selection-end-line="58" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dashboard/static/Dashboard/assets/js/paper-dashboard.js" />
-    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/icons.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="1349" lean-forward="true" selection-start-line="1349" selection-end-line="1349" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/notifications.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="35" column="47" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1715">
-          <caret line="53" column="18" lean-forward="true" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="82" column="22" lean-forward="true" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promotion/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="898">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
+            <element signature="e#0#92#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Dashboard/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        <state relative-caret-position="133">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dashboard/views.py">
+    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24">
-          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#65#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-456">
+          <caret line="189" column="82" selection-start-line="189" selection-start-column="82" selection-end-line="189" selection-end-column="82" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/index.html">
+    <entry file="file://$PROJECT_DIR$/Dashboard/sys.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="222" column="34" lean-forward="true" selection-start-line="222" selection-start-column="34" selection-end-line="222" selection-end-column="34" />
+        <state relative-caret-position="76">
+          <caret line="4" column="42" lean-forward="true" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
         </state>
       </provider>
     </entry>
