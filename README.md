@@ -36,6 +36,17 @@ Multiple mirroring, load balancing, high availability
 - Python 3.6 (Recommend)
 - Django 2.0 (Necessary)
 
+### Third party plugins (Necessary)
+- django-bootstrap3
+- psutil
+- docker-py
+
+```shell
+pip install django-bootstrap3
+pip install psutil
+pip install docker
+```
+
 ### Usage
 - Change admin's password(Administrator username: admin): 
 ```shell
@@ -54,6 +65,10 @@ python manage.py runserver
 ```
 
 ### Update Logs
+#### V2.2 Date :2018/4/21
+- Add system lib
+- Add docker lib
+- Fix login bugs
 #### V2.1 Date :2018/4/18
 - Finish login/logout function
 - Rewrite login static HTML page
