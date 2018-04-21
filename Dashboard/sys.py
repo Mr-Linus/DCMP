@@ -9,7 +9,7 @@ class sys:
     con_run_num = client.info()['ContainersRunning']
     con_stop_num  = client.info()['ContainersStopped']
     con_pause_num = client.info()['ContainersPaused']
-    con_mirrors = client.info()['RegistryConfig']['IndexConfigs']['docker.io']['Mirrors']
+    con_mirrors = client.info()['RegistryConfig']['IndexConfigs']['docker.io']['Mirrors'][0]
     swarm_stat =  client.info()['Swarm']['LocalNodeState']
     swarm_nodeid = client.info()['Swarm']['NodeID']
     swarm_addr = client.info()['Swarm']['NodeAddr']

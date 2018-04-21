@@ -96,12 +96,7 @@
                         <p>Notifications</p>
                     </a>
                 </li>
-				<li class="active-pro">
-                    <a href="upgrade.html">
-                        <i class="ti-export"></i>
-                        <p>Upgrade to PRO</p>
-                    </a>
-                </li>
+
             </ul>
     	</div>
     </div>
@@ -251,14 +246,14 @@
                     <div class="col-md-6 ">
                         <div class="card">
                             <div class="header">
-                                <h5 class="title">Docker Containers information</h5>
-                                <p class="category" >Localhost performance:</p>
+                                <h5 class="title">Docker information</h5>
+                                <p class="category" >Localhost & Swarm performance:</p>
                                 </br>
                             </div>
                             <div class="content">
-                                <p>Docker Version:  {{ sysinfo.con_ver }} </p>
-                                <p> Arch: {{ sysinfo.con_arch }}  OS: {{ sysinfo.con_os }}</p>
-                                <p>Swarm Status: {{ sysinfo.swarm_stat }}</p>
+                                <p>Docker Version:  {{ sysinfo.con_ver }} &emsp; Mirrors:&nbsp;{{ sysinfo.con_mirrors }} </p>
+                                <p> Arch: {{ sysinfo.con_arch }} &emsp; OS: {{ sysinfo.con_os }} &emsp; CPU Core:{{ sysinfo.cpu_num }}  &emsp; Thread:{{ sysinfo.cpu_Lnum }}</p>
+                                <p>Swarm Status: {{ sysinfo.swarm_stat }} &emsp; Swarm Node: {{ sysinfo.swarm_num }} &emsp; Swarm IP:{{ sysinfo.swarm_addr }}</p>
 
                             </div>
                         </div>
@@ -346,7 +341,7 @@
 
                 <div class="row">
 
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         <div class="card">
                             <div class="header">
                                 <h4 class="title">Memory Status</h4>
@@ -375,54 +370,65 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="row">
+
                     <div class="col-md-6">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Email Statistics</h4>
-                                <p class="category">Last Campaign Performance</p>
+                                <h4 class="title">Network Status</h4>
+                                <p class="category">24 Hours performance</p>
                             </div>
                             <div class="content">
-                                <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
-                                <div class="footer">
-                                    <div class="chart-legend">
-                                        <i class="fa fa-circle text-info"></i> Open
-                                        <i class="fa fa-circle text-danger"></i> Bounce
-                                        <i class="fa fa-circle text-warning"></i> Unsubscribe
-                                    </div>
-                                    <hr>
-                                    <div class="stats">
-                                        <i class="ti-timer"></i> Campaign sent 2 days ago
-                                    </div>
+                                 <div id="cpu" style="width: 600px;height:400px;"></div>
+                                <script>
+                                echarts.init(document.getElementById('cpu')).setOption({
+                                        tooltip: {
+                                        trigger: 'item',
+                                        formatter: "{a} <br/>{b}: {c} ({d}%)"
+                                        },
+                                        legend: {
+                                            orient: 'vertical',
+                                            x: 'left',
+                                            data:['Send Packages','Receive Packages']
+                                        },
+                                        series: [
+                                        {
+                                            name:'Network Status',
+                                            type:'pie',
+                                            radius: ['50%', '70%'],
+                                            avoidLabelOverlap: false,
+                                            label: {
+                                                normal: {
+                                                    show: false,
+                                                    position: 'center'
+                                                },
+                                                emphasis: {
+                                                    show: true,
+                                                    textStyle: {
+                                                        fontSize: '30',
+                                                        fontWeight: 'bold'
+                                                    }
+                                                }
+                                                },
+                                            labelLine: {
+                                                normal: {
+                                                    show: false
+                                                }
+                                                },
+                                            data:[
+                                                {value:{{ sysinfo.net_send }}, name:'Send Packages'},
+                                                {value: {{ sysinfo.net_recv }}, name:'Receive Packages'}
+                                                ]
+                                        }]}
+                                    );
+                                </script>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card ">
-                            <div class="header">
-                                <h4 class="title">2015 Sales</h4>
-                                <p class="category">All products including Taxes</p>
-                            </div>
-                            <div class="content">
-                                <div id="chartActivity" class="ct-chart"></div>
 
-                                <div class="footer">
-                                    <div class="chart-legend">
-                                        <i class="fa fa-circle text-info"></i> Tesla Model S
-                                        <i class="fa fa-circle text-warning"></i> BMW 5 Series
-                                    </div>
-                                    <hr>
-                                    <div class="stats">
-                                        <i class="ti-check"></i> Data information certified
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
+
+
             </div>
         </div>
 
@@ -433,18 +439,8 @@
                     <ul>
 
                         <li>
-                            <a href="#">
-                                Creative Tim
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://blog.creative-tim.com">
-                               Blog
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#/license">
-                                Licenses
+                            <a href="/">
+                                DCMP.
                             </a>
                         </li>
                     </ul>
