@@ -1,7 +1,20 @@
 import psutil ,datetime , docker
 class sys:
+# Docker Information
     client = docker.from_env()
-    con_num = int(len(client.containers.list()))
+    con_num = len(client.containers.list(all))
+    con_ver = client.version()['Components'][0]['Version']
+    con_arch = client.version()['Components'][0]['Details']['Arch']
+    con_os = client.version()['Components'][0]['Details']['Os']
+    con_run_num = client.info()['ContainersRunning']
+    con_stop_num  = client.info()['ContainersStopped']
+    con_pause_num = client.info()['ContainersPaused']
+    con_mirrors = client.info()['RegistryConfig']['IndexConfigs']['docker.io']['Mirrors']
+    swarm_stat =  client.info()['Swarm']['LocalNodeState']
+    swarm_nodeid = client.info()['Swarm']['NodeID']
+    swarm_addr = client.info()['Swarm']['NodeAddr']
+    swarm_num = client.info()['Swarm']['Nodes']
+# Systen Information
     hostname = str(psutil.users()[0].name)
     nowtime = str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
     cpu_num = psutil.cpu_count(logical=False)
@@ -21,7 +34,7 @@ class sys:
         sum = 0
         for  persent in psutil.cpu_percent(interval=1,percpu=True) :
             sum += persent
-        return round(sum / self.cpu_num,0)
+        return int( sum / self.cpu_num )
     def disk_info(self):
         result = ""
         def optback(opt):
@@ -43,6 +56,5 @@ class sys:
     def uptime(self):
         Uptime = datetime.datetime.fromtimestamp(psutil.boot_time())
         Nowtime = datetime.datetime.now()
-        return  int((Nowtime - Uptime).seconds/3600)
-
+        return  int(round((Nowtime - Uptime).seconds/3600))
 

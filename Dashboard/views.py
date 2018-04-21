@@ -11,7 +11,7 @@ def dashboard_login(request):
         password = request.POST['password']
         user = authenticate(username=username,password=password)
         if user is not  None :
-            #messages.error(request, 'login Success!')
+            messages.success(request, 'login Success!')
             login(request,user)
             sysinfo = sys()
             context = {
@@ -22,6 +22,7 @@ def dashboard_login(request):
             messages.error(request, 'Invaild login !')
             return render(request, 'Dashboard/login.html')
     elif  request.user.is_authenticated:
+        messages.success(request, 'login Success!')
         sysinfo = sys()
         context = {
             "sysinfo": sysinfo,

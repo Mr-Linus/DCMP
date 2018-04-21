@@ -27,14 +27,14 @@
 
 
     <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="{% static 'Dashboard/css/demo.css' %}" rel="stylesheet" />
+    <link href="{% static "Dashboard/css/demo.css" %}" rel="stylesheet" />
 
 
     <!--  Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
     <link href="{% static "Dashboard/css/themify-icons.css" %}" rel="stylesheet">
-
+    <script src="{% static "Dashboard/js/echarts.min.js" %}"></script>
 </head>
 <body>
 
@@ -120,25 +120,24 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="ti-panel"></i>
-								<p>Stats</p>
-                            </a>
-                        </li>
+
                         <li class="dropdown">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="ti-bell"></i>
-                                    <p class="notification">5</p>
+                                    <p class="notification">
+                                    </p>
 									<p>Notifications</p>
 									<b class="caret"></b>
                               </a>
                               <ul class="dropdown-menu">
-                                <li><a href="#">Notification 1</a></li>
-                                <li><a href="#">Notification 2</a></li>
-                                <li><a href="#">Notification 3</a></li>
-                                <li><a href="#">Notification 4</a></li>
-                                <li><a href="#">Another notification</a></li>
+                                {% csrf_token %}
+                                {% if messages %}
+                                   {% for message in messages %}
+                                       <li><a style="color: #9D3D5F"> *  {{ message }} </a></li>
+                                   {% endfor %}
+                                    {% else %}
+                                    <li><a> * None </a></li>
+                                {% endif %}
                               </ul>
                         </li>
 						<li>
@@ -149,7 +148,7 @@
                         </li>
                         <li>
                             <a href="/dashboard/logout">
-								<i class="ti-logout"></i>
+								<i class="ti-close"></i>
 								<p>Logout</p>
                             </a>
                         </li>
@@ -245,26 +244,134 @@
                         </div>
                     </div>
                 </div>
+
+
+
+                <div class="row">
+                    <div class="col-md-6 ">
+                        <div class="card">
+                            <div class="header">
+                                <h5 class="title">Docker Containers information</h5>
+                                <p class="category" >Localhost performance:</p>
+                                </br>
+                            </div>
+                            <div class="content">
+                                <p>Docker Version:  {{ sysinfo.con_ver }} </p>
+                                <p> Arch: {{ sysinfo.con_arch }}  OS: {{ sysinfo.con_os }}</p>
+                                <p>Swarm Status: {{ sysinfo.swarm_stat }}</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="col-md-6 ">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Docker Containers Status:</h4>
+                                 <p class="category" >Localhost performance:</p>
+                            </div>
+                            <div class="container">
+                            <div class="content">
+                    <div class="container col-md-pull" >
+                        <div class="col-lg-2 col-sm-2 center">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col-xs-5">
+                                            <div class="icon-big icon-success text-center">
+                                                <i class="ti-rocket"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-7">
+                                            <div class="numbers">
+                                                <p> Running:</p>
+                                                <a>{{ sysinfo.con_run_num | default:"(N/A)" }} </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-2 col-sm-2 ">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col-xs-5">
+                                            <div class="icon-big icon-warning text-center">
+                                                <i class="ti-close"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-7">
+                                            <div class="numbers">
+                                                <p> Paused:</p>
+                                                <a>{{ sysinfo.con_pause_num | default:"0" }} </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-2 col-sm-2">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col-xs-5">
+                                            <div class="icon-big icon-danger text-center">
+                                                <i class="ti-alert"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-7">
+                                            <div class="numbers">
+                                                <p> Stopped:</p>
+                                                <a>{{ sysinfo.con_stop_num | default:"0" }} </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
                 <div class="row">
 
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Users Behavior</h4>
+                                <h4 class="title">Memory Status</h4>
                                 <p class="category">24 Hours performance</p>
                             </div>
                             <div class="content">
-                                <div id="chartHours" class="ct-chart"></div>
-                                <div class="footer">
-                                    <div class="chart-legend">
-                                        <i class="fa fa-circle text-info"></i> Open
-                                        <i class="fa fa-circle text-danger"></i> Click
-                                        <i class="fa fa-circle text-warning"></i> Click Second Time
-                                    </div>
-                                    <hr>
-                                    <div class="stats">
-                                        <i class="ti-reload"></i> Updated 3 minutes ago
-                                    </div>
+                                 <div id="mem" style="width: 600px;height:400px;"></div>
+                                <script>
+                                echarts.init(document.getElementById('mem')).setOption({
+                                     series : [
+                                    {
+                                        name: 'Memory',
+                                        type: 'pie',
+                                        radius: '85%',
+                                        roseType: 'angle',
+                                        data:[
+                                            {value:{{ sysinfo.mem_used }}, name:'Memory used'},
+                                            {value:{{ sysinfo.swap_used }}, name:'Swap used'},
+                                            {value:{{ sysinfo.mem_free }}, name:'Memory free'},
+                                            {value:{{ sysinfo.swap_free }}, name:'Swap Free'}
+                                            ]
+                                    }
+                                    ]}
+                                    );
+                                </script>
                                 </div>
                             </div>
                         </div>
@@ -279,7 +386,6 @@
                             </div>
                             <div class="content">
                                 <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
-
                                 <div class="footer">
                                     <div class="chart-legend">
                                         <i class="fa fa-circle text-info"></i> Open
