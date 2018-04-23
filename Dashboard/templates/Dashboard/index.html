@@ -126,14 +126,11 @@
 									<b class="caret"></b>
                               </a>
                               <ul class="dropdown-menu">
-                                {% csrf_token %}
-                                {% if messages %}
-                                   {% for message in messages %}
-                                       <li><a style="color: #9D3D5F"> *  {{ message }} </a></li>
-                                   {% endfor %}
-                                    {% else %}
-                                    <li><a> * None </a></li>
-                                {% endif %}
+{#                                {% if user_last_login %}-->#}
+                                        <li><a style="color:green"> *  Last Login:  &nbsp;  {{  user_last_login }} </a></li>
+{#                                    {% else %}#}
+{#                                    <li><a> * None </a></li>#}
+{#                                {% endif %}#}
                               </ul>
                         </li>
 						<li>
@@ -351,13 +348,19 @@
                             <div class="content">
                                  <div id="mem" style="width: 600px;height:400px;"></div>
                                 <script>
-                                echarts.init(document.getElementById('mem')).setOption({
+                                echarts.init(document.getElementById('mem'),).setOption({
+                                    tooltip : {
+                                    trigger: 'item',
+
+                                        formatter: "{a} <br/>{b} : {c} ({d}%)"
+                                    },
                                      series : [
                                     {
                                         name: 'Memory',
                                         type: 'pie',
                                         radius: '85%',
                                         roseType: 'angle',
+
                                         data:[
                                             {value:{{ sysinfo.mem_used }}, name:'Memory used'},
                                             {value:{{ sysinfo.swap_used }}, name:'Swap used'},
@@ -395,7 +398,7 @@
                                         {
                                             name:'Network Status',
                                             type:'pie',
-                                            radius: ['50%', '70%'],
+                                            radius: ['70%', '90%'],
                                             avoidLabelOverlap: false,
                                             label: {
                                                 normal: {
