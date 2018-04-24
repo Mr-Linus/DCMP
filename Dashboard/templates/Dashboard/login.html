@@ -78,20 +78,25 @@
 	  <div class="item">
      
 	  </div>
-
-	  <form method="post">
-      {% csrf_token %}
-           {% if messages %}
-                        {% for message in messages %}
-                            <p style="color: #9D3D5F"> *  {{ message }} </p>
-                        {% endfor %}
-
-           {% endif %}
-           <h4>Username:   <input type="username"  style="width:400px"  class="center text-center" placeholder="Username" name="username"></h4>
+      {% if form.errors %}
+            <p>Your username and password didn't match. Please try again.</p>
+      {% endif %}
+        {% if next %}
+            {% if user.is_authenticated %}
+                <p>Your account doesn't have access to this page. To proceed,
+                    please login with an account that has access.</p>
+                {% else %}
+                <p>Please login to see this page.</p>
+            {% endif %}
+        {% endif %}
+	  <form method="post" >
+        {% csrf_token %}
+        <h4>Username:   <input type="username"  style="width:400px"  class="center text-center" placeholder="Username" name="username"></h4>
            </br>
           <h4>Password:  <input type="password"  style="width:400px"  class="center text-center " placeholder="Password" name="password"></h4>
       </br></br></br>
-        <button type="submit" class="btn btn-default">★ Login</button> </br></br></br> </br></br></br> </br></br></br>
+          <input type="submit" class="btn btn-default" value="login" />
+          <input type="hidden" name="next" value="{{ next }}" />
       </form>
     </div>
   </div>
