@@ -68,13 +68,13 @@
 <div id="contact-section" class="text-center" style="background-image:url({% static "Dashboard/img/header-bg.jpg" %});min-height:400px;*+height:100%;_height:400px;">
   <div class="container">
   </br></br></br>
-    <div class="section-title center" >
+    <div class="section-title center"  %}>
       <h2><strong>Welcome to </strong>DCMP</h2>
 	   <h4>To provide a precise, efficient and stable container management platform</h4>
     </div>
-    <div class="text-center">
+    <div class="text-center login panel" style="background-image:url({% static "Dashboard/img/login-form.jpg" %});">
       <hr> 
-      <p style="color:gray;font-size:20px;"><strong>Log in to Management Platform</strong></p>
+      <p style="color:#ff1493;font-size:20px;"><strong>Log in to Management Platform</strong></p>
 	  <div class="item">
      
 	  </div>
@@ -89,18 +89,19 @@
                 <p>Please login to see this page.</p>
             {% endif %}
         {% endif %}
-	  <form method="post" >
+
+	  <form method="post" class="form-horizontal ">
         {% csrf_token %}
-        <h4>Username:   <input type="username"  style="width:400px"  class="center text-center" placeholder="Username" name="username"></h4>
+        <h4><i class="fa fa-user fa-lg">&nbsp;</i><input type="username"  style="width:400px ;background-color: rgba(0, 0, 0, 0.4);  "  class="center text-center" placeholder="Username" name="username"></h4>
            </br>
-          <h4>Password:  <input type="password"  style="width:400px"  class="center text-center " placeholder="Password" name="password"></h4>
+          <h4><i class="fa fa-lock fa-lg">&nbsp;</i><input type="password"  style="width:400px ;background-color: rgba(0, 0, 0, 0.4);  "  class="center text-center " placeholder="Password" name="password"></h4>
       </br></br></br>
           <input type="submit" class="btn btn-default" value="login" />
           <input type="hidden" name="next" value="{{ next }}" />
       </form>
     </div>
   </div>
-  
+
 </div>
 </div>
 <nav id="footer" style="position:relative;">

@@ -8,4 +8,5 @@ urlpatterns = [
     path('logout/', views.dashboard_logout_view.as_view()),
 # path('index/', views.dashboard_index, name='index'),
     path('index/', views.dashboard_index_view.as_view()),
+    path('containers/',views.dashobard_containers_view),
 ]

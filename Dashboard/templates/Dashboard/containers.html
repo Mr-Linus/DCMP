@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+    {% load static %}
+    <link rel="shortcut icon" href="{% static "Dashboard/img/favicon.ico" %}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{%  static "Dashboard/img/apple-touch-icon.png" %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static "Dashboard/img/apple-touch-icon-72x72.png" %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static "Dashboard/img/apple-touch-icon-114x114.png" %}">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title></title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+  <!-- Bootstrap core CSS     -->
+    <link href="{% static 'Dashboard/css/bootstrap.min.css' %}" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="{% static 'Dashboard/css/animate.min.css' %}" rel="stylesheet"/>
+
+    <!--  Paper Dashboard core CSS    -->
+    <link href="{% static 'Dashboard/css/paper-dashboard.css' %}" rel="stylesheet"/>
+
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="{% static "Dashboard/css/demo.css" %}" rel="stylesheet" />
+
+
+    <!--  Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+    <link href="{% static "Dashboard/css/themify-icons.css" %}" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="wrapper">
+	<div class="sidebar" data-background-color="white" data-active-color="danger">
+
+    <!--
+		Tip 1: you can change the color of the sidebar's background using: data-background-color="white | black"
+		Tip 2: you can change the color of the active button using the data-active-color="primary | info | success | warning | danger"
+	-->
+	<div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="/dashboard/index" class="simple-text">
+                    DCMP.
+                </a>
+            </div>
+
+            <ul class="nav">
+                <li>
+                    <a href="/dashboard/index">
+                        <i class="ti-dashboard"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="/dashboard/containers">
+                        <i class="ti-server"></i>
+                        <p>Containers</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="user.html">
+                        <i class="ti-paint-bucket"></i>
+                        <p>Deploy</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="table.html">
+                        <i class="ti-world"></i>
+                        <p>Swarm</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="typography.html">
+                        <i class="ti-paint-roller"></i>
+                        <p>Images</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="icons.html">
+                        <i class="ti-book"></i>
+                        <p>Volumes</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="notifications.html">
+                        <i class="ti-cloud"></i>
+                        <p>Networks</p>
+                    </a>
+                </li>
+
+            </ul>
+    	</div>
+    </div>
+
+    <div class="main-panel">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar bar1"></span>
+                        <span class="icon-bar bar2"></span>
+                        <span class="icon-bar bar3"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Dashboard</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="ti-bell"></i>
+                                    <p class="notification">
+                                    </p>
+									<p>Notifications</p>
+									<b class="caret"></b>
+                              </a>
+                              <ul class="dropdown-menu">
+{#                                {% if user_last_login %}-->#}
+                                        <li><a style="color:green"> *  Last Login:  &nbsp;  {{  user_last_login }} </a></li>
+{#                                    {% else %}#}
+{#                                    <li><a> * None </a></li>#}
+{#                                {% endif %}#}
+                              </ul>
+                        </li>
+
+
+                        <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="ti-user"></i>
+                                    <p class="notification">
+                                    </p>
+									<p>User: {{ user }}</p>
+									<b class="caret"></b>
+                              </a>
+                              <ul class="dropdown-menu">
+                                  <li>
+                                        <a href="#">
+								            <i class="ti-settings"> Settings</i>
+                                        </a>
+                                  </li>
+                                  <li>
+                                       <a href="/dashboard/logout">
+                                            <i class="ti-close"> Logout</i>
+
+                                       </a>
+                                  </li>
+                              </ul>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Container list</h4>
+                                <p class="category">Containers</p>
+                            </div>
+                            <div class="content table-responsive table-full-width">
+                              <form  method="POST" action="">
+                                        {% csrf_token %}
+                                <table class="table table-striped">
+                                    <thead>
+                                        <th>
+                                            <input type="checkbox" onclick="swapCheck()" />&nbsp;Select All</th>
+                                        <th>ID</th>
+                                    	<th>Name</th>
+                                    	<th>Image</th>
+                                    	<th>Status</th>
+                                    </thead>
+                                    <tbody>
+                                    {% for con in con_list %}
+                                        <tr>
+                                            <td>
+                                                    <input type="checkbox"  value="{{ con.name }}" name="con_name" />
+                                            </td>
+                                        	<td>{{ con.short_id }}</td>
+                                        	<td>{{ con.name }}</td>
+                                        	<td>{% for images in  con.image.tags %}{{ images }}{% endfor %}</td>
+                                        	<td>
+                                                            {% if con.status == 'exited' %}
+                                                                <div class="alert alert-warning col-xs-3 text-center">
+                                                            {% elif con.status == 'stopped' %}
+                                                              <div class="alert alert-danger col-xs-3 text-center">
+                                                            {% else %}
+                                                                <div class="alert alert-success col-xs-4 text-center center">
+                                                            {% endif %}
+                                                        <b>{{ con.status }} </b>
+                                                    </div>
+                                            </td>
+                                        </tr>
+
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                                <div class="text-center">
+                                        <li class="btn btn-info btn-fill "   href="/dashboard/deploy">Create</li>
+                                        <button type="submit" class="btn btn-info btn-fill btn-info"  name="start">Start</button>
+                                        <button type="submit" class="btn btn-info btn-fill btn-danger" name="stop">Stop</button>
+                                        <button type="submit" class="btn btn-info btn-fill btn-danger" name="restart">Restart</button>
+                                        <button type="submit" class="btn btn-info btn-fill btn-danger" name="remove">Remove</button>
+                                </div>
+                                </form>
+                                <script type="text/javascript">
+                                        //checkbox 全选/取消全选
+                                        var isCheckAll = false;
+                                        function swapCheck() {
+                                                if (isCheckAll) {
+                                                            $("input[type='checkbox']").each(function() {
+                                                            this.checked = false;
+                                                            });
+                                                            isCheckAll = false;
+                                                            } else {
+                                                            $("input[type='checkbox']").each(function() {
+                                                                this.checked = true;
+                                                                });
+                                                            isCheckAll = true;
+                                                 }
+                                        }
+                                </script>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <nav class="pull-left">
+                    <ul>
+
+                        <li>
+                            <a href="/">
+                                DCMP.
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="copyright pull-right">
+                    Copyright &copy; DCMP 2018 .Company  All rights reserved.<a target="_blank" href="http://geekfan.top/">Funky's Blog</a>
+                </div>
+            </div>
+        </footer>
+
+
+    </div>
+</div>
+
+
+</body>
+
+      <!--   Core JS Files   -->
+    <script src="{% static 'Dashboard/js/jquery-1.10.2.js'  %}" type="text/javascript"></script>
+	<script src="{% static 'Dashboard/js/bootstrap.min.js' %}" type="text/javascript"></script>
+
+	<!--  Checkbox, Radio & Switch Plugins
+	<script src="{% static "Dashboard/js/bootstrap-checkbox-radio.js" %}"></script> -->
+
+	<!--  Charts Plugin -->
+	<script src="{% static "Dashboard/js/chartist.min.js" %}"></script>
+
+    <!--  Notifications Plugin    -->
+    <script src="{% static "Dashboard/js/bootstrap-notify.js" %}"></script>
+
+
+    <!--  Google Maps Plugin    -->
+    <!---<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>--->
+
+    <!-- Paper Dashboard Core javascript and methods for Demo purpose -->
+	<script src="{% static "Dashboard/js/paper-dashboard.js" %}"></script>
+
+	<!-- Paper Dashboard DEMO methods, don't include it in your project! -->
+	<script src="{% static "Dashboard/js/demo.js" %}"></script>
+
+
+</html>

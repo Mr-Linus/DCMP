@@ -2,7 +2,8 @@ import psutil ,datetime , docker
 class sys:
 # Docker Information
     client = docker.from_env()
-    con_num = len(client.containers.list(all))
+    con = client.containers.list(all=True)
+    con_num = len(client.containers.list(all=True))
     con_ver = client.version()['Components'][0]['Version']
     con_arch = client.version()['Components'][0]['Details']['Arch']
     con_os = client.version()['Components'][0]['Details']['Os']
@@ -20,12 +21,12 @@ class sys:
     cpu_num = psutil.cpu_count(logical=False)
     cpu_Lnum = psutil.cpu_count(logical=True)
     mem_persent = psutil.virtual_memory().percent
-    mem_used = psutil.virtual_memory().used
-    mem_free = psutil.virtual_memory().free
-    mem_total = psutil.virtual_memory().total
-    swap_used = psutil.swap_memory().used
-    swap_total = psutil.swap_memory().total
-    swap_free = psutil.swap_memory().free
+    mem_used = psutil.virtual_memory().used/1024/1024
+    mem_free = psutil.virtual_memory().free/1024/1024
+    mem_total = psutil.virtual_memory().total/1024/1024
+    swap_used = psutil.swap_memory().used/1024/1024
+    swap_total = psutil.swap_memory().total/1024/1024
+    swap_free = psutil.swap_memory().free/1024/1024
     disk = psutil.disk_partitions()
     net_send = psutil.net_io_counters().bytes_sent
     net_recv = psutil.net_io_counters().bytes_recv
@@ -57,4 +58,8 @@ class sys:
         Uptime = datetime.datetime.fromtimestamp(psutil.boot_time())
         Nowtime = datetime.datetime.now()
         return  int(round((Nowtime - Uptime).seconds/3600))
+
+class sys_update:
+    client = docker.from_env()
+    con = client.containers.list(all=True)
 
