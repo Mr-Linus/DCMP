@@ -79,6 +79,7 @@ python manage.py runserver
 ```
 
 ### Update Logs
+
 #### V2.5 Date :2018/4/30
 - Add Swarm Function
 - Fix some bugs
