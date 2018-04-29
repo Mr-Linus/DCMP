@@ -59,7 +59,23 @@ class sys:
         Nowtime = datetime.datetime.now()
         return  int(round((Nowtime - Uptime).seconds/3600))
 
-class sys_update:
+class sys_swarm:
     client = docker.from_env()
     con = client.containers.list(all=True)
-
+    info = client.info()['Swarm']
+    NodeID = info['NodeID']
+    NodeAddr = info['NodeAddr']
+    LocalNodeState = info['LocalNodeState']
+    ControlAvailable = info['ControlAvailable']
+    RemoteManagers = info['RemoteManagers']
+    Remote_NodeID = RemoteManagers[0]['NodeID']
+    Remote_Addr  = RemoteManagers[0]['Addr']
+    Nodes = info['Nodes']
+    Managers = info['Managers']
+    Cluster_info = info['Cluster']
+    Cluster_ID = Cluster_info['ID']
+    Version = client.swarm.version
+    def update(self):
+        self.client.swarm.update()
+    def reload(self):
+        self.client.swarm.reload()

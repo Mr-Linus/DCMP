@@ -3,7 +3,7 @@ from django.views.decorators.csrf import csrf_exempt
 #from django.contrib.auth import	authenticate,	login,	logout
 #from django.contrib import messages
 #from django.contrib.auth.decorators	import login_required
-from .sys import sys,sys_update
+from .sys import sys,sys_swarm
 from django.contrib.auth.views import LoginView,LogoutView
 from django.views.generic.base import TemplateView
 import docker
@@ -165,3 +165,23 @@ def dashboard_deploy_view(request):
     else:
         return redirect('/dashboard/login')
 
+@csrf_exempt
+def dashobard_swarm_view(request):
+    template_name = 'Dashboard/swarm.html'
+    context = {
+        "swarm": sys_swarm(),
+        "user_last_login": request.user.last_login,
+        "user": request.user.username,
+    }
+    if request.user.is_authenticated:
+        if request.method == "GET":
+            return render_to_response(template_name, context)
+        if request.method == "POST":
+            if 'reload' in request.POST:
+                sys_swarm().reload()
+            elif 'update' in request.POST:
+                sys_swarm().update()
+
+            return render_to_response(template_name, context)
+    else:
+        return redirect('/dashboard/login')

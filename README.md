@@ -27,7 +27,21 @@ Multiple mirroring, load balancing, high availability
 ![PromotionPage](https://github.com/Mr-Linus/DCMP/blob/master/Promotionpage.png)
 
 - Dashboard
+
 ![DashboardPage](https://github.com/Mr-Linus/DCMP/blob/master/dashboard.png)
+
+- Containters Management
+
+![Containers](https://github.com/Mr-Linus/DCMP/blob/master/containers.png)
+
+- Containters Deploy
+
+![Deploy](https://github.com/Mr-Linus/DCMP/blob/master/deploy.png)
+
+- Swarm Monitor
+
+![swarm](https://github.com/Mr-Linus/DCMP/blob/master/swarm.png)
+
 
 > The project is currently in the construction phase.
 
@@ -65,6 +79,15 @@ python manage.py runserver
 ```
 
 ### Update Logs
+#### V2.5 Date :2018/4/30
+- Add Swarm Function
+- Fix some bugs
+#### V2.4 Date :2018/4/29
+- Add Deploy funtion
+- Fix some bugs
+#### V2.3 Date :2018/4/25
+- Add container function 
+- Fix some bugs
 #### V2.2 Date :2018/4/21
 - Add system lib
 - Add docker lib

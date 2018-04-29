@@ -9,5 +9,6 @@ urlpatterns = [
 # path('index/', views.dashboard_index, name='index'),
     path('index/', views.dashboard_index_view.as_view()),
     path('containers/', views.dashobard_containers_view),
-    path('deploy/', views.dashboard_deploy_view ),
+    path('deploy/', views.dashboard_deploy_view),
+    path('swarm/', views.dashobard_swarm_view),
 ]
