@@ -8,6 +8,7 @@ from django.contrib.auth.views import LoginView,LogoutView
 from django.views.generic.base import TemplateView
 import docker
 from time import sleep
+from  . form import DeployForm
 from django.views.generic.base import RedirectView
 # Create your views here.
 class dashboard_login_view(LoginView):
@@ -65,6 +66,7 @@ class dashboard_index_view(TemplateView):
         context['con_pause'] = docker.from_env().info()['ContainersPaused']
         context['user_last_login'] = self.request.user.last_login
         context['user'] = self.request.user.username
+        context['con_num'] = len(docker.from_env().containers.list(all=True))
         return context
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated:
@@ -109,11 +111,6 @@ def dashobard_containers_view(request):
     else:
         return redirect('/dashboard/login')
 
-
-
-
-
-
     # def get_context_data(self, **kwargs,):
     #     context = super().get_context_data(**kwargs)
     #     context['sysinfo'] = sys()
@@ -143,4 +140,28 @@ def dashobard_containers_view(request):
     #         return self.render_to_response(context)
     #     else:
     #         return redirect('/dashboard/login')
+
+@csrf_exempt
+def dashboard_deploy_view(request):
+    template_name = 'Dashboard/deploy.html'
+    if request.user.is_authenticated:
+        if request.method == "POST":
+            form = DeployForm(request.POST)
+            if form.is_valid():
+                sys().client.containers.run(
+                    image=form.cleaned_data['image'],
+                    command=form.cleaned_data['cmd'],
+                    auto_remove=form.cleaned_data['auto_remove'],
+                    tty=form.cleaned_data['tty'],
+                    ports=form.cleaned_data['ports'],
+                    working_dir=form.cleaned_data['work_dir'],
+                    name=form.cleaned_data['name']
+                )
+                print('ok')
+                return redirect('/dashboard/containers')
+        if request.method == "GET":
+            form = DeployForm()
+            return render_to_response(template_name, context={'form': form, 'user':request.user.username, 'user_last_login':request.user.last_login})
+    else:
+        return redirect('/dashboard/login')
 
