@@ -6,19 +6,14 @@
       <change beforePath="$PROJECT_DIR$/Dashboard/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/form.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dashboard/sys.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/sys.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dashboard/templates/Dashboard/containers.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/templates/Dashboard/containers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dashboard/templates/Dashboard/dashboard.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Dashboard/templates/Dashboard/deploy.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/templates/Dashboard/deploy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dashboard/templates/Dashboard/icons.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard/templates/Dashboard/images.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/templates/Dashboard/images.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dashboard/templates/Dashboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/templates/Dashboard/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dashboard/templates/Dashboard/maps.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dashboard/templates/Dashboard/notifications.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Dashboard/templates/Dashboard/swarm.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/templates/Dashboard/swarm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dashboard/templates/Dashboard/template.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dashboard/templates/Dashboard/typography.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dashboard/templates/Dashboard/upgrade.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Dashboard/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dashboard/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Promotion/static/Promotion/img/testimonial-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Promotion/static/Promotion/img/testimonial-bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Promotion/templates/Promotion/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Promotion/templates/Promotion/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,74 +25,84 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/DCMP$dashboard_context.coverage" NAME="dashboard_context Coverage Results" MODIFIED="1524503649871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Dashboard" />
     <SUITE FILE_PATH="coverage/DCMP$views.coverage" NAME="views Coverage Results" MODIFIED="1524503669085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Dashboard" />
-    <SUITE FILE_PATH="coverage/DCMP$sys.coverage" NAME="sys Coverage Results" MODIFIED="1525060683264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Dashboard" />
+    <SUITE FILE_PATH="coverage/DCMP$sys.coverage" NAME="sys Coverage Results" MODIFIED="1525090486628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Dashboard" />
     <SUITE FILE_PATH="coverage/DCMP$Test__.coverage" NAME="Test:  Coverage Results" MODIFIED="1524503679370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="DCMP" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.49178332">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Dashboard/views.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="675">
-                  <caret line="214" column="43" lean-forward="true" selection-start-line="214" selection-start-column="43" selection-end-line="214" selection-end-column="43" />
-                  <folding>
-                    <element signature="e#0#63#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="form.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Dashboard/form.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="209">
-                  <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/forms/forms.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-398">
-                  <caret line="61" column="6" selection-start-line="61" selection-start-column="6" selection-end-line="61" selection-end-column="6" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="images.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/images.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="308">
-                  <caret line="248" column="56" lean-forward="true" selection-start-line="248" selection-start-column="56" selection-end-line="248" selection-end-column="56" />
-                  <folding>
-                    <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#nav#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="sys.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Dashboard/sys.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="237">
-                  <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dashboard/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2137">
+              <caret line="267" column="65" lean-forward="true" selection-start-line="267" selection-start-column="65" selection-end-line="267" selection-end-column="65" />
+              <folding>
+                <element signature="e#0#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Promotion/templates/Promotion/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="148" column="10" lean-forward="true" selection-start-line="148" selection-start-column="10" selection-end-line="148" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="volumes.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/volumes.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="589">
+              <caret line="112" column="58" lean-forward="true" selection-start-line="112" selection-start-column="58" selection-end-line="112" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="swarm.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/swarm.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="networks.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/networks.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dashboard/form.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="593">
+              <caret line="75" column="5" lean-forward="true" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dashboard/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -123,16 +128,18 @@
         <option value="$PROJECT_DIR$/Dashboard/dashboard_context.py" />
         <option value="$PROJECT_DIR$/DCMP/settings.py" />
         <option value="$PROJECT_DIR$/Dashboard/templates/Dashboard/login.html" />
-        <option value="$PROJECT_DIR$/Promotion/templates/Promotion/index.html" />
         <option value="$PROJECT_DIR$/Dashboard/urls.py" />
-        <option value="$PROJECT_DIR$/Dashboard/templates/Dashboard/containers.html" />
-        <option value="$PROJECT_DIR$/Dashboard/templates/Dashboard/deploy.html" />
-        <option value="$PROJECT_DIR$/Dashboard/templates/Dashboard/index.html" />
-        <option value="$PROJECT_DIR$/Dashboard/templates/Dashboard/swarm.html" />
-        <option value="$PROJECT_DIR$/Dashboard/sys.py" />
         <option value="$PROJECT_DIR$/Dashboard/templates/Dashboard/images.html" />
+        <option value="$PROJECT_DIR$/Dashboard/templates/Dashboard/index.html" />
+        <option value="$PROJECT_DIR$/Dashboard/sys.py" />
         <option value="$PROJECT_DIR$/Dashboard/form.py" />
         <option value="$PROJECT_DIR$/Dashboard/views.py" />
+        <option value="$PROJECT_DIR$/Dashboard/templates/Dashboard/containers.html" />
+        <option value="$PROJECT_DIR$/Dashboard/templates/Dashboard/deploy.html" />
+        <option value="$PROJECT_DIR$/Dashboard/templates/Dashboard/volumes.html" />
+        <option value="$PROJECT_DIR$/Dashboard/templates/Dashboard/swarm.html" />
+        <option value="$PROJECT_DIR$/Dashboard/templates/Dashboard/networks.html" />
+        <option value="$PROJECT_DIR$/Promotion/templates/Promotion/index.html" />
       </list>
     </option>
   </component>
@@ -146,8 +153,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="450" />
-    <option name="y" value="105" />
+    <option name="x" value="578" />
+    <option name="y" value="125" />
     <option name="width" value="1253" />
     <option name="height" value="837" />
   </component>
@@ -178,7 +185,32 @@
             <path>
               <item name="DCMP" type="b2602c69:ProjectViewProjectNode" />
               <item name="DCMP" type="462c0819:PsiDirectoryNode" />
+              <item name="Dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="Dashboard" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DCMP" type="b2602c69:ProjectViewProjectNode" />
               <item name="DCMP" type="462c0819:PsiDirectoryNode" />
+              <item name="DCMP" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DCMP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DCMP" type="462c0819:PsiDirectoryNode" />
+              <item name="Promotion" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DCMP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DCMP" type="462c0819:PsiDirectoryNode" />
+              <item name="Promotion" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DCMP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DCMP" type="462c0819:PsiDirectoryNode" />
+              <item name="Promotion" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="Promotion" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -207,7 +239,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Django server.DCMP">
+  <component name="RunManager" selected="Python.sys">
     <configuration name="Test: " type="DjangoTestsConfigurationType" factoryName="Django tests" temporary="true">
       <module name="DCMP" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -343,6 +375,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="38" width="1936" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="调试" order="14" />
@@ -352,7 +385,7 @@
       <window_info anchor="bottom" id="Python Console" order="13" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.32969433" />
       <window_info anchor="bottom" id="运行" order="7" weight="0.189011" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4984127" visible="true" weight="0.14427084" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4984127" visible="true" weight="0.14427084" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -373,29 +406,29 @@
     <layout-to-restore>
       <window_info anchor="bottom" id="找到" order="15" weight="0.32967034" />
       <window_info active="true" anchor="bottom" id="运行" order="7" visible="true" weight="0.189011" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4984127" visible="true" weight="0.14427084" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4984127" visible="true" weight="0.14427084" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Python Console" order="13" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.32969433" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32967034" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="16" weight="0.32969433" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Favorites" order="2" show_stripe_button="false" sideWeight="0.50158733" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="调试" order="14" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Python Console" order="13" />
+      <window_info id="Favorites" order="2" show_stripe_button="false" sideWeight="0.50158733" side_tool="true" weight="0.25" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,24 +439,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Dashboard/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dashboard/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3591">
@@ -642,13 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Promotion/templates/Promotion/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="192" column="36" lean-forward="true" selection-start-line="192" selection-start-column="36" selection-end-line="192" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DCMP/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1728">
@@ -705,44 +717,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-665">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dashboard/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/deploy.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="80" column="24" lean-forward="true" selection-start-line="80" selection-start-column="24" selection-end-line="80" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/swarm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="79" column="46" selection-start-line="79" selection-start-column="46" selection-end-line="79" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="674">
-          <caret line="85" column="41" lean-forward="true" selection-start-line="85" selection-start-column="41" selection-end-line="85" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/dashboard.html" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/docker/client.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="684">
@@ -774,13 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/containers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="192" column="68" selection-start-line="192" selection-start-column="68" selection-end-line="192" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/docker/models/images.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="427">
@@ -788,44 +756,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dashboard/sys.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/forms/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+        <state relative-caret-position="19">
+          <caret line="61" column="6" selection-start-line="61" selection-start-column="6" selection-end-line="61" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/images.html">
+    <entry file="file://$PROJECT_DIR$/Dashboard/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="248" column="56" lean-forward="true" selection-start-line="248" selection-start-column="56" selection-end-line="248" selection-end-column="56" />
+        <state relative-caret-position="285">
+          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
           <folding>
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#nav#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/forms/forms.py">
+    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-398">
-          <caret line="61" column="6" selection-start-line="61" selection-start-column="6" selection-end-line="61" selection-end-column="6" />
+        <state relative-caret-position="541">
+          <caret line="93" column="48" lean-forward="true" selection-start-line="93" selection-start-column="48" selection-end-line="93" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Dashboard/form.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="593">
+          <caret line="75" column="5" lean-forward="true" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dashboard/sys.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="84" column="44" lean-forward="true" selection-start-line="84" selection-start-column="44" selection-end-line="84" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/deploy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="159" column="14" lean-forward="true" selection-start-line="159" selection-start-column="14" selection-end-line="159" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/containers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="109" column="63" selection-start-line="109" selection-start-column="63" selection-end-line="109" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/images.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="89" column="48" selection-start-line="89" selection-start-column="48" selection-end-line="89" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/swarm.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/networks.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/volumes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="112" column="58" lean-forward="true" selection-start-line="112" selection-start-column="58" selection-end-line="112" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Dashboard/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="214" column="43" lean-forward="true" selection-start-line="214" selection-start-column="43" selection-end-line="214" selection-end-column="43" />
+        <state relative-caret-position="2137">
+          <caret line="267" column="65" lean-forward="true" selection-start-line="267" selection-start-column="65" selection-end-line="267" selection-end-column="65" />
           <folding>
-            <element signature="e#0#63#0" expanded="true" />
+            <element signature="e#0#57#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Promotion/templates/Promotion/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="148" column="10" lean-forward="true" selection-start-line="148" selection-start-column="10" selection-end-line="148" selection-end-column="10" />
         </state>
       </provider>
     </entry>

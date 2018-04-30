@@ -12,4 +12,6 @@ urlpatterns = [
     path('deploy/', views.dashboard_deploy_view),
     path('swarm/', views.dashobard_swarm_view),
     path('images/', views.dashobard_images_view),
+    path('volumes/', views.dashboard_volume_view),
+    path('networks/', views.dashboard_network_view),
 ]

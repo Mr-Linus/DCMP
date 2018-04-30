@@ -82,6 +82,6 @@ class sys_swarm:
         self.client.swarm.reload()
 
 
-
+print(sys().client.networks.list()[0].attrs)
 
 

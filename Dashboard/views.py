@@ -1,4 +1,4 @@
-from django.shortcuts import redirect,render_to_response,render
+from django.shortcuts import redirect, render_to_response
 from django.views.decorators.csrf import csrf_exempt
 #from django.contrib.auth import	authenticate,	login,	logout
 #from django.contrib import messages
@@ -8,8 +8,8 @@ from django.contrib.auth.views import LoginView,LogoutView
 from django.views.generic.base import TemplateView
 import docker
 from time import sleep
-from  . form import DeployForm,PullForm
-from django.views.generic.base import RedirectView
+from  . form import DeployForm, PullForm, CreateVolumeForm,CreateNetworkForm
+# from django.views.generic.base import RedirectView
 # Create your views here.
 class dashboard_login_view(LoginView):
     template_name = 'Dashboard/login.html'
@@ -211,7 +211,62 @@ def dashobard_images_view(request):
                 pull_form = PullForm(request.POST)
                 if pull_form.is_valid():
                     sys().image.pull(pull_form.cleaned_data['pull_image'])
-                # sys().image.pull()
+        return redirect('/dashboard/index')
+    else:
+        return redirect('/dashboard/login')
+
+@csrf_exempt
+def dashboard_volume_view(request):
+    template_name = 'Dashboard/volumes.html'
+    context = {
+        "user_last_login": request.user.last_login,
+        "user": request.user.username,
+        "volumes": sys().client.volumes.list(),
+        "form": CreateVolumeForm(),
+    }
+    if request.user.is_authenticated:
+        if request.method == "GET":
+            return render_to_response(template_name, context)
+        if request.method == "POST":
+            if 'remove' in request.POST:
+                volume_names = request.POST.getlist('volume_name')
+                for volume_name in volume_names:
+                    sys().client.volumes.get(volume_name).remove()
+            if 'create' in request.POST:
+                create_form = CreateVolumeForm(request.POST)
+                if create_form.is_valid():
+                    sys.client.volumes.create(
+                        name=create_form.cleaned_data['name'],
+                        driver=create_form.cleaned_data['driver']
+                    )
+        return redirect('/dashboard/index')
+    else:
+        return redirect('/dashboard/login')
+
+@csrf_exempt
+def dashboard_network_view(request):
+    template_name = 'Dashboard/networks.html'
+    context = {
+        "user_last_login": request.user.last_login,
+        "user": request.user.username,
+        "form": CreateNetworkForm(),
+        "networks": docker.from_env().networks.list()
+    }
+    if request.user.is_authenticated:
+        if request.method == "GET":
+            return render_to_response(template_name, context)
+        if request.method == "POST":
+            if 'remove' in request.POST:
+                network_ids = request.POST.getlist('network_id')
+                for network_id in network_ids:
+                    sys().client.networks.get(network_id).remove()
+            if 'create' in request.POST:
+                create_form = CreateNetworkForm(request.POST)
+                if create_form.is_valid():
+                    sys.client.networks.create(
+                        name=create_form.cleaned_data['name'],
+                        driver=create_form.cleaned_data['driver']
+                    )
         return redirect('/dashboard/index')
     else:
         return redirect('/dashboard/login')
