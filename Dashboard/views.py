@@ -8,7 +8,7 @@ from django.contrib.auth.views import LoginView,LogoutView
 from django.views.generic.base import TemplateView
 import docker
 from time import sleep
-from  . form import DeployForm
+from  . form import DeployForm,PullForm
 from django.views.generic.base import RedirectView
 # Create your views here.
 class dashboard_login_view(LoginView):
@@ -183,5 +183,35 @@ def dashobard_swarm_view(request):
                 sys_swarm().update()
 
             return render_to_response(template_name, context)
+    else:
+        return redirect('/dashboard/login')
+
+@csrf_exempt
+def dashobard_images_view(request):
+    template_name = 'Dashboard/images.html'
+    con_image_list = []
+    for con in docker.from_env().containers.list(all=True):
+        con_image_list += con.image.tags
+    context = {
+        "images": docker.from_env().images.list(all=True),
+        "user_last_login": request.user.last_login,
+        "user": request.user.username,
+        "con_image_list": con_image_list,
+        "form":PullForm(),
+    }
+    if request.user.is_authenticated:
+        if request.method == "GET":
+            return render_to_response(template_name, context)
+        if request.method == "POST":
+            if 'remove' in request.POST:
+                image_tags = request.POST.getlist('image')
+                for image_tag in image_tags:
+                    sys().image.remove(image_tag)
+            if 'pull' in request.POST:
+                pull_form = PullForm(request.POST)
+                if pull_form.is_valid():
+                    sys().image.pull(pull_form.cleaned_data['pull_image'])
+                # sys().image.pull()
+        return redirect('/dashboard/index')
     else:
         return redirect('/dashboard/login')

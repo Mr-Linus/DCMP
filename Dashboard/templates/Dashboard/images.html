@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="{% static "Dashboard/img/favicon.ico" %}" type="image/x-icon">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title></title>
+	<title>DCMP.</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -55,7 +55,7 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li class="active">
+                <li >
                     <a href="/dashboard/containers">
                         <i class="ti-server"></i>
                         <p>Containers</p>
@@ -73,7 +73,7 @@
                         <p>Swarm</p>
                     </a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="/dashboard/images">
                         <i class="ti-paint-roller"></i>
                         <p>Images</p>
@@ -107,7 +107,7 @@
                         <span class="icon-bar bar2"></span>
                         <span class="icon-bar bar3"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Dashboard</a>
+                    <a class="navbar-brand" href="#">Images</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -168,8 +168,8 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Container list</h4>
-                                <p class="category">Containers</p>
+                                <h4 class="title">Image list</h4>
+                                <p class="category">Images</p>
                             </div>
                             <div class="content table-responsive table-full-width">
                               <form  method="POST" action="">
@@ -180,40 +180,37 @@
                                             <input type="checkbox" onclick="swapCheck()" />&nbsp;Select All</th>
                                         <th>ID</th>
                                     	<th>Name</th>
-                                    	<th>Image</th>
-                                    	<th>Status</th>
+                                        <th>Status</th>
+                                        <th>Created</th>
                                     </thead>
-                                    {% for con in con_list %}
+                                    {% for image in images %}
                                         <tr>
                                             <td>
-                                                    <input type="checkbox"  value="{{ con.name }}" name="con_name" />
+                                                    <input type="checkbox"  value="{{ image.tags.0 }}" name="image" />
                                             </td>
-                                        	<td>{{ con.short_id }}</td>
-                                        	<td>{{ con.name }}</td>
-                                        	<td>{% for images in  con.image.tags %}{{ images }}{% endfor %}</td>
-                                        	<td>
-                                                            {% if con.status == 'exited' %}
-                                                                <div class="alert alert-warning col-xs-3 text-center">
-                                                            {% elif con.status == 'stopped' %}
-                                                              <div class="alert alert-danger col-xs-3 text-center">
-                                                            {% else %}
-                                                                <div class="alert alert-success col-xs-4 text-center center">
-                                                            {% endif %}
-                                                        <b>{{ con.status }} </b>
-                                                    </div>
-                                            </td>
+                                        	<td>{{ image.short_id }}</td>
+                                            <td>{% for tag in image.tags %}{{ tag }}</td>
+                                                 <td>{% if tag in con_image_list %}
+                                                        <div class="alert alert-success col-xs-6 text-center center">
+                                                            Using
+                                                        </div>
+                                                {% else %}
+                                                        <div class="alert alert-danger col-xs-6 text-center center">
+                                                            Unused
+                                                        </div>
+                                                {% endif %}
+                                                </td>
+                                                {% endfor %}
+                                            <td>{{ image.attrs.Created }}</td>
                                         </tr>
                                     {% empty %}
                                         <div class="row center text-center">
-                                            <tr><td>There is no container in the Node.</td><td>Null</td><td>Null</td><td>Null</td><td>Null</td></tr>
+                                            <tr><td>There is no image in the Node.</td><td>Null</td><td>Null</td><td>Null</td><td>Null</td></tr>
                                         </div>
                                     {% endfor %}
                                     </tbody>
                                 </table>
                                 <div class="text-center">
-                                        <button type="submit" class="btn btn-info btn-fill btn-info"  name="start">Start</button>
-                                        <button type="submit" class="btn btn-info btn-fill btn-danger" name="stop">Stop</button>
-                                        <button type="submit" class="btn btn-info btn-fill btn-danger" name="restart">Restart</button>
                                         <button type="submit" class="btn btn-info btn-fill btn-danger" name="remove">Remove</button>
                                 </div>
                                 </form>
@@ -239,6 +236,28 @@
 
                     </div>
                 </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                  <div class="header">
+                                        <h4 class="title">Pull image</h4>
+                                        <p class="category">Options</p>
+                                  </div>
+                                 <div class="content  table-responsive table-full-width">
+                                     <div class="container">
+                                    {% load bootstrap3 %}
+                                    <form method="post">
+                                    {% csrf_token %}
+                                    {% bootstrap_form form %}
+                                            <div class="text-center">
+                                                <button type="submit" class="btn btn-info btn-fill btn-success" name="pull">Pull Image</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
 

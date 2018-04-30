@@ -7,6 +7,7 @@ class sys:
     con_ver = client.version()['Components'][0]['Version']
     con_arch = client.version()['Components'][0]['Details']['Arch']
     con_os = client.version()['Components'][0]['Details']['Os']
+    image = client.images
     con_run_num = client.info()['ContainersRunning']
     con_stop_num  = client.info()['ContainersStopped']
     con_pause_num = client.info()['ContainersPaused']
@@ -79,3 +80,8 @@ class sys_swarm:
         self.client.swarm.update()
     def reload(self):
         self.client.swarm.reload()
+
+
+
+
+

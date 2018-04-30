@@ -10,4 +10,5 @@ class DeployForm(forms.Form):
     cmd = forms.CharField(max_length=100, label='Command',help_text="The command to run in the container.", required=False)
 
 
-
+class PullForm(forms.Form):
+    pull_image = forms.CharField(max_length=20, label="Image Name (e.g. ubuntu:14.04)",help_text="Note: if you don't specify the tag in the image name, latest will be used.",label_suffix="Image Name e.g. ubuntu:14.04")
