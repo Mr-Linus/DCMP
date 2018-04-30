@@ -42,9 +42,17 @@ Multiple mirroring, load balancing, high availability
 
 ![swarm](https://github.com/Mr-Linus/DCMP/blob/master/swarm.png)
 
-- Image Manage
+- Images Management
 
 ![images](https://github.com/Mr-Linus/DCMP/blob/master/images.png)
+
+- Volumes Management
+
+![volumes](https://github.com/Mr-Linus/DCMP/blob/master/volumes.png)
+
+- Networks Management
+![networks](https://github.com/Mr-Linus/DCMP/blob/master/networks.png)
+
 > The project is currently in the construction phase.
 
 
@@ -85,6 +93,8 @@ python manage.py runserver
 #### V2.5 Date :2018/4/30
 - Add Swarm Function
 - Add Image Function
+- Add Volume Function
+- Add Network Function
 - Fix some bugs
 #### V2.4 Date :2018/4/29
 - Add Deploy funtion
@@ -127,5 +137,5 @@ python manage.py runserver
 - [x]  Docker Deploy Function
 - [x]  Docker Image Management 
 - [ ]  User Management
-- [ ]  Docker Network Management
-- [ ]  Docker Volume Management
+- [x]  Docker Network Management
+- [x]  Docker Volume Management
