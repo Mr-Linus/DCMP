@@ -14,4 +14,6 @@ urlpatterns = [
     path('images/', views.dashobard_images_view),
     path('volumes/', views.dashboard_volume_view),
     path('networks/', views.dashboard_network_view),
+    path('events/', views.dashboard_events_view.as_view()),
+    path('settings/', views.dashboard_settings_view),
 ]

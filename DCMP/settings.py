@@ -124,9 +124,15 @@ USE_TZ = True
 STATIC_URL = '/static/'
 LOGIN_URL = '/dashboard/login/'
 LOGIN_REDIRECT_URL = '/dashboard/index/'
+
+# E-mail information
 EMAIL_HOST = 'mail.gmx.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER	= 'mrfunky@gmx.com'
 EMAIL_HOST_PASSWORD	= 'qweasd123'
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'DCMP <mrfunky@gmx.com>'
+
+#User Settings
+
+AUTH_USER_MODEL= 'Dashboard.User'

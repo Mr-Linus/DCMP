@@ -3,13 +3,13 @@ from django.views.decorators.csrf import csrf_exempt
 #from django.contrib.auth import	authenticate,	login,	logout
 #from django.contrib import messages
 #from django.contrib.auth.decorators	import login_required
-from .sys import sys,sys_swarm
+from Dashboard.sys import sys,sys_swarm
 from django.contrib.auth.views import LoginView,LogoutView
 from django.views.generic.base import TemplateView
 import docker
-from time import sleep
-from  . form import DeployForm, PullForm, CreateVolumeForm,CreateNetworkForm
+from  Dashboard.form import DeployForm, PullForm, CreateVolumeForm,CreateNetworkForm
 # from django.views.generic.base import RedirectView
+import datetime
 # Create your views here.
 class dashboard_login_view(LoginView):
     template_name = 'Dashboard/login.html'
@@ -57,7 +57,6 @@ class dashboard_logout_view(LogoutView):
 
 class dashboard_index_view(TemplateView):
     template_name = 'Dashboard/index.html'
-
     def get_context_data(self, **kwargs,):
         context = super().get_context_data(**kwargs)
         context['sysinfo'] = sys()
@@ -69,7 +68,7 @@ class dashboard_index_view(TemplateView):
         context['con_num'] = len(docker.from_env().containers.list(all=True))
         return context
     def get(self, request, *args, **kwargs):
-        if request.user.is_authenticated:
+        if request.user.is_authenticated and request.user.dashboard_permission:
             context = self.get_context_data(**kwargs)
             return self.render_to_response(context)
         else:
@@ -79,7 +78,7 @@ class dashboard_index_view(TemplateView):
 @csrf_exempt
 def dashobard_containers_view(request):
     template_name = 'Dashboard/containers.html'
-    if request.user.is_authenticated:
+    if request.user.is_authenticated and request.user.containers_permission:
         if request.method == "POST":
             con_name = request.POST.getlist("con_name")
             if 'start' in request.POST:
@@ -99,7 +98,6 @@ def dashobard_containers_view(request):
                 "user_last_login": request.user.last_login,
                 "user": request.user.username,
             }
-            sleep(3)
             return render_to_response(template_name,context)
         if request.method == "GET":
             context = {
@@ -144,7 +142,7 @@ def dashobard_containers_view(request):
 @csrf_exempt
 def dashboard_deploy_view(request):
     template_name = 'Dashboard/deploy.html'
-    if request.user.is_authenticated:
+    if request.user.is_authenticated and request.user.containers_permission:
         if request.method == "POST":
             form = DeployForm(request.POST)
             if form.is_valid():
@@ -173,7 +171,7 @@ def dashobard_swarm_view(request):
         "user_last_login": request.user.last_login,
         "user": request.user.username,
     }
-    if request.user.is_authenticated:
+    if request.user.is_authenticated and request.user.swarm_permission:
         if request.method == "GET":
             return render_to_response(template_name, context)
         if request.method == "POST":
@@ -199,7 +197,7 @@ def dashobard_images_view(request):
         "con_image_list": con_image_list,
         "form":PullForm(),
     }
-    if request.user.is_authenticated:
+    if request.user.is_authenticated and request.user.images_permission:
         if request.method == "GET":
             return render_to_response(template_name, context)
         if request.method == "POST":
@@ -224,7 +222,7 @@ def dashboard_volume_view(request):
         "volumes": sys().client.volumes.list(),
         "form": CreateVolumeForm(),
     }
-    if request.user.is_authenticated:
+    if request.user.is_authenticated and request.user.volumes_permission:
         if request.method == "GET":
             return render_to_response(template_name, context)
         if request.method == "POST":
@@ -243,6 +241,7 @@ def dashboard_volume_view(request):
     else:
         return redirect('/dashboard/login')
 
+
 @csrf_exempt
 def dashboard_network_view(request):
     template_name = 'Dashboard/networks.html'
@@ -252,7 +251,7 @@ def dashboard_network_view(request):
         "form": CreateNetworkForm(),
         "networks": docker.from_env().networks.list()
     }
-    if request.user.is_authenticated:
+    if request.user.is_authenticated & request.user.networks_permission:
         if request.method == "GET":
             return render_to_response(template_name, context)
         if request.method == "POST":
@@ -260,6 +259,64 @@ def dashboard_network_view(request):
                 network_ids = request.POST.getlist('network_id')
                 for network_id in network_ids:
                     sys().client.networks.get(network_id).remove()
+            if 'create' in request.POST:
+                create_form = CreateNetworkForm(request.POST)
+                if create_form.is_valid():
+                    sys.client.networks.create(
+                        name=create_form.cleaned_data['name'],
+                        driver=create_form.cleaned_data['driver']
+                    )
+        return redirect('/dashboard/index')
+    else:
+        return redirect('/dashboard/login')
+
+
+class dashboard_events_view(TemplateView):
+    template_name = 'Dashboard/events.html'
+    permission_required = 'events_permission'
+    def get_events_list(self):
+        event_list=[]
+        count=0
+        for event in docker.from_env().events(decode=True,since=(datetime.datetime.now() - datetime.timedelta(days=5)),until=datetime.datetime.now()):
+            event_list.append(event)
+            count += 1
+            if count == 20:
+                break
+        return event_list
+    def get_context_data(self, **kwargs,):
+        context = super().get_context_data(**kwargs)
+        context['user_last_login'] = self.request.user.last_login
+        context['user'] = self.request.user.username
+        context['events_list'] = self.get_events_list()
+        return context
+    def get(self, request, *args, **kwargs):
+        if request.user.is_authenticated & request.user.events_permission:
+            context = self.get_context_data(**kwargs)
+            return self.render_to_response(context)
+        else:
+            return redirect('/dashboard/login')
+
+
+def dashboard_settings_view(request):
+    template_name = 'Dashboard/settings.html'
+    user_perm = request.user
+    if request.user.is_authenticated:
+        context = {
+            "user_last_login": request.user.last_login,
+            "user": request.user.username,
+            "user_info": user_perm,
+            "dashboard": user_perm.dashboard_permission,
+            "containers": user_perm.containers_permission,
+            "images": user_perm.images_permission,
+            "swarm": user_perm.swarm_permission,
+            "volumes": user_perm.volumes_permission,
+            "events": user_perm.events_permission,
+            "networks": user_perm.networks_permission,
+        }
+        if request.method == "GET":
+            print(request.user.has_perm('Dashboard.dashboard_permission'))
+            return render_to_response(template_name, context)
+        if request.method == "POST":
             if 'create' in request.POST:
                 create_form = CreateNetworkForm(request.POST)
                 if create_form.is_valid():

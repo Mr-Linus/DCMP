@@ -1,4 +1,4 @@
-import psutil ,datetime , docker
+import psutil ,datetime , docker,threading,time
 class sys:
 # Docker Information
     client = docker.from_env()
@@ -16,6 +16,7 @@ class sys:
     swarm_nodeid = client.info()['Swarm']['NodeID']
     swarm_addr = client.info()['Swarm']['NodeAddr']
     swarm_num = client.info()['Swarm']['Nodes']
+    events = client.events(decode=True, until=datetime.datetime.now())
 # Systen Information
     hostname = str(psutil.users()[0].name)
     nowtime = str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
@@ -82,6 +83,9 @@ class sys_swarm:
         self.client.swarm.reload()
 
 
-print(sys().client.networks.list()[0].attrs)
+
+
+
+
 
 
