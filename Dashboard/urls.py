@@ -16,4 +16,5 @@ urlpatterns = [
     path('networks/', views.dashboard_network_view),
     path('events/', views.dashboard_events_view.as_view()),
     path('settings/', views.dashboard_settings_view),
+    path('add_update_user/', views.dashboard_add_update_view),
 ]

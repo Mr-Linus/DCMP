@@ -1,108 +1,104 @@
 # DCMP System
 
-DCMP :whale2: :sweat_drops: is a Docker Container Management Platform using the django framework and python language and it is suitable for internal network deployment.
+DCMP :whale2: :sweat_drops: 是一个使用Python语言和Django框架搭建的Docker容器管理平台，适用于内网部署.
 
-Language:     English | [中文](https://github.com/Mr-Linus/DCMP/blob/master/readme_CN.md) 
+Language:     [English](https://github.com/Mr-Linus/DCMP/blob/master/README.md)  | 中文
 
-### Features ###
-- WEB MONITOR
+### 特点 ###
+- WEB 监控
 
+便捷、高效
 
-Concise, efficient, data visualization
+- 容器管理
 
-- Container MANAGEMENT
-
-
-
-Efficient, responsive, second-level deployment
-
-- ANALYSTICS
+快速响应、秒级部署
 
 
-Data visualization, dynamic updates
+- 数据可视化
 
-- DEPLOY SERVICES
+数据同步，动态更新
 
+- 服务管理
 
-Multiple mirroring, load balancing, high availability
+容器、镜像、网络、卷、消息
 
-### Overview
-- Promotion Page
+### 外观
+- 宣传页
 
 ![PromotionPage](https://github.com/Mr-Linus/DCMP/blob/master/Promotionpage.png)
 
-- Dashboard
+- 仪表盘
 
 ![DashboardPage](https://github.com/Mr-Linus/DCMP/blob/master/dashboard.png)
 
-- Containters Management
+- 容器管理
 
 ![Containers](https://github.com/Mr-Linus/DCMP/blob/master/containers.png)
 
-- Containters Deploy
+- 容器部署
 
 ![Deploy](https://github.com/Mr-Linus/DCMP/blob/master/deploy.png)
 
-- Swarm Monitor
+- Swarm 监控
 
 ![swarm](https://github.com/Mr-Linus/DCMP/blob/master/swarm.png)
 
-- Images Management
+- 镜像管理
 
 ![images](https://github.com/Mr-Linus/DCMP/blob/master/images.png)
 
-- Volumes Management
+- 卷管理
 
 ![volumes](https://github.com/Mr-Linus/DCMP/blob/master/volumes.png)
 
-- Networks Management
+- 网络管理
 
 ![networks](https://github.com/Mr-Linus/DCMP/blob/master/networks.png)
 
-- Events Monitor
+- 事件监控
 
 ![events](https://github.com/Mr-Linus/DCMP/blob/master/events.png)
 
-- User Management
+- 用户管理
 
 ![user](https://github.com/Mr-Linus/DCMP/blob/master/user.png)
 
-### Development Test Environment
+### 开发测试环境
 - Python 3.6 (Recommend)
 - Django 2.0 (Necessary)
 
-### Third party plugins (Necessary)
+### 第三方软件包
 - django-bootstrap3
 - psutil
 - docker-py
 
-Install plugins:
+安装:
 ```shell
 pip install django-bootstrap3
 pip install psutil
 pip install docker
 ```
 
-### Usage
-- Refresh & Synchronize the database(Step 1):
+### 用法
+- 更新同步数据库(Step 1):
 ```shell 
 python manage.py makemigrations
 python manage.py migrate
 ```
 
-- Create Superuser(Step 2): 
+- 创建超级用户(Step 2): 
 ```shell
 python manage.py createsuperuser
 ```
-> Superuser has the ability to create user.
+> 超级用户具有创建用户功能
 
 
-- Run the website(Step 3):
+- 运行(Step 3):
 ```shell
 python manage.py runserver
 ```
 
-### Update Logs
+### 更新日志
 
 #### V2.6(Beta) Date :2018/5/2 
 - Add User ManageMent Function(Rewrite to User Management)
@@ -139,7 +135,7 @@ python manage.py runserver
 - Finish Saving Contacts
 - Finish Interactive management terminal
 
-### Schedule(Finished)
+### 进度(Finished)
 - [x]  Promotional page
 - [x]  Sending email
 - [x]  Saving Contacts
@@ -157,6 +153,6 @@ python manage.py runserver
 - [x]  Docker Network Management
 - [x]  Docker Volume Management
 
-### Follow-up function
+### 后期功能
 - [ ] i18N Internationalization 
 - [ ] Container Status Details

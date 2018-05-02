@@ -21,11 +21,25 @@ class DashboardUserManager(UserManager):
         return self._create_user(username, email, password, **extra_fields)
 
 class User(AbstractUser):
-    dashboard_permission = models.BooleanField(default=True, verbose_name="Dashboard Permission")
-    containers_permission = models.BooleanField(default=False, verbose_name="Containers Permission")
-    images_permission = models.BooleanField(default=False, verbose_name="Images Permission")
-    networks_permission = models.BooleanField(default=False, verbose_name="Networks Permission")
-    volumes_permission = models.BooleanField(default=False, verbose_name="Volumes Permission")
-    swarm_permission = models.BooleanField(default=False, verbose_name="Swarm Permission")
-    events_permission = models.BooleanField(default=False, verbose_name="Events Permission")
+    dashboard_permission = models.BooleanField(default=True,
+                                               verbose_name="Dashboard Permission"
+                                               )
+    containers_permission = models.BooleanField(default=False,
+                                                verbose_name="Containers Permission"
+                                                )
+    images_permission = models.BooleanField(default=False,
+                                            verbose_name="Images Permission"
+                                            )
+    networks_permission = models.BooleanField(default=False,
+                                              verbose_name="Networks Permission"
+                                              )
+    volumes_permission = models.BooleanField(default=False,
+                                             verbose_name="Volumes Permission"
+                                             )
+    swarm_permission = models.BooleanField(default=False,
+                                           verbose_name="Swarm Permission"
+                                           )
+    events_permission = models.BooleanField(default=False,
+                                            verbose_name="Events Permission"
+                                            )
     objects = DashboardUserManager()

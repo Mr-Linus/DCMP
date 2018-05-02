@@ -6,10 +6,12 @@ from django.views.decorators.csrf import csrf_exempt
 from Dashboard.sys import sys,sys_swarm
 from django.contrib.auth.views import LoginView,LogoutView
 from django.views.generic.base import TemplateView
+from django.contrib.auth import logout
 import docker
-from  Dashboard.form import DeployForm, PullForm, CreateVolumeForm,CreateNetworkForm
+from  Dashboard.form import DeployForm, PullForm, CreateVolumeForm,CreateNetworkForm, ChangePasswordForm,UserCreationForm
 # from django.views.generic.base import RedirectView
 import datetime
+from Dashboard.models import User
 # Create your views here.
 class dashboard_login_view(LoginView):
     template_name = 'Dashboard/login.html'
@@ -155,7 +157,6 @@ def dashboard_deploy_view(request):
                     working_dir=form.cleaned_data['work_dir'],
                     name=form.cleaned_data['name']
                 )
-                print('ok')
                 return redirect('/dashboard/containers')
         if request.method == "GET":
             form = DeployForm()
@@ -296,7 +297,7 @@ class dashboard_events_view(TemplateView):
         else:
             return redirect('/dashboard/login')
 
-
+@csrf_exempt
 def dashboard_settings_view(request):
     template_name = 'Dashboard/settings.html'
     user_perm = request.user
@@ -312,18 +313,43 @@ def dashboard_settings_view(request):
             "volumes": user_perm.volumes_permission,
             "events": user_perm.events_permission,
             "networks": user_perm.networks_permission,
+            "chpasswd_form": ChangePasswordForm(),
         }
         if request.method == "GET":
-            print(request.user.has_perm('Dashboard.dashboard_permission'))
             return render_to_response(template_name, context)
         if request.method == "POST":
-            if 'create' in request.POST:
-                create_form = CreateNetworkForm(request.POST)
-                if create_form.is_valid():
-                    sys.client.networks.create(
-                        name=create_form.cleaned_data['name'],
-                        driver=create_form.cleaned_data['driver']
-                    )
+            if 'change' in request.POST:
+                password_form = ChangePasswordForm(request.POST)
+                if password_form.is_valid():
+                    if password_form.cleaned_data['confirm'] == password_form.cleaned_data['password']:
+                        request.user.set_password(
+                            password_form.cleaned_data['password'],
+                        )
+                        request.user.save()
+                        # logout(request)
+                        redirect('/dashboard/login')
         return redirect('/dashboard/index')
     else:
         return redirect('/dashboard/login')
+
+
+@csrf_exempt
+def dashboard_add_update_view(request):
+    template_name = 'Dashboard/add_update.html'
+    if request.user.is_authenticated and request.user.is_superuser:
+        context = {
+            "user_last_login": request.user.last_login,
+            "user": request.user.username,
+            "add_update_form": UserCreationForm(),
+        }
+        if request.method == "GET":
+            return render_to_response(template_name, context)
+        if request.method == "POST":
+                add_update_form = UserCreationForm(request.POST)
+                if add_update_form.is_valid():
+                       if add_update_form.confirm_password():
+                            add_update_form.save(commit=True)
+        return redirect('/dashboard/index')
+    else:
+        return redirect('/dashboard/login')
+

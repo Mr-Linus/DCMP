@@ -1,5 +1,5 @@
 from django import forms
-
+from Dashboard.models import User
 class DeployForm(forms.Form):
     name = forms.CharField(max_length=100,
                            label='Contianer Name',
@@ -74,3 +74,60 @@ class CreateNetworkForm(forms.Form):
         help_text='Driver configuration',
         required=False
     )
+
+class ChangePasswordForm(forms.Form):
+    password = forms.CharField(label="Password",max_length=20, widget=forms.PasswordInput)
+    confirm = forms.CharField(label="Confirm Password",max_length=20, widget=forms.PasswordInput)
+
+
+class UserCreationForm(forms.ModelForm):
+    password = forms.CharField(label='Password',
+                               widget=forms.PasswordInput
+                               )
+    confirm = forms.CharField(
+        label='Password confirmation',
+        widget=forms.PasswordInput,
+    )
+
+    def confirm_password(self):
+        password = self.cleaned_data.get("password")
+        confirm = self.cleaned_data.get("confirm")
+        if password and confirm and password != confirm:
+            raise forms.ValidationError("Passwords don't match")
+        return password
+
+    def save(self, commit=True):
+        user = super(UserCreationForm, self).save(commit=False)
+        user.set_password(self.confirm_password())
+        if commit:
+            user.save()
+        return user
+
+    class Meta:
+        model = User
+        fields = ['username',
+                  'first_name',
+                  'last_name',
+                  'email',
+                  'is_superuser',
+                  'dashboard_permission',
+                  'containers_permission',
+                  'images_permission',
+                  'networks_permission',
+                  'volumes_permission',
+                  'swarm_permission',
+                  'events_permission'
+                  ]
+        labels = { 'username': 'Name', 'email': 'E-mail', }
+        help_texts = {
+            'email':'Please ensure the E-mail is available.',
+        }
+        error_messages= {
+            'name':{
+                'max_length': "The name is too long",
+            },
+        }
+
+            
+
+
