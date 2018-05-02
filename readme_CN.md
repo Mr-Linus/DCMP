@@ -27,6 +27,10 @@ Language:     [English](https://github.com/Mr-Linus/DCMP/blob/master/README.md) 
 
 ![PromotionPage](https://github.com/Mr-Linus/DCMP/blob/master/Promotionpage.png)
 
+- 登陆
+
+![Login](https://github.com/Mr-Linus/DCMP/blob/master/login.png)
+
 - 仪表盘
 
 ![DashboardPage](https://github.com/Mr-Linus/DCMP/blob/master/dashboard.png)

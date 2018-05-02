@@ -31,6 +31,10 @@ Multiple mirroring, load balancing, high availability
 
 ![PromotionPage](https://github.com/Mr-Linus/DCMP/blob/master/Promotionpage.png)
 
+- Login Page
+
+![Login](https://github.com/Mr-Linus/DCMP/blob/master/login.png)
+
 - Dashboard
 
 ![DashboardPage](https://github.com/Mr-Linus/DCMP/blob/master/dashboard.png)
