@@ -88,6 +88,11 @@ pip install docker
 ```
 
 ### Usage
+- Run Swarm for docker(pre step):
+```shell
+docker swarm init
+```
+
 - Refresh & Synchronize the database(Step 1):
 ```shell 
 python manage.py makemigrations

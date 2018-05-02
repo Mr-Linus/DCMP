@@ -84,6 +84,11 @@ pip install docker
 ```
 
 ### 用法
+- 运行docker-Swarm(pre step):
+```shell
+docker swarm init
+```
+
 - 更新同步数据库(Step 1):
 ```shell 
 python manage.py makemigrations
