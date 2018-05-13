@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="90c048e5-c101-4b2b-bd63-7cdb919e1a11" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme_CN.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme_CN.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard/templates/Dashboard/containers.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/templates/Dashboard/containers.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,11 +31,20 @@
           <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Dashboard/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="443">
-                  <caret line="341" column="3" selection-start-line="341" selection-start-column="3" selection-end-line="341" selection-end-column="3" />
+                <state relative-caret-position="800">
+                  <caret line="349" column="61" selection-start-line="349" selection-start-column="61" selection-end-line="349" selection-end-column="61" />
                   <folding>
                     <element signature="e#0#57#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="containers.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/containers.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="475">
+                  <caret line="25" selection-start-line="25" selection-end-line="25" />
                 </state>
               </provider>
             </entry>
@@ -60,8 +68,8 @@
           <file leaf-file-name="form.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Dashboard/form.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="464">
-                  <caret line="95" column="64" selection-start-line="95" selection-start-column="64" selection-end-line="95" selection-end-column="64" />
+                <state relative-caret-position="285">
+                  <caret line="103" column="19" selection-start-line="103" selection-start-column="19" selection-end-line="103" selection-end-column="19" />
                   <folding>
                     <element signature="e#0#24#0" expanded="true" />
                   </folding>
@@ -101,11 +109,7 @@
         <option value="$PROJECT_DIR$/Dashboard/sys.py" />
         <option value="$PROJECT_DIR$/DCMP/settings.py" />
         <option value="$PROJECT_DIR$/Dashboard/admin.py" />
-        <option value="$PROJECT_DIR$/Dashboard/templates/Dashboard/containers.html" />
         <option value="$PROJECT_DIR$/Dashboard/templates/Dashboard/deploy.html" />
-        <option value="$PROJECT_DIR$/Dashboard/templates/Dashboard/events.html" />
-        <option value="$PROJECT_DIR$/Dashboard/templates/Dashboard/images.html" />
-        <option value="$PROJECT_DIR$/Dashboard/templates/Dashboard/index.html" />
         <option value="$PROJECT_DIR$/Dashboard/templates/Dashboard/networks.html" />
         <option value="$PROJECT_DIR$/Dashboard/templates/Dashboard/swarm.html" />
         <option value="$PROJECT_DIR$/Dashboard/templates/Dashboard/volumes.html" />
@@ -116,6 +120,10 @@
         <option value="$PROJECT_DIR$/Dashboard/views.py" />
         <option value="$PROJECT_DIR$/Dashboard/models.py" />
         <option value="$PROJECT_DIR$/Dashboard/form.py" />
+        <option value="$PROJECT_DIR$/Dashboard/templates/Dashboard/index.html" />
+        <option value="$PROJECT_DIR$/Dashboard/templates/Dashboard/images.html" />
+        <option value="$PROJECT_DIR$/Dashboard/templates/Dashboard/events.html" />
+        <option value="$PROJECT_DIR$/Dashboard/templates/Dashboard/containers.html" />
       </list>
     </option>
   </component>
@@ -139,7 +147,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -193,11 +200,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/DjangoBlog-master/DjangoBlog-master" />
     <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.selected.package.stylelint" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -361,6 +369,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="38" width="1936" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32919955" />
       <window_info anchor="bottom" id="调试" order="14" />
@@ -370,7 +379,7 @@
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.32919955" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.37767756" />
       <window_info anchor="bottom" id="运行" order="7" sideWeight="0.49947917" weight="0.3449831" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4984127" visible="true" weight="0.15831557" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4984127" visible="true" weight="0.16471216" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -392,24 +401,24 @@
       <window_info anchor="bottom" id="找到" order="15" weight="0.32967034" />
       <window_info active="true" anchor="bottom" id="运行" order="7" sideWeight="0.49947917" visible="true" weight="0.3449831" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="调试" order="14" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4984127" visible="true" weight="0.11353944" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Python Console" order="13" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.37880495" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5005208" side_tool="true" weight="0.33736265" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="bottom" id="调试" order="14" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info active="true" anchor="bottom" id="Concurrent Activities Diagram" order="16" visible="true" weight="0.32967034" />
@@ -739,27 +748,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/events.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2926">
-          <caret line="154" column="39" lean-forward="true" selection-start-line="154" selection-start-column="39" selection-end-line="154" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/images.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="148" column="38" lean-forward="true" selection-start-line="148" selection-start-column="38" selection-end-line="148" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="152" column="68" selection-start-line="152" selection-start-column="68" selection-end-line="152" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/networks.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -771,13 +759,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="151" column="39" lean-forward="true" selection-start-line="151" selection-start-column="39" selection-end-line="151" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/containers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="150" column="68" selection-start-line="150" selection-start-column="68" selection-end-line="150" selection-end-column="68" />
         </state>
       </provider>
     </entry>
@@ -855,9 +836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1653">
           <caret line="15" column="59" lean-forward="true" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -878,20 +856,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/images.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/events.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Dashboard/form.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="95" column="64" selection-start-line="95" selection-start-column="64" selection-end-line="95" selection-end-column="64" />
+        <state relative-caret-position="285">
+          <caret line="103" column="19" selection-start-line="103" selection-start-column="19" selection-end-line="103" selection-end-column="19" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/containers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Dashboard/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="341" column="3" selection-start-line="341" selection-start-column="3" selection-end-line="341" selection-end-column="3" />
+        <state relative-caret-position="800">
+          <caret line="349" column="61" selection-start-line="349" selection-start-column="61" selection-end-line="349" selection-end-column="61" />
           <folding>
             <element signature="e#0#57#0" expanded="true" />
           </folding>
