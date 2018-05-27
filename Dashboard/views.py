@@ -4,7 +4,7 @@ from django.views.decorators.csrf import csrf_exempt
 #from django.contrib import messages
 #from django.contrib.auth.decorators	import login_required
 from Dashboard.sys import sys,sys_swarm
-from django.contrib.auth.views import LoginView,LogoutView
+from django.contrib.auth.views import LoginView, LogoutView
 from django.views.generic.base import TemplateView
 from django.contrib.auth import logout
 import docker

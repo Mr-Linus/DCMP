@@ -2,7 +2,7 @@
 
 DCMP :whale2: :sweat_drops: is a Docker Container Management Platform using the django framework and python language and it is suitable for internal network deployment.
 
-Language:     English | [中文](https://github.com/Mr-Linus/DCMP/blob/master/readme_CN.md) 
+Language:     English | [中文](https://gitee.com/Mr-Linus/DCMP/blob/master/readme_CN.md) 
 
 ### Features ###
 - WEB MONITOR
@@ -29,47 +29,47 @@ Multiple mirroring, load balancing, high availability
 ### Overview
 - Promotion Page
 
-![PromotionPage](https://github.com/Mr-Linus/DCMP/blob/master/Promotionpage.png)
+![PromotionPage](https://gitee.com/Mr-Linus/DCMP/blob/master/Promotionpage.png)
 
 - Login Page
 
-![Login](https://github.com/Mr-Linus/DCMP/blob/master/login.png)
+![Login](https://gitee.com/Mr-Linus/DCMP/blob/master/login.png)
 
 - Dashboard
 
-![DashboardPage](https://github.com/Mr-Linus/DCMP/blob/master/dashboard.png)
+![DashboardPage](https://gitee.com/Mr-Linus/DCMP/blob/master/dashboard.png)
 
 - Containters Management
 
-![Containers](https://github.com/Mr-Linus/DCMP/blob/master/containers.png)
+![Containers](https://gitee.com/Mr-Linus/DCMP/blob/master/containers.png)
 
 - Containters Deploy
 
-![Deploy](https://github.com/Mr-Linus/DCMP/blob/master/deploy.png)
+![Deploy](https://gitee.com/Mr-Linus/DCMP/blob/master/deploy.png)
 
 - Swarm Monitor
 
-![swarm](https://github.com/Mr-Linus/DCMP/blob/master/swarm.png)
+![swarm](https://gitee.com/Mr-Linus/DCMP/blob/master/swarm.png)
 
 - Images Management
 
-![images](https://github.com/Mr-Linus/DCMP/blob/master/images.png)
+![images](https://gitee.com/Mr-Linus/DCMP/blob/master/images.png)
 
 - Volumes Management
 
-![volumes](https://github.com/Mr-Linus/DCMP/blob/master/volumes.png)
+![volumes](https://gitee.com/Mr-Linus/DCMP/blob/master/volumes.png)
 
 - Networks Management
 
-![networks](https://github.com/Mr-Linus/DCMP/blob/master/networks.png)
+![networks](https://gitee.com/Mr-Linus/DCMP/blob/master/networks.png)
 
 - Events Monitor
 
-![events](https://github.com/Mr-Linus/DCMP/blob/master/events.png)
+![events](https://gitee.com/Mr-Linus/DCMP/blob/master/events.png)
 
 - User Management
 
-![user](https://github.com/Mr-Linus/DCMP/blob/master/user.png)
+![user](https://gitee.com/Mr-Linus/DCMP/blob/master/user.png)
 
 ### Development Test Environment
 - Python 3.6 (Recommend)

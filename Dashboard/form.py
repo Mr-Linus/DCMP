@@ -42,7 +42,7 @@ class PullForm(forms.Form):
         max_length=20,
         label="Image Name (e.g. ubuntu:14.04)",
         help_text="Note: if you don't specify the tag in the image name, latest will be used.",
-        label_suffix="Image Name e.g. ubuntu:14.04"，
+        label_suffix="Image Name e.g. ubuntu:14.04",
 		required=True
     )
 

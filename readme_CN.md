@@ -2,7 +2,7 @@
 
 DCMP :whale2: :sweat_drops: 是一个使用Python语言和Django框架搭建的Docker容器管理平台，适用于内网部署.
 
-Language:     [English](https://github.com/Mr-Linus/DCMP/blob/master/README.md)  | 中文
+Language:     [English](https://gitee.com/Mr-Linus/DCMP/blob/master/README.md)  | 中文
 
 ### 特点 ###
 - WEB 监控
@@ -25,47 +25,47 @@ Language:     [English](https://github.com/Mr-Linus/DCMP/blob/master/README.md) 
 ### 外观
 - 宣传页
 
-![PromotionPage](https://github.com/Mr-Linus/DCMP/blob/master/Promotionpage.png)
+![PromotionPage](https://gitee.com/Mr-Linus/DCMP/blob/master/Promotionpage.png)
 
 - 登陆
 
-![Login](https://github.com/Mr-Linus/DCMP/blob/master/login.png)
+![Login](https://gitee.com/Mr-Linus/DCMP/blob/master/login.png)
 
 - 仪表盘
 
-![DashboardPage](https://github.com/Mr-Linus/DCMP/blob/master/dashboard.png)
+![DashboardPage](https://gitee.com/Mr-Linus/DCMP/blob/master/dashboard.png)
 
 - 容器管理
 
-![Containers](https://github.com/Mr-Linus/DCMP/blob/master/containers.png)
+![Containers](https://gitee.com/Mr-Linus/DCMP/blob/master/containers.png)
 
 - 容器部署
 
-![Deploy](https://github.com/Mr-Linus/DCMP/blob/master/deploy.png)
+![Deploy](https://gitee.com/Mr-Linus/DCMP/blob/master/deploy.png)
 
 - Swarm 监控
 
-![swarm](https://github.com/Mr-Linus/DCMP/blob/master/swarm.png)
+![swarm](https://gitee.com/Mr-Linus/DCMP/blob/master/swarm.png)
 
 - 镜像管理
 
-![images](https://github.com/Mr-Linus/DCMP/blob/master/images.png)
+![images](https://gitee.com/Mr-Linus/DCMP/blob/master/images.png)
 
 - 卷管理
 
-![volumes](https://github.com/Mr-Linus/DCMP/blob/master/volumes.png)
+![volumes](https://gitee.com/Mr-Linus/DCMP/blob/master/volumes.png)
 
 - 网络管理
 
-![networks](https://github.com/Mr-Linus/DCMP/blob/master/networks.png)
+![networks](https://gitee.com/Mr-Linus/DCMP/blob/master/networks.png)
 
 - 事件监控
 
-![events](https://github.com/Mr-Linus/DCMP/blob/master/events.png)
+![events](https://gitee.com/Mr-Linus/DCMP/blob/master/events.png)
 
 - 用户管理
 
-![user](https://github.com/Mr-Linus/DCMP/blob/master/user.png)
+![user](https://gitee.com/Mr-Linus/DCMP/blob/master/user.png)
 
 ### 开发测试环境
 - Python 3.6 (Recommend)
