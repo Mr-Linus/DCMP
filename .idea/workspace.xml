@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="90c048e5-c101-4b2b-bd63-7cdb919e1a11" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/Dashboard/sys.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/sys.py" afterDir="false" />
-    </list>
+    <list default="true" id="90c048e5-c101-4b2b-bd63-7cdb919e1a11" name="默认的" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -347,7 +345,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="38" width="1936" height="1050" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32919955" />
       <window_info anchor="bottom" id="调试" order="14" />
@@ -355,8 +352,8 @@
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.32919955" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.37767756" />
-      <window_info active="true" anchor="bottom" id="运行" order="7" sideWeight="0.49947917" visible="true" weight="0.34385568" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.37767756" />
+      <window_info anchor="bottom" id="运行" order="7" sideWeight="0.49947917" weight="0.34385568" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4984127" visible="true" weight="0.21321961" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
