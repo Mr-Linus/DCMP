@@ -4,11 +4,17 @@ class sys:
     client = docker.from_env()
     con = client.containers.list(all=True)
     con_num = len(client.containers.list(all=True))
+    con_Components = client.version()['Components'][0]
+    con_ver = con_Components['Version']
+    con_arch = con_Components['Details']['Arch']
+    con_os = con_Components['Details']['Os']
     image = client.images
     con_run_num = client.info()['ContainersRunning']
     con_stop_num  = client.info()['ContainersStopped']
     con_pause_num = client.info()['ContainersPaused']
-    con_mirrors = client.info()['RegistryConfig']['IndexConfigs']['docker.io']['Mirrors'][0]
+    IndexConfigs = client.info()['RegistryConfig']['IndexConfigs']
+    io = IndexConfigs['docker.io']['Mirrors']
+    con_mirrors = io[0]
     swarm_stat =  client.info()['Swarm']['LocalNodeState']
     swarm_nodeid = client.info()['Swarm']['NodeID']
     swarm_addr = client.info()['Swarm']['NodeAddr']
