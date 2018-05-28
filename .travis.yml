@@ -4,13 +4,16 @@ python:
   - "3.6.5"
 os:
   - linux
-services:
-  - docker
 before_install:
   - docker swarm init
-env:
-  - DJANGO_VERSION=2.0.5
 install: 
   - pip install -r requirements.txt
+  - sudo apt-get update
+  - sudo apt-get install -y curl software-properties-common apt-transport-https ca-certificates
+  - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu trusty stable"
+  - sudo apt-get update
+  - sudo apt-get install -y docker-ce
 script: 
+  - service docker start
   - python manage.py test
