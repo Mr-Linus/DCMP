@@ -4,6 +4,8 @@ python:
   - "3.6"
 services:
   - docker
+before_install:
+ - docker swarm init
 env:
   - DJANGO_VERSION=2.0.5
 install: 
