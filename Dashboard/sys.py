@@ -4,9 +4,6 @@ class sys:
     client = docker.from_env()
     con = client.containers.list(all=True)
     con_num = len(client.containers.list(all=True))
-    con_ver = client.version()['Components'][0]['Version']
-    con_arch = client.version()['Components'][0]['Details']['Arch']
-    con_os = client.version()['Components'][0]['Details']['Os']
     image = client.images
     con_run_num = client.info()['ContainersRunning']
     con_stop_num  = client.info()['ContainersStopped']
