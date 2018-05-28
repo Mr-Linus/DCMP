@@ -11,4 +11,4 @@ before_install:
 install: 
   - pip install -r requirements.txt
 script: 
-  - python manage.py test Promotion
+  - python test.py  
