@@ -2,7 +2,7 @@
 
 DCMP :whale2: :sweat_drops: is a Docker Container Management Platform using the django framework and python language and it is suitable for internal network deployment.
 
-![build](https://travis-ci.org/Mr-Linus/DCMP.svg?branch=master)
+![build](https://travis-ci.org/Mr-Linus/DCMP.svg?branch=master) ![len](https://github.com/mr-linus/DCMP/blob/master/LICENSE)
 
 Language:     English | [中文](https://github.com/Mr-Linus/DCMP/blob/master/readme_CN.md) 
 
