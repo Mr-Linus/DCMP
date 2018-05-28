@@ -2,7 +2,7 @@
 
 DCMP :whale2: :sweat_drops: 是一个使用Python语言和Django框架搭建的Docker容器管理平台，适用于内网部署.
 
-Language:     [English](https://gitee.com/Mr-Linus/DCMP/blob/master/README.md)  | 中文
+Language:     [English](https://github.com/Mr-Linus/DCMP/blob/master/README.md)  | 中文
 
 ### 特点 ###
 - WEB 监控
@@ -25,47 +25,47 @@ Language:     [English](https://gitee.com/Mr-Linus/DCMP/blob/master/README.md)  
 ### 外观
 - 宣传页
 
-![PromotionPage](https://gitee.com/Mr-Linus/DCMP/blob/master/Promotionpage.png)
+![PromotionPage](https://github.com/Mr-Linus/DCMP/blob/master/img/Promotionpage.png)
 
 - 登陆
 
-![Login](https://gitee.com/Mr-Linus/DCMP/blob/master/login.png)
+![Login](https://github.com/Mr-Linus/DCMP/blob/master/img/login.png)
 
 - 仪表盘
 
-![DashboardPage](https://gitee.com/Mr-Linus/DCMP/blob/master/dashboard.png)
+![DashboardPage](https://github.com/Mr-Linus/DCMP/blob/master/img/dashboard.png)
 
 - 容器管理
 
-![Containers](https://gitee.com/Mr-Linus/DCMP/blob/master/containers.png)
+![Containers](https://github.com/Mr-Linus/DCMP/blob/master/img/containers.png)
 
 - 容器部署
 
-![Deploy](https://gitee.com/Mr-Linus/DCMP/blob/master/deploy.png)
+![Deploy](https://github.com/Mr-Linus/DCMP/blob/master/img/deploy.png)
 
 - Swarm 监控
 
-![swarm](https://gitee.com/Mr-Linus/DCMP/blob/master/swarm.png)
+![swarm](https://github.com/Mr-Linus/DCMP/blob/master/img/swarm.png)
 
 - 镜像管理
 
-![images](https://gitee.com/Mr-Linus/DCMP/blob/master/images.png)
+![images](https://github.com/Mr-Linus/DCMP/blob/master/img/images.png)
 
 - 卷管理
 
-![volumes](https://gitee.com/Mr-Linus/DCMP/blob/master/volumes.png)
+![volumes](https://github.com/Mr-Linus/DCMP/blob/master/img/volumes.png)
 
 - 网络管理
 
-![networks](https://gitee.com/Mr-Linus/DCMP/blob/master/networks.png)
+![networks](https://github.com/Mr-Linus/DCMP/blob/master/img/networks.png)
 
 - 事件监控
 
-![events](https://gitee.com/Mr-Linus/DCMP/blob/master/events.png)
+![events](https://github.com/Mr-Linus/DCMP/blob/master/img/events.png)
 
 - 用户管理
 
-![user](https://gitee.com/Mr-Linus/DCMP/blob/master/user.png)
+![user](https://github.com/Mr-Linus/DCMP/blob/master/img/user.png)
 
 ### 开发测试环境
 - Python 3.6 (Recommend)

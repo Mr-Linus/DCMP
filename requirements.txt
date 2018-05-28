@@ -1,0 +1,4 @@
+django 
+django-bootstrap3 
+psutil 
+docker
