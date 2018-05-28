@@ -1,11 +1,11 @@
 sudo: required
 language: python 
 python:
-  - "3.6.5"
+  - "3.6"
 services:
   - docker
 os:
-  - osx
+  - linux
 before_install:
   - docker swarm init
 install: 
