@@ -1,4 +1,4 @@
-django=2.0.5 
+django==2.0.5 
 django-bootstrap3 
 psutil 
 docker
