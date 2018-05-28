@@ -1,15 +1,16 @@
+sudo: required
 language: python 
 python:
   - "3.6.5"
 os:
- - centos
+  - linux
 services:
   - docker
 before_install:
- - docker swarm init
+  - docker swarm init
 env:
   - DJANGO_VERSION=2.0.5
 install: 
   - pip install -r requirements.txt
 script: 
-  - python manage.py test
+  - sudo python manage.py test
