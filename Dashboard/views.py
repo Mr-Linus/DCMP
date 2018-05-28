@@ -59,7 +59,7 @@ class dashboard_logout_view(LogoutView):
 
 class dashboard_index_view(TemplateView):
     template_name = 'Dashboard/index.html'
-    def get_context_data(self, **kwargs,):
+    def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['sysinfo'] = sys()
         context['con_run'] = docker.from_env().info()['ContainersRunning']
@@ -284,7 +284,7 @@ class dashboard_events_view(TemplateView):
             if count == 20:
                 break
         return event_list
-    def get_context_data(self, **kwargs,):
+    def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['user_last_login'] = self.request.user.last_login
         context['user'] = self.request.user.username
