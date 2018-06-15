@@ -6,12 +6,14 @@ from django.views.decorators.csrf import csrf_exempt
 from Dashboard.sys import sys,sys_swarm
 from django.contrib.auth.views import LoginView, LogoutView
 from django.views.generic.base import TemplateView
-from django.contrib.auth import logout
+from django.contrib.auth.mixins import LoginRequiredMixin
+# from django.views.generic import ListView
+# from django.contrib.auth import logout
 import docker
 from  Dashboard.form import DeployForm, PullForm, CreateVolumeForm,CreateNetworkForm, ChangePasswordForm,UserCreationForm
 # from django.views.generic.base import RedirectView
 import datetime
-from Dashboard.models import User
+# from Dashboard.models import User
 # Create your views here.
 class dashboard_login_view(LoginView):
     template_name = 'Dashboard/login.html'
@@ -57,8 +59,10 @@ class dashboard_logout_view(LogoutView):
 #     else:
 #         return redirect('Dashboard:login')
 
-class dashboard_index_view(TemplateView):
+
+class dashboard_index_view(LoginRequiredMixin, TemplateView):
     template_name = 'Dashboard/index.html'
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['sysinfo'] = sys()
@@ -69,6 +73,7 @@ class dashboard_index_view(TemplateView):
         context['user'] = self.request.user.username
         context['con_num'] = len(docker.from_env().containers.list(all=True))
         return context
+
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated and request.user.dashboard_permission:
             context = self.get_context_data(**kwargs)
@@ -77,12 +82,26 @@ class dashboard_index_view(TemplateView):
             return redirect('/dashboard/login')
 
 
-@csrf_exempt
-def dashobard_containers_view(request):
+class ContainersView(LoginRequiredMixin, TemplateView):
     template_name = 'Dashboard/containers.html'
-    if request.user.is_authenticated and request.user.containers_permission:
-        if request.method == "POST":
-            con_name = request.POST.getlist("con_name")
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["object_list"] = docker.from_env().containers.list(all=True)
+        context["user_last_login"] = self.request.user.last_login
+        context["user"] = self.request.user.username
+        return context
+
+    def get(self, request, *args, **kwargs):
+        if request.user.containers_permission:
+            context = self.get_context_data(**kwargs)
+            return self.render_to_response(context)
+        else:
+            return redirect('/dashboard/login')
+
+    def post(self, request, *args, **kwargs):
+        con_name = request.POST.getlist("con_name")
+        if request.user.containers_permission:
             if 'start' in request.POST:
                 for con in con_name:
                     sys().client.containers.get(con).start()
@@ -96,21 +115,49 @@ def dashobard_containers_view(request):
                 for con in con_name:
                     sys().client.containers.get(con).remove()
             context = {
-                "con_list": docker.from_env().containers.list(all=True),
+                "object_list": docker.from_env().containers.list(all=True),
                 "user_last_login": request.user.last_login,
                 "user": request.user.username,
             }
-            return render_to_response(template_name,context)
-        if request.method == "GET":
-            context = {
-                "con_list": docker.from_env().containers.list(all=True),
-                "user_last_login": request.user.last_login,
-                "user": request.user.username,
-            }
-            return render_to_response(template_name, context)
-    else:
+            return render_to_response(self.template_name, context)
         return redirect('/dashboard/login')
 
+# rewrite 2
+#@csrf_exempt
+# def dashboard_containers_view(request):
+#     template_name = 'Dashboard/containers.html'
+#     if request.user.is_authenticated and request.user.containers_permission:
+#         if request.method == "POST":
+#             con_name = request.POST.getlist("con_name")
+#             if 'start' in request.POST:
+#                 for con in con_name:
+#                     sys().client.containers.get(con).start()
+#             elif 'stop'in request.POST:
+#                 for con in con_name:
+#                     sys().client.containers.get(con).stop()
+#             elif 'restart' in request.POST:
+#                 for con in con_name:
+#                     sys().client.containers.get(con).restart()
+#             elif 'remove'in request.POST:
+#                 for con in con_name:
+#                     sys().client.containers.get(con).remove()
+#             context = {
+#                 "con_list": docker.from_env().containers.list(all=True),
+#                 "user_last_login": request.user.last_login,
+#                 "user": request.user.username,
+#             }
+#             return render_to_response(template_name,context)
+#         if request.method == "GET":
+#             context = {
+#                 "con_list": docker.from_env().containers.list(all=True),
+#                 "user_last_login": request.user.last_login,
+#                 "user": request.user.username,
+#             }
+#             return render_to_response(template_name, context)
+#     else:
+#         return redirect('/dashboard/login')
+
+# rewrite 1:
     # def get_context_data(self, **kwargs,):
     #     context = super().get_context_data(**kwargs)
     #     context['sysinfo'] = sys()
@@ -272,26 +319,29 @@ def dashboard_network_view(request):
         return redirect('/dashboard/login')
 
 
-class dashboard_events_view(TemplateView):
+class dashboard_events_view(LoginRequiredMixin, TemplateView):
     template_name = 'Dashboard/events.html'
     permission_required = 'events_permission'
+
     def get_events_list(self):
         event_list=[]
         count=0
-        for event in docker.from_env().events(decode=True,since=(datetime.datetime.now() - datetime.timedelta(days=5)),until=datetime.datetime.now()):
+        for event in docker.from_env().events(decode=True,since=(datetime.datetime.now() - datetime.timedelta(days=5)), until=datetime.datetime.now()):
             event_list.append(event)
             count += 1
             if count == 20:
                 break
         return event_list
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['user_last_login'] = self.request.user.last_login
         context['user'] = self.request.user.username
         context['events_list'] = self.get_events_list()
         return context
+
     def get(self, request, *args, **kwargs):
-        if request.user.is_authenticated & request.user.events_permission:
+        if request.user.events_permission:
             context = self.get_context_data(**kwargs)
             return self.render_to_response(context)
         else:
