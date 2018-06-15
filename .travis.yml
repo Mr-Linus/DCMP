@@ -10,8 +10,7 @@ python:
   - "3.6"
 os:
   - linux
-before_install:
-  
+before_install: 
   - sudo docker swarm init
 install: 
   - pip install -r requirements.txt
