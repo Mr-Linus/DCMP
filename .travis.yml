@@ -1,9 +1,11 @@
 sudo: required
 language: python 
+addons:
+  apt:
+    packages:
+      - docker-ce
 python:
   - "3.6"
-services:
-  - docker
 os:
   - linux
 before_install:
@@ -11,4 +13,5 @@ before_install:
 install: 
   - pip install -r requirements.txt
 script: 
+  - docker --version
   - python test.py  
