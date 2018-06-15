@@ -9,7 +9,7 @@ python:
 os:
   - linux
 before_install:
-  - echo "DOCKER_OPTS=\"--registry-mirror=https://registry.docker-cn.com\"" > /etc/default/docker
+  - sudo echo "DOCKER_OPTS=\"--registry-mirror=https://registry.docker-cn.com\"" > /etc/default/docker
   - service docker restart
   - docker swarm init
 install: 
