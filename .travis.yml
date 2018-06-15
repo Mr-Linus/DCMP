@@ -1,5 +1,7 @@
 sudo: required
 language: python 
+services:
+  - docker
 addons:
   apt:
     packages:
@@ -9,7 +11,7 @@ python:
 os:
   - linux
 before_install:
-  - /usr/bin/dockerd --registry-mirror=https://registry.docker-cn.com --raw-logs
+  - sudo /usr/bin/dockerd --registry-mirror=https://registry.docker-cn.com --raw-logs
   - docker swarm init
 install: 
   - pip install -r requirements.txt
