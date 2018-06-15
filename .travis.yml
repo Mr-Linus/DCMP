@@ -9,8 +9,8 @@ python:
 os:
   - linux
 before_install:
-  - sudo echo "DOCKER_OPTS=\"--registry-mirror=https://registry.docker-cn.com\"" > /etc/default/docker
-  - service docker restart
+  - service docker stop
+  - /usr/bin/dockerd --registry-mirror=https://registry.docker-cn.com --raw-logs
   - docker swarm init
 install: 
   - pip install -r requirements.txt
