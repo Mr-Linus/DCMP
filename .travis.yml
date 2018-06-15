@@ -9,7 +9,6 @@ python:
 os:
   - linux
 before_install:
-  - service docker stop
   - /usr/bin/dockerd --registry-mirror=https://registry.docker-cn.com --raw-logs
   - docker swarm init
 install: 
