@@ -165,4 +165,4 @@ python manage.py runserver
 
 ### Follow-up function
 - [ ] i18N Internationalization 
-- [ ] Container Status Details
+- [x] Container Status Details

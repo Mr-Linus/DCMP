@@ -161,4 +161,4 @@ python manage.py runserver
 
 ### 后期功能
 - [ ] i18N Internationalization 
-- [ ] Container Status Details
+- [x] Container Status Details
