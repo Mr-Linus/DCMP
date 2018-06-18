@@ -90,7 +90,7 @@ pip install docker
 ```
 
 ### Usage
-- Initialize Docker (PreStep)
+- Initialize Docker (PreStep):
 ```shell
 docker swarm init #Please Your make sure your Docker engine is turned on 
 ```

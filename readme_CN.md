@@ -87,7 +87,7 @@ pip install docker
 ```
 
 ### 用法
-- 初始化 Docker (PreStep)
+- 初始化 Docker (PreStep):
 ```shell
 docker swarm init #请确保你的Docker已经开启 
 ```
