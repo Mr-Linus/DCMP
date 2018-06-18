@@ -72,6 +72,7 @@ Language:     [English](https://github.com/Mr-Linus/DCMP/blob/master/README.md) 
 ### 开发测试环境
 - Python 3.6 (Recommend)
 - Django 2.0 (Necessary)
+- Docker 18.03-ce
 
 ### 第三方软件包
 - django-bootstrap3
@@ -86,6 +87,12 @@ pip install docker
 ```
 
 ### 用法
+- 初始化 Docker (PreStep)
+```shell
+docker swarm init #请确保你的Docker已经开启 
+```
+
+
 - 更新同步数据库(Step 1):
 ```shell 
 python manage.py makemigrations

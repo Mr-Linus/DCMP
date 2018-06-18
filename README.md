@@ -76,7 +76,7 @@ Multiple mirroring, load balancing, high availability
 ### Development Test Environment
 - Python 3.6 (Recommend)
 - Django 2.0 (Necessary)
-
+- Docker 18.03-ce
 ### Third party plugins (Necessary)
 - django-bootstrap3
 - psutil
@@ -90,6 +90,12 @@ pip install docker
 ```
 
 ### Usage
+- Initialize Docker (PreStep)
+```shell
+docker swarm init #Please Your make sure your Docker engine is turned on 
+```
+
+
 - Refresh & Synchronize the database(Step 1):
 ```shell 
 python manage.py makemigrations
