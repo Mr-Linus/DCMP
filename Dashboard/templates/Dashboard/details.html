@@ -4,7 +4,11 @@
 	<meta charset="utf-8" />
     {% load static %}
     <link rel="shortcut icon" href="{% static "Dashboard/img/favicon.ico" %}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{%  static "Dashboard/img/apple-touch-icon.png" %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static "Dashboard/img/apple-touch-icon-72x72.png" %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static "Dashboard/img/apple-touch-icon-114x114.png" %}">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
 	<title>DCMP.</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -54,7 +58,7 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li class="active">
+                <li class="active" >
                     <a href="/dashboard/containers">
                         <i class="ti-server"></i>
                         <p>Containers</p>
@@ -66,7 +70,7 @@
                         <p>Deploy</p>
                     </a>
                 </li>
-                <li>
+                <li >
                     <a href="/dashboard/swarm">
                         <i class="ti-world"></i>
                         <p>Swarm</p>
@@ -91,14 +95,12 @@
                         <p>Networks</p>
                     </a>
                 </li>
-
-                <li>
+                <li  >
                     <a href="/dashboard/events">
                         <i class="ti-notepad"></i>
                         <p>Events</p>
                     </a>
                 </li>
-
 
             </ul>
     	</div>
@@ -114,7 +116,7 @@
                         <span class="icon-bar bar2"></span>
                         <span class="icon-bar bar3"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Containers</a>
+                    <a class="navbar-brand" >Container Infomation</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -175,79 +177,87 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Container list</h4>
-                                <p class="category">Containers</p>
+                                <h4 class="title">Container: {{ con.short_id }}</h4>
+                                <p class="category">Details</p>
                             </div>
                             <div class="content table-responsive table-full-width">
-                              <form  method="POST" action="">
-                                        {% csrf_token %}
                                 <table class="table table-striped">
-                                    <thead>
-                                        <th>
-                                            <input type="checkbox" onclick="swapCheck()" />&nbsp;Select All</th>
-                                        <th>ID</th>
-                                    	<th>Name</th>
-                                    	<th>Image</th>
-                                    	<th>Status</th>
-                                    </thead>
-                                    {% for con in object_list %}
-                                        <tr>
-                                            <td>
-                                                    <input type="checkbox"  value="{{ con.name }}" name="con_name" />
-                                            </td>
-                                            <td><a href="/dashboard/containers/{{ con.short_id }}">{{ con.short_id }}</a></td>
-                                        	<td>{{ con.name }}</td>
-                                        	<td>{% for images in  con.image.tags %}{{ images }}{% endfor %}</td>
-                                        	<td>
-                                                            {% if con.status == 'exited' %}
-                                                                <div class="alert alert-warning col-xs-3 text-center">
-                                                            {% elif con.status == 'stopped' %}
-                                                              <div class="alert alert-danger col-xs-3 text-center">
-                                                            {% else %}
-                                                                <div class="alert alert-success col-xs-4 text-center center">
-                                                            {% endif %}
-                                                        <b>{{ con.status }} </b>
-                                                    </div>
-                                            </td>
-                                        </tr>
-                                    {% empty %}
-                                        <div class="row center text-center">
-                                            <tr><td>There is no container in the Node.</td><td>Null</td><td>Null</td><td>Null</td><td>Null</td></tr>
-                                        </div>
-                                    {% endfor %}
-                                    </tbody>
+                                    <tr>
+                                         <td>
+                                            Name: &nbsp;{{ con.name }}
+                                         </td>
+                                    </tr>
+                                    <tr>
+                                         <td>
+                                            ID: &nbsp;{{ con.id }}
+                                         </td>
+                                    </tr>
+                                    <tr>
+                                         <td>
+                                            images: &nbsp;{% for images in  con.image.tags %}{{ images }}{% endfor %}
+                                         </td>
+                                    </tr>
+                                     <tr>
+                                         <td>
+                                                Status:&nbsp;:{{ con.status }}
+                                         </td>
+                                     </tr>
+                                    <tr>
+                                         <td>
+                                                Labels:&nbsp;{%  for label in con.labels %}{{ label }} {% endfor %}
+                                         </td>
+                                     </tr>
+                                     <tr>
+                                         <td>
+                                                Created :&nbsp;{{ con.attrs.Created }}
+                                         </td>
+                                     </tr>
+                                    <tr>
+                                         <td>
+                                                Start Time :&nbsp;{{ con.attrs.State.StartedAt }}
+                                         </td>
+                                     </tr>
+                                    <tr>
+                                         <td>
+                                                Path :&nbsp;{{ con.attrs.Path }}
+                                         </td>
+                                     </tr>
+                                    <tr>
+                                         <td>
+                                                Env :&nbsp;{{ con.attrs.Config.Env.0 }}
+                                         </td>
+                                     </tr>
+                                    <tr>
+                                         <td>
+                                                CMD :&nbsp;{{ con.attrs.Config.Cmd.0 }}
+                                         </td>
+                                     </tr><tr>
+                                         <td>
+                                                Driver :&nbsp;{{ con.attrs.Driver }}
+                                         </td>
+                                     </tr>
+                                    <tr>
+                                         <td>
+                                                TTY :&nbsp;{{ con.attrs.Config.Tty}}
+                                         </td>
+                                     </tr>
+                                    <tr>
+                                         <td>
+                                                IP addresss :&nbsp;{{ con.attrs.NetworkSettings.Networks.bridge.IPAddress}}
+                                         </td>
+                                     </tr>
                                 </table>
-                                <div class="text-center">
-                                        <button type="submit" class="btn btn-info btn-fill btn-info"  name="start">Start</button>
-                                        <button type="submit" class="btn btn-info btn-fill btn-danger" name="stop">Stop</button>
-                                        <button type="submit" class="btn btn-info btn-fill btn-danger" name="restart">Restart</button>
-                                        <button type="submit" class="btn btn-info btn-fill btn-danger" name="remove">Remove</button>
-                                </div>
-                                </form>
-                                <script type="text/javascript">
-                                        //checkbox 全选/取消全选
-                                        var isCheckAll = false;
-                                        function swapCheck() {
-                                                if (isCheckAll) {
-                                                            $("input[type='checkbox']").each(function() {
-                                                            this.checked = false;
-                                                            });
-                                                            isCheckAll = false;
-                                                            } else {
-                                                            $("input[type='checkbox']").each(function() {
-                                                                this.checked = true;
-                                                                });
-                                                            isCheckAll = true;
-                                                 }
-                                        }
-                                </script>
                             </div>
                         </div>
-
                     </div>
                 </div>
+
             </div>
         </div>
+
+
+
+
 
 
         <footer class="footer">

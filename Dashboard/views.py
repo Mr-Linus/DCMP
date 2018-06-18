@@ -403,3 +403,19 @@ def dashboard_add_update_view(request):
     else:
         return redirect('/dashboard/login')
 
+
+class DetailView(LoginRequiredMixin, TemplateView):
+    template_name = 'Dashboard/details.html'
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['user_last_login'] = self.request.user.last_login
+        context['user'] = self.request.user.username
+        context['con'] = docker.from_env().containers.get(self.request.path.split('containers/')[1])
+        return context
+
+    def get(self, request, *args, **kwargs):
+        if request.user.events_permission:
+            context = self.get_context_data(**kwargs)
+            return self.render_to_response(context)
+        else:
+            return redirect('/dashboard/login')

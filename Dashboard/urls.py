@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, re_path
 from . import views
 app_name = 'Dashboard'
 urlpatterns = [
@@ -10,6 +10,7 @@ urlpatterns = [
     path('index/', views.dashboard_index_view.as_view()),
 # path('containers/', views.dashobard_containers_view),
     path('containers/', views.ContainersView.as_view()),
+    re_path(r'^containers/[A-Za-z0-9]{10}$', views.DetailView.as_view()),
     path('deploy/', views.dashboard_deploy_view),
     path('swarm/', views.dashobard_swarm_view),
     path('images/', views.dashobard_images_view),
