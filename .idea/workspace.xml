@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="90c048e5-c101-4b2b-bd63-7cdb919e1a11" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard/templates/Dashboard/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/templates/Dashboard/details.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,8 +30,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dashboard/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7619">
-              <caret line="415" column="44" selection-start-line="415" selection-start-column="44" selection-end-line="415" selection-end-column="44" />
+            <state relative-caret-position="183">
+              <caret line="404" lean-forward="true" selection-start-line="404" selection-end-line="404" />
             </state>
           </provider>
         </entry>
@@ -38,8 +39,8 @@
       <file leaf-file-name="details.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/details.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="768">
-              <caret line="311" column="7" selection-start-line="311" selection-start-column="7" selection-end-line="311" selection-end-column="7" />
+            <state relative-caret-position="464">
+              <caret line="250" column="52" selection-start-line="250" selection-start-column="52" selection-end-line="250" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -140,10 +141,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-32768" />
-    <option name="y" value="-32768" />
+    <option name="x" value="306" />
+    <option name="y" value="118" />
     <option name="width" value="3860" />
-    <option name="height" value="1113" />
+    <option name="height" value="1067" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -373,7 +374,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-32768" y="-32768" width="3860" height="1113" extended-state="0" />
+    <frame x="0" y="46" width="3860" height="1067" extended-state="0" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32919955" />
       <window_info anchor="bottom" id="调试" order="14" />
@@ -382,8 +383,8 @@
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.32919955" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.37767756" />
-      <window_info anchor="bottom" id="运行" order="7" sideWeight="0.49947917" weight="0.33709133" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4984127" visible="true" weight="0.085263155" />
+      <window_info active="true" anchor="bottom" id="运行" order="7" sideWeight="0.49947917" visible="true" weight="0.33628318" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4984127" visible="true" weight="0.08552632" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -402,31 +403,31 @@
       <window_info active="true" anchor="bottom" id="Concurrent Activities Diagram" order="15" visible="true" weight="0.32967034" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="找到" order="15" weight="0.32967034" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="运行" order="7" sideWeight="0.49947917" visible="true" weight="0.3449831" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info id="Favorites" order="2" show_stripe_button="false" sideWeight="0.50158733" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4984127" visible="true" weight="0.11353944" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="运行" order="7" sideWeight="0.49947917" visible="true" weight="0.3449831" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="bottom" id="Python Console" order="13" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.37880495" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5005208" side_tool="true" weight="0.33736265" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="调试" order="14" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info active="true" anchor="bottom" id="Concurrent Activities Diagram" order="16" visible="true" weight="0.32967034" />
-      <window_info anchor="bottom" id="Python Console" order="13" />
+      <window_info id="Favorites" order="2" show_stripe_button="false" sideWeight="0.50158733" side_tool="true" weight="0.25" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -865,15 +866,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Dashboard/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7619">
-          <caret line="415" column="44" selection-start-line="415" selection-start-column="44" selection-end-line="415" selection-end-column="44" />
+        <state relative-caret-position="183">
+          <caret line="404" lean-forward="true" selection-start-line="404" selection-end-line="404" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Dashboard/templates/Dashboard/details.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="311" column="7" selection-start-line="311" selection-start-column="7" selection-end-line="311" selection-end-column="7" />
+        <state relative-caret-position="464">
+          <caret line="250" column="52" selection-start-line="250" selection-start-column="52" selection-end-line="250" selection-end-column="52" />
         </state>
       </provider>
     </entry>
