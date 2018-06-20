@@ -325,11 +325,13 @@ class dashboard_events_view(LoginRequiredMixin, TemplateView):
 
     def get_events_list(self):
         event_list=[]
-        count=0
-        for event in docker.from_env().events(decode=True,since=(datetime.datetime.now() - datetime.timedelta(days=5)), until=datetime.datetime.now()):
+        count = 0
+        for event in docker.from_env().events(decode=True,
+                                              since=(datetime.datetime.now() - datetime.timedelta(days=5)),
+                                              until=datetime.datetime.now()):
             event_list.append(event)
             count += 1
-            if count == 20:
+            if count == 5:
                 break
         return event_list
 
