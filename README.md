@@ -86,9 +86,7 @@ Multiple mirroring, load balancing, high availability
 
 Install plugins:
 ```shell
-pip install django-bootstrap3
-pip install psutil
-pip install docker
+pip install -r requirement.txt
 ```
 
 ### Usage
@@ -174,3 +172,4 @@ python manage.py runserver
 ### Follow-up function
 - [ ] i18N Internationalization 
 - [x] Container Status Details
+

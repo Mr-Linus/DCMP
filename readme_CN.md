@@ -83,9 +83,7 @@ Demo 地址： [Demo](http://123.207.57.210:8000)
 
 安装:
 ```shell
-pip install django-bootstrap3
-pip install psutil
-pip install docker
+pip install -r requirement.txt
 ```
 
 ### 用法
