@@ -217,6 +217,7 @@
                                     {% endfor %}
                                     </tbody>
                                 </table>
+                                        {% csrf_token %}
                                 <div class="text-center">
                                         <button type="submit" class="btn btn-info btn-fill btn-info"  name="start">Start</button>
                                         <button type="submit" class="btn btn-info btn-fill btn-danger" name="stop">Stop</button>

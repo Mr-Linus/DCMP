@@ -84,7 +84,6 @@ class dashboard_index_view(LoginRequiredMixin, TemplateView):
 
 class ContainersView(LoginRequiredMixin, TemplateView):
     template_name = 'Dashboard/containers.html'
-
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["object_list"] = docker.from_env().containers.list(all=True)
@@ -113,6 +112,7 @@ class ContainersView(LoginRequiredMixin, TemplateView):
                     sys().client.containers.get(con).restart()
             elif 'remove'in request.POST:
                 for con in con_name:
+                    sys().client.containers.get(con).stop()
                     sys().client.containers.get(con).remove()
             context = {
                 "object_list": docker.from_env().containers.list(all=True),
