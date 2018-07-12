@@ -503,7 +503,7 @@
 	<!-- Paper Dashboard DEMO methods, don't include it in your project! -->
 	<script src="{% static "Dashboard/js/demo.js" %}"></script>
 
-
+{% if messages %}
 	<script type="text/javascript">
     	$(document).ready(function(){
 
@@ -520,5 +520,5 @@
 
     	});
 	</script>
-
+{% endif %}
 </html>

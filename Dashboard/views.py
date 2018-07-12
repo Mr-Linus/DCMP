@@ -1,7 +1,7 @@
 from django.shortcuts import redirect, render
 from django.views.decorators.csrf import csrf_exempt
 #from django.contrib.auth import	authenticate,	login,	logout
-#from django.contrib import messages
+from django.contrib import messages
 #from django.contrib.auth.decorators	import login_required
 from Dashboard.sys import sys,sys_swarm
 from django.contrib.auth.views import LoginView, LogoutView
@@ -82,6 +82,8 @@ class dashboard_index_view(LoginRequiredMixin, TemplateView):
         return context
 
     def get(self, request, *args, **kwargs):
+        if datetime != request.user.last_login:
+            messages.add_message(request, messages.SUCCESS, '')
         if request.user.is_authenticated and request.user.dashboard_permission:
             context = self.get_context_data(**kwargs)
             return self.render_to_response(context=context)
