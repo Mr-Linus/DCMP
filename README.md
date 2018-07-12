@@ -115,7 +115,10 @@ python manage.py runserver
 ```
 
 ### Update Logs
-
+#### V3.0(Beta) Date :2018/7/12
+- Add Celery to accelerate docker services
+- Add Rabbitmq to processing messages
+- Fix some bugs
 #### V2.6(Beta) Date :2018/5/2 
 - Add User ManageMent Function(Rewrite to User Management)
 - Fix some bugs
