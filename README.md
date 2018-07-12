@@ -79,6 +79,7 @@ Multiple mirroring, load balancing, high availability
 - Python 3.6 (Recommend)
 - Django 2.0 (Necessary)
 - Docker 18.03-ce
+- RabbitMQ 3.7.6
 ### Third party plugins (Necessary)
 - django-bootstrap3
 - psutil
@@ -114,6 +115,12 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
+- Start the RabbitMQ server
+```shell
+# You need to install the RabbitMQ 
+# before run the following command.
+sudo rabbitmq-server -detached
+```
 ### Update Logs
 #### V3.0(Beta) Date :2018/7/12
 - Add Celery to accelerate docker services
