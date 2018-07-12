@@ -84,7 +84,7 @@ Multiple mirroring, load balancing, high availability
 - django-bootstrap3
 - psutil
 - docker-py
-
+- celery
 Install plugins:
 ```shell
 pip install -r requirement.txt
@@ -115,11 +115,16 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-- Start the RabbitMQ server
+- Start the RabbitMQ server(Step 4):
 ```shell
 # You need to install the RabbitMQ 
 # before run the following command.
 sudo rabbitmq-server -detached
+```
+
+- Start the Celery Worker(Step 5):
+```shell
+celery -A DCMP worker -l info
 ```
 ### Update Logs
 #### V3.0(Beta) Date :2018/7/12

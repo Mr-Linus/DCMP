@@ -75,12 +75,12 @@ Demo 地址： [Demo](http://123.207.57.210:8000)
 - Python 3.6 (Recommend)
 - Django 2.0 (Necessary)
 - Docker 18.03-ce
-
+- RabbitMQ 3.7.6
 ### 第三方软件包
 - django-bootstrap3
 - psutil
 - docker-py
-
+- celery
 安装:
 ```shell
 pip install -r requirement.txt
@@ -111,8 +111,22 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-### 更新日志
+- 运行 RabbitMQ 服务(Step 4):
+```shell
+# 你需要先安装RabbitMQ 再去执行此命令
+sudo rabbitmq-server -detached
+```
 
+- 开启Celery Worker(Step 5):
+```shell
+celery -A DCMP worker -l info
+```
+### 更新日志
+### Update Logs
+#### V3.0(Beta) Date :2018/7/12
+- Add Celery to accelerate docker services
+- Add Rabbitmq to processing messages
+- Fix some bugs
 #### V2.6(Beta) Date :2018/5/2 
 - Add User ManageMent Function(Rewrite to User Management)
 - Fix some bugs
