@@ -264,7 +264,7 @@ def dashboard_network_view(request):
                             driver=create_form.cleaned_data['driver']
                         )
                     except:
-                        print("Fail")
+                        print("Network Created Failed")
         return redirect('/dashboard/networks')
     else:
         return redirect('/dashboard/login')
