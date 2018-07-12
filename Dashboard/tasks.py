@@ -3,6 +3,7 @@ from celery import shared_task
 from Dashboard.sys import sys
 
 
+
 @shared_task
 def deploy(image, command, auto_remove, tty, ports, working_dir, name):
     try:
