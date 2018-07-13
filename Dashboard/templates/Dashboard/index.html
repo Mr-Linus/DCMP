@@ -502,23 +502,20 @@
 
 	<!-- Paper Dashboard DEMO methods, don't include it in your project! -->
 	<script src="{% static "Dashboard/js/demo.js" %}"></script>
-
-{% if messages %}
-	<script type="text/javascript">
+    {% if messages %}
+    {% for message in messages %}
+    <script type="text/javascript">
     	$(document).ready(function(){
-
         	demo.initChartist();
-
         	$.notify({
             	icon: 'ti-gift',
-            	message: "Welcome to <b>DCMP Dashboard</b> - A beautiful Docker Container Management Platform."
-
+            	message: "{{ message }}"
             },{
-                type: 'success',
+                type: '{{ message.tags }}',
                 timer: 4000
             });
-
     	});
 	</script>
-{% endif %}
+    {% endfor %}
+    {% endif %}
 </html>

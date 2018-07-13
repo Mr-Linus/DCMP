@@ -2,13 +2,18 @@ from django.shortcuts import redirect, render
 from django.views.decorators.csrf import csrf_exempt
 #from django.contrib.auth import	authenticate,	login,	logout
 from django.contrib import messages
+from django.contrib.sessions.backends.db import SessionStore
 #from django.contrib.auth.decorators	import login_required
+from django.shortcuts import resolve_url
 from Dashboard.sys import sys,sys_swarm
 from django.contrib.auth.views import LoginView, LogoutView
 from django.views.generic.base import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
+import time
 # from django.views.generic import ListView
 # from django.contrib.auth import logout
+
+from django.conf import settings
 import docker
 from  Dashboard.form import DeployForm, PullForm, CreateVolumeForm,CreateNetworkForm, ChangePasswordForm,UserCreationForm
 # from django.views.generic.base import RedirectView
@@ -21,6 +26,14 @@ from Dashboard.tasks import deploy, image_pull
 class dashboard_login_view(LoginView):
     template_name = 'Dashboard/login.html'
     redirect_authenticated_user = True
+
+    def get_success_url(self):
+        url = self.get_redirect_url()
+        messages.add_message(self.request, messages.SUCCESS,
+                             "Welcome to DCMP Dashboard - A beautiful Docker Container Management Platform.")
+        return url or resolve_url(settings.LOGIN_REDIRECT_URL)
+
+
 # def dashboard_login(request):
 #     if request.method == 'POST':
 #         username = request.POST['username']
@@ -82,8 +95,6 @@ class dashboard_index_view(LoginRequiredMixin, TemplateView):
         return context
 
     def get(self, request, *args, **kwargs):
-        if datetime != request.user.last_login:
-            messages.add_message(request, messages.SUCCESS, '')
         if request.user.is_authenticated and request.user.dashboard_permission:
             context = self.get_context_data(**kwargs)
             return self.render_to_response(context=context)
@@ -113,17 +124,33 @@ class ContainersView(LoginRequiredMixin, TemplateView):
         if request.user.containers_permission:
             if 'start' in request.POST:
                 for con in con_name:
-                    sys().client.containers.get(con).start()
+                    try:
+                        sys().client.containers.get(con).start()
+                        messages.add_message(request, messages.SUCCESS, "Contianer: "+str(con)+" start Success")
+                    except:
+                        messages.add_message(request, messages.ERROR, "Contianer: "+str(con)+"  start Failed")
             elif 'stop'in request.POST:
                 for con in con_name:
-                    sys().client.containers.get(con).stop()
+                    try:
+                        sys().client.containers.get(con).stop()
+                        messages.add_message(request, messages.WARNING, "Contianer: " + str(con) + " stop Success")
+                    except:
+                        messages.add_message(request, messages.ERROR, "Contianer: " + str(con) + "  stop Failed")
             elif 'restart' in request.POST:
                 for con in con_name:
-                    sys().client.containers.get(con).restart()
+                    try:
+                        sys().client.containers.get(con).restart()
+                        messages.add_message(request, messages.SUCCESS, "Contianer: " + str(con) + " restart Success")
+                    except:
+                        messages.add_message(request, messages.ERROR, "Contianer: " + str(con) + "  restart Failed")
             elif 'remove'in request.POST:
                 for con in con_name:
-                    sys().client.containers.get(con).stop()
-                    sys().client.containers.get(con).remove()
+                    try:
+                        sys().client.containers.get(con).stop()
+                        sys().client.containers.get(con).remove()
+                        messages.add_message(request, messages.SUCCESS, "Contianer: " + str(con) + " remove Success")
+                    except:
+                        messages.add_message(request, messages.ERROR, "Contianer: " + str(con) + "  remove Failed")
             context = {
                 "object_list": docker.from_env().containers.list(all=True),
                 "user_last_login": request.user.last_login,
@@ -147,10 +174,16 @@ def dashboard_deploy_view(request):
                     auto_remove=form.cleaned_data['auto_remove'],
                     tty=form.cleaned_data['tty'],
                     ports=form.cleaned_data['ports'],
-                    working_dir=form.cleaned_data['work_dir'],
-                    name=form.cleaned_data['name']
+                    volumes=form.cleaned_data['volumes'],
+                    name=form.cleaned_data['name'],
+                    hostname=form.cleaned_data['hostname'],
+                    cpu=form.cleaned_data['cpu'],
+                    mem=form.cleaned_data['mem'],
+                    privileged=form.cleaned_data['privileged'],
+                    network=form.cleaned_data['network'],
                 )
-                # return
+                messages.add_message(request, messages.INFO, 'Deloying the Container. Please wait and refresh the page after a while. ')
+                time.sleep(3)
                 return redirect('/dashboard/containers')
         if request.method == "GET":
             form = DeployForm()
@@ -172,10 +205,17 @@ def dashobard_swarm_view(request):
             return render(request, template_name=template_name, context=context)
         if request.method == "POST":
             if 'reload' in request.POST:
-                sys_swarm().reload()
+                try:
+                    sys_swarm().reload()
+                    messages.add_message(request, messages.SUCCESS, 'Reloading the Swarm.')
+                except:
+                    messages.add_message(request, messages.ERROR, 'Reloading the Swarm Error.')
             elif 'update' in request.POST:
-                sys_swarm().update()
-
+                try:
+                    sys_swarm().update()
+                    messages.add_message(request, messages.SUCCESS, 'Updating the Swarm.')
+                except:
+                    messages.add_message(request, messages.ERROR, 'Updating the Swarm Error.')
             return render(request, template_name=template_name, context=context)
     else:
         return redirect('/dashboard/login')
@@ -199,13 +239,21 @@ def dashobard_images_view(request):
             return render(request, template_name=template_name, context=context)
         if request.method == "POST":
             if 'remove' in request.POST:
-                image_tags = request.POST.getlist('image')
-                for image_tag in image_tags:
-                    sys().image.remove(image_tag)
+                try:
+                    image_tags = request.POST.getlist('image')
+                    for image_tag in image_tags:
+                        sys().image.remove(image_tag)
+                    messages.add_message(request, messages.SUCCESS, 'Removing images..Please wait.')
+                except:
+                    messages.add_message(request, messages.WARNING, 'Removing images failed.')
             if 'pull' in request.POST:
                 pull_form = PullForm(request.POST)
                 if pull_form.is_valid():
-                    image_pull.delay(pull_form.cleaned_data['pull_image'])
+                    try:
+                        image_pull.delay(pull_form.cleaned_data['pull_image'])
+                        messages.add_message(request, messages.SUCCESS, 'Pulling images.Please wait and refresh the page after a while.')
+                    except:
+                        messages.add_message(request, messages.WARNING, 'Pulling images failed.')
         return redirect('/dashboard/images')
     else:
         return redirect('/dashboard/login')
@@ -227,14 +275,23 @@ def dashboard_volume_view(request):
             if 'remove' in request.POST:
                 volume_names = request.POST.getlist('volume_name')
                 for volume_name in volume_names:
-                    sys().client.volumes.get(volume_name).remove()
+                    try:
+                        sys().client.volumes.get(volume_name).remove()
+                        messages.add_message(request, messages.SUCCESS, 'Removing volumes:'+volume_name+'.Please wait and refresh the page after a while.')
+                    except:
+                        messages.add_message(request, messages.WARNING, 'Removing volumes:'+volume_name+' Error')
+
             if 'create' in request.POST:
                 create_form = CreateVolumeForm(request.POST)
                 if create_form.is_valid():
-                    sys.client.volumes.create(
-                        name=create_form.cleaned_data['name'],
-                        driver=create_form.cleaned_data['driver']
-                    )
+                    try:
+                        sys.client.volumes.create(
+                            name=create_form.cleaned_data['name'],
+                            driver=create_form.cleaned_data['driver']
+                        )
+                        messages.add_message(request, messages.SUCCESS, 'Creating volumes:'+create_form.cleaned_data['name']+'.Please wait and refresh the page after a while.')
+                    except:
+                        messages.add_message(request, messages.WARNING, 'Creating volumes:'+create_form.cleaned_data['name']+' Error')
         return redirect('/dashboard/volumes')
     else:
         return redirect('/dashboard/login')
@@ -256,17 +313,24 @@ def dashboard_network_view(request):
             if 'remove' in request.POST:
                 network_ids = request.POST.getlist('network_id')
                 for network_id in network_ids:
-                    sys().client.networks.get(network_id).remove()
+                    try:
+                        sys().client.networks.get(network_id).remove()
+                        messages.add_message(request, messages.SUCCESS, 'Removing networks:'+network_id+'.Please wait and refresh the page after a while.')
+                    except:
+                        messages.add_message(request, messages.WARNING, 'Removing networks:'+network_id+' Error')
+
             if 'create' in request.POST:
                 create_form = CreateNetworkForm(request.POST)
                 if create_form.is_valid():
                     try:
                         sys.client.networks.create(
                             name=create_form.cleaned_data['name'],
-                            driver=create_form.cleaned_data['driver']
+                            driver=create_form.cleaned_data['driver'],
+                            scope=create_form.cleaned_data['scope']
                         )
+                        messages.add_message(request, messages.SUCCESS, 'Creating networks:' +create_form.cleaned_data['name']+ '.Please wait and refresh the page after a while.')
                     except:
-                        print("Network Created Failed")
+                        messages.add_message(request, messages.WARNING, 'Creating networks:' + create_form.cleaned_data['name'] + ' Error')
         return redirect('/dashboard/networks')
     else:
         return redirect('/dashboard/login')
@@ -362,7 +426,6 @@ def dashboard_add_update_view(request):
 
 class DetailView(LoginRequiredMixin, TemplateView):
     template_name = 'Dashboard/details.html'
-
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['user_last_login'] = self.request.user.last_login

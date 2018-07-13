@@ -5,7 +5,7 @@ from Dashboard.sys import sys
 
 
 @shared_task
-def deploy(image, command, auto_remove, tty, ports, working_dir, name):
+def deploy(image, command, auto_remove, tty, ports, volumes, name, hostname, cpu, mem, privileged, network ):
     try:
         sys().client.containers.run(
             image=image,
@@ -13,11 +13,18 @@ def deploy(image, command, auto_remove, tty, ports, working_dir, name):
             auto_remove=auto_remove,
             tty=tty,
             ports=ports,
-            working_dir=working_dir,
-            name=name)
+            volumes=volumes,
+            name=name,
+            hostname=hostname,
+            cpu_shares=cpu,
+            mem_limit=mem,
+            privileged=privileged,
+            network=network
+        )
         return True
 
     except:
+
         return False
 
 

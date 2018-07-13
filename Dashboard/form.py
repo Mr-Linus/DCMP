@@ -16,6 +16,29 @@ class DeployForm(forms.Form):
         label="Auto remove",
         required=False
     )
+    privileged =forms.BooleanField(
+        help_text="Give extended privileges to this container.",
+        label="Privileged",
+        required=False
+    )
+    cpu = forms.CharField(
+        max_length=7,
+        label='CPU Shares',
+        help_text="CPU shares (relative weight). default:1024",
+        required=True
+    )
+    mem = forms.CharField(
+        max_length=7,
+        label='Memory',
+        help_text="Memory limit. Accepts float values (which represent the memory limit of the created container in bytes) or a string with a units identification char (100000b, 1000k, 128m, 1g).",
+        required=True
+    )
+    hostname = forms.CharField(
+                                max_length=100,
+                                label='Contianer Hostname',
+                                help_text="Please input the Container HostName.This is a custom option",
+                                required=False
+    )
     ports = forms.CharField(max_length=100,
                             label='Ports',
                             help_text="Export Posts .For example, {'2222/tcp': 3333} will expose port 2222 inside the container as port 3333 on the host.",
@@ -25,9 +48,15 @@ class DeployForm(forms.Form):
                              label='tty',
                              required=False
                              )
-    work_dir = forms.CharField(max_length=100,
-                               label="Working directory",
-                               help_text="Path to the working directory.",
+    network = forms.CharField(
+                            max_length=100,
+                            label='Network',
+                            help_text='Name of the network this container will be connected to at creation time.',
+                            required=False
+    )
+    volumes = forms.CharField(max_length=100,
+                               label="Volumes",
+                               help_text="A dictionary to configure volumes mounted inside the container. For exapmle,{'/home/user1/': {'bind': '/mnt/vol2', 'mode': 'rw'},'/var/www': {'bind': '/mnt/vol1', 'mode': 'ro'}}",
                                required=False
                                )
     cmd = forms.CharField(max_length=100,
@@ -43,8 +72,7 @@ class PullForm(forms.Form):
         label="Image Name (e.g. ubuntu:14.04)",
         help_text="Note: if you don't specify the tag in the image name, latest will be used.",
         label_suffix="Image Name e.g. ubuntu:14.04",
-		required=True
-    )
+        required=True,)
 
 
 class CreateVolumeForm(forms.Form):
@@ -63,18 +91,35 @@ class CreateVolumeForm(forms.Form):
 
 
 class CreateNetworkForm(forms.Form):
+    SCOPE_CHOICES = (
+        ('local', 'local'),
+        ('global', 'global'),
+        ('swarm', 'swarm')
+    )
+    DRIVER_CHOICES = (
+        ('host', 'host'),
+        ('overlay', 'overlay'),
+        ('null', 'null')
+    )
     name = forms.CharField(
         max_length=20,
         label='Name',
-        help_text="Network Name",
+        help_text="Name of the network",
         required=True
     )
-    driver = forms.CharField(
-        max_length=30,
+    driver = forms.ChoiceField(
+        choices=DRIVER_CHOICES,
         label='Driver',
-        help_text='Driver configuration',
+        help_text='Name of the driver used to create the network',
         required=False
     )
+    scope = forms.ChoiceField(
+        choices=SCOPE_CHOICES,
+        label='Scope',
+        help_text='Specify the network’s scope (local, global or swarm)',
+        required=False
+    )
+
 
 class ChangePasswordForm(forms.Form):
     password = forms.CharField(label="Password",max_length=20, widget=forms.PasswordInput)

@@ -298,6 +298,23 @@
 
 	<!-- Paper Dashboard DEMO methods, don't include it in your project! -->
 	<script src="{% static "Dashboard/js/demo.js" %}"></script>
+    {% if messages %}
+    {%for message in messages %}
+            <script type="text/javascript">
+    	$(document).ready(function(){
+        	demo.initChartist();
+        	$.notify({
+            	icon: 'ti-pie-chart',
+            	message: "{{ message }}"
+            },{
+                type: {% if message.tags == 'error' %}'danger'{% else %}'{{ message.tags }}'{% endif %},
+                {#type: 'warning',#}
+                timer: 4000
+            });
+    	});
+	    </script>
+    {% endfor %}
 
+    {% endif %}
 
 </html>
