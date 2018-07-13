@@ -25,13 +25,13 @@ class DeployForm(forms.Form):
         max_length=7,
         label='CPU Shares',
         help_text="CPU shares (relative weight). default:1024",
-        required=True
+        required=False
     )
     mem = forms.CharField(
         max_length=7,
         label='Memory',
         help_text="Memory limit. Accepts float values (which represent the memory limit of the created container in bytes) or a string with a units identification char (100000b, 1000k, 128m, 1g).",
-        required=True
+        required=False
     )
     hostname = forms.CharField(
                                 max_length=100,
