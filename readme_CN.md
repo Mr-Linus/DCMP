@@ -75,13 +75,13 @@ Demo 地址： [Demo](http://123.207.57.210:8000)
 - Python 3.6 (Recommend)
 - Django 2.0 (Necessary)
 - Docker 18.03-ce
-- RabbitMQ 3.7.6
+- Radis 2.0.6
 ### 第三方软件包
 - django-bootstrap3
 - psutil
 - docker-py
 - celery
-安装:
+> 安装:
 ```shell
 pip install -r requirement.txt
 ```
@@ -111,10 +111,9 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-- 运行 RabbitMQ 服务(Step 4):
+- 运行 Radis 服务(Step 4):
 ```shell
-# 你需要先安装RabbitMQ 再去执行此命令
-sudo rabbitmq-server -detached
+docker run --name redis -p 6379:6379 redis
 ```
 
 - 开启Celery Worker(Step 5):

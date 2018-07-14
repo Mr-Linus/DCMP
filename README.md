@@ -79,13 +79,13 @@ Multiple mirroring, load balancing, high availability
 - Python 3.6 (Recommend)
 - Django 2.0 (Necessary)
 - Docker 18.03-ce
-- RabbitMQ 3.7.6
+- Radis 2.0.6
 ### Third party plugins (Necessary)
 - django-bootstrap3
 - psutil
 - docker-py
 - celery
-Install plugins:
+> Install plugins:
 ```shell
 pip install -r requirement.txt
 ```
@@ -115,11 +115,9 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-- Start the RabbitMQ server(Step 4):
+- Start the Radis server(Step 4):
 ```shell
-# You need to install the RabbitMQ 
-# before run the following command.
-sudo rabbitmq-server -detached
+docker run --name redis -p 6379:6379 redis
 ```
 
 - Start the Celery Worker(Step 5):

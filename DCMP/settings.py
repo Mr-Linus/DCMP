@@ -15,7 +15,7 @@ import os
 
 
 # from __future__ import absolute_import, unicode_literals
-CELERY_BROKER_URL = 'amqp://guest:guest@localhost//'
+CELERY_BROKER_URL = 'redis://localhost:6379/0'
 
 #: Only add pickle to this list if your broker is secured
 #: from unwanted access (see userguide/security.html)

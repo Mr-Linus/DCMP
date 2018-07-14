@@ -4,3 +4,4 @@ psutil==5.4.5
 docker==3.3.0
 celery==4.2.0
 sqlalchemy==1.2.9
+redis==2.10.6
