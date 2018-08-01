@@ -32,7 +32,7 @@ class sys:
     disk = psutil.disk_partitions()
     net_send = psutil.net_io_counters().bytes_sent
     net_recv = psutil.net_io_counters().bytes_recv
-    ip = str(psutil.users()[0].host)
+    #ip = str(psutil.users()[0].host)
     def cpu_percent(self) :
         sum = 0
         for  persent in psutil.cpu_percent(interval=1,percpu=True) :
