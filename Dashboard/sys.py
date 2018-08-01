@@ -18,7 +18,7 @@ class sys:
     swarm_num = client.info()['Swarm']['Nodes']
     events = client.events(decode=True, until=datetime.datetime.now())
 # Systen Information
-    hostname = str(psutil.users()[0].name)
+    #hostname = str(psutil.users()[0].name)
     nowtime = str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
     cpu_num = psutil.cpu_count(logical=False)
     cpu_Lnum = psutil.cpu_count(logical=True)
