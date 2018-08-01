@@ -86,6 +86,12 @@ Demo 地址： [Demo](http://123.207.57.210:8000)
 pip install -r requirement.txt
 ```
 
+### Docker版启动
+```bash
+docker run -itd -v /var/run/docker.sock:/var/run/docker.sock -p 8000:8000 registry.cn-hangzhou.aliyuncs.com/geekcloud/dcmp:latest
+```
+> username:admin password:dcmpdcmp123
+
 ### 用法
 - 初始化 Docker (PreStep):
 ```shell

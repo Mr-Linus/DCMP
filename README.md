@@ -90,6 +90,12 @@ Multiple mirroring, load balancing, high availability
 pip install -r requirement.txt
 ```
 
+### Running DCMP in Docker 
+```bash
+docker run -itd -v /var/run/docker.sock:/var/run/docker.sock -p 8000:8000 registry.cn-hangzhou.aliyuncs.com/geekcloud/dcmp:latest
+```
+> username:admin password:dcmpdcmp123
+
 ### Usage
 - Initialize Docker (PreStep):
 ```shell
