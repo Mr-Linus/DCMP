@@ -132,6 +132,10 @@ celery -A DCMP worker -l info
 ```
 ### 更新日志
 ### Update Logs
+
+
+#### V3.0.1 Date :2018/8/17
+- Fix errors in Redis 
 #### V3.0(Beta) Date :2018/7/12
 - Add Celery to accelerate docker services
 - Add Rabbitmq to processing messages
