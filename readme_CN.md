@@ -119,7 +119,7 @@ python manage.py runserver
 
 - 运行 Radis 服务(Step 4):
 ```shell
-docker run --name redis -p 6379:6379 redis
+docker run --name dcmp-redis -p 6379:6379 redis
 ```
 
 - 开启Celery Worker(Step 5):

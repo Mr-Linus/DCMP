@@ -92,8 +92,11 @@ pip install -r requirement.txt
 
 ### Running DCMP in Docker 
 ```bash
-docker run -itd -v /var/run/docker.sock:/var/run/docker.sock -p 8000:8000 registry.cn-hangzhou.aliyuncs.com/geekcloud/dcmp:latest
+docker network create dcmp
+docker run -itd -v /var/run/docker.sock:/var/run/docker.sock --net dcmp -p 8000:8000 registry.cn-hangzhou.aliyuncs.com/geekcloud/dcmp:latest
+docker run --name dcmp-redis --net dcmp
 ```
+
 > username:admin password:dcmpdcmp123
 
 ### Usage
@@ -123,7 +126,7 @@ python manage.py runserver
 
 - Start the Radis server(Step 4):
 ```shell
-docker run --name redis -p 6379:6379 redis
+docker run --name dcmp-redis -p 6379:6379 redis
 ```
 
 - Start the Celery Worker(Step 5):
