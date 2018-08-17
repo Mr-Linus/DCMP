@@ -123,7 +123,7 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-- Start the Radis server(Step 4):
+- Start the Redis server(Step 4):
 ```shell
 docker run --name dcmp-redis -p 6379:6379 redis
 ```
