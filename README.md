@@ -2,7 +2,7 @@
 
 DCMP :whale2: :sweat_drops: is a Docker Container Management Platform using the django framework and python language and it is suitable for internal network deployment.
 
-![build](https://travis-ci.org/Mr-Linus/DCMP.svg?branch=master) [![License](https://img.shields.io/badge/LICENSE-Apache-blue.svg)](https://github.com/Mr-Linus/DCMP/blob/master/LICENSE) ![PythonVersion](https://img.shields.io/badge/Python-3.6-brightgreen.svg) ![DjangoVersion](https://img.shields.io/badge/Django-2.0-green.svg)
+![build](https://travis-ci.org/Mr-Linus/DCMP.svg?branch=master) [![License](https://img.shields.io/badge/LICENSE-Apache-blue.svg)](https://github.com/Mr-Linus/DCMP/blob/master/LICENSE) ![PythonVersion](https://img.shields.io/badge/Python-3.6-brightgreen.svg) ![DjangoVersion](https://img.shields.io/badge/Django-2.0-green.svg) [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FMr-Linus%2FDCMP.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FMr-Linus%2FDCMP?ref=badge_shield)
 
 Language:     English | [中文](https://github.com/Mr-Linus/DCMP/blob/master/readme_CN.md) 
 
@@ -132,6 +132,9 @@ docker run --name dcmp-redis -p 6379:6379 redis
 ```shell
 celery -A DCMP worker -l info
 ```
+
+
+
 ### Update Logs
 #### V3.0.1 Date :2018/8/17
 - Fix errors in Redis 

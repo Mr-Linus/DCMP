@@ -2,7 +2,7 @@
 
 DCMP :whale2: :sweat_drops: 是一个使用Python语言和Django框架搭建的Docker容器管理平台，适用于内网部署.
 
-![build](https://travis-ci.org/Mr-Linus/DCMP.svg?branch=master) [![License](https://img.shields.io/badge/LICENSE-Apache-blue.svg)](https://github.com/Mr-Linus/DCMP/blob/master/LICENSE) ![PythonVersion](https://img.shields.io/badge/Python-3.6-brightgreen.svg) ![DjangoVersion](https://img.shields.io/badge/Django-2.0-green.svg)
+![build](https://travis-ci.org/Mr-Linus/DCMP.svg?branch=master) [![License](https://img.shields.io/badge/LICENSE-Apache-blue.svg)](https://github.com/Mr-Linus/DCMP/blob/master/LICENSE) ![PythonVersion](https://img.shields.io/badge/Python-3.6-brightgreen.svg) ![DjangoVersion](https://img.shields.io/badge/Django-2.0-green.svg) [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FMr-Linus%2FDCMP.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FMr-Linus%2FDCMP?ref=badge_shield)
 
 Language:     [English](https://github.com/Mr-Linus/DCMP/blob/master/README.md)  | 中文
 
@@ -130,6 +130,9 @@ docker run --name dcmp-redis -p 6379:6379 redis
 ```shell
 celery -A DCMP worker -l info
 ```
+
+
+
 ### 更新日志
 ### Update Logs
 
