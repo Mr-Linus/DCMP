@@ -74,7 +74,7 @@ Language:     [English](https://github.com/Mr-Linus/DCMP/blob/master/README.md) 
 - Python 3.6 (Recommend)
 - Django 2.0 (Necessary)
 - Docker 18.03-ce
-- Radis 2.0.6
+- Redis 2.0.6 
 ### 第三方软件包
 - django-bootstrap3
 - psutil

@@ -78,7 +78,7 @@ Multiple mirroring, load balancing, high availability
 - Python 3.6 (Recommend)
 - Django 2.0 (Necessary)
 - Docker 18.03-ce
-- Radis 2.0.6
+- Redis 2.0.6
 ### Third party plugins (Necessary)
 - django-bootstrap3
 - psutil
