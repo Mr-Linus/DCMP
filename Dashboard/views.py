@@ -187,7 +187,13 @@ def dashboard_deploy_view(request):
                 return redirect('/dashboard/containers')
         if request.method == "GET":
             form = DeployForm()
-            return render(request, template_name=template_name, context={'form': form, 'user':request.user.username, 'user_last_login':request.user.last_login})
+            return render(request,
+                          template_name=template_name,
+                          context={'form': form,
+                                   'user':request.user.username,
+                                   'user_last_login':request.user.last_login
+                                   }
+                          )
     else:
         return redirect('/dashboard/login')
 
@@ -243,17 +249,29 @@ def dashobard_images_view(request):
                     image_tags = request.POST.getlist('image')
                     for image_tag in image_tags:
                         sys().image.remove(image_tag)
-                    messages.add_message(request, messages.SUCCESS, 'Removing images..Please wait.')
+                    messages.add_message(request,
+                                         messages.SUCCESS,
+                                         'Removing images..Please wait.'
+                                         )
                 except:
-                    messages.add_message(request, messages.WARNING, 'Removing images failed.')
+                    messages.add_message(request,
+                                         messages.WARNING,
+                                         'Removing images failed.'
+                                         )
             if 'pull' in request.POST:
                 pull_form = PullForm(request.POST)
                 if pull_form.is_valid():
                     try:
                         image_pull.delay(pull_form.cleaned_data['pull_image'])
-                        messages.add_message(request, messages.SUCCESS, 'Pulling images.Please wait and refresh the page after a while.')
+                        messages.add_message(request,
+                                             messages.SUCCESS,
+                                             'Pulling images.Please wait and refresh the page after a while.'
+                                             )
                     except:
-                        messages.add_message(request, messages.WARNING, 'Pulling images failed.')
+                        messages.add_message(request,
+                                             messages.WARNING,
+                                             'Pulling images failed.'
+                                             )
         return redirect('/dashboard/images')
     else:
         return redirect('/dashboard/login')
@@ -277,9 +295,13 @@ def dashboard_volume_view(request):
                 for volume_name in volume_names:
                     try:
                         sys().client.volumes.get(volume_name).remove()
-                        messages.add_message(request, messages.SUCCESS, 'Removing volumes:'+volume_name+'.Please wait and refresh the page after a while.')
+                        messages.add_message(request, messages.SUCCESS,
+                                             'Removing volumes:'+volume_name+'.Please wait and refresh the page after a while.'
+                                             )
                     except:
-                        messages.add_message(request, messages.WARNING, 'Removing volumes:'+volume_name+' Error')
+                        messages.add_message(request, messages.WARNING,
+                                             'Removing volumes:'+volume_name+' Error'
+                                             )
 
             if 'create' in request.POST:
                 create_form = CreateVolumeForm(request.POST)
@@ -289,9 +311,13 @@ def dashboard_volume_view(request):
                             name=create_form.cleaned_data['name'],
                             driver=create_form.cleaned_data['driver']
                         )
-                        messages.add_message(request, messages.SUCCESS, 'Creating volumes:'+create_form.cleaned_data['name']+'.Please wait and refresh the page after a while.')
+                        messages.add_message(request, messages.SUCCESS,
+                                             'Creating volumes:'+create_form.cleaned_data['name']+'.Please wait and refresh the page after a while.'
+                                             )
                     except:
-                        messages.add_message(request, messages.WARNING, 'Creating volumes:'+create_form.cleaned_data['name']+' Error')
+                        messages.add_message(request, messages.WARNING,
+                                             'Creating volumes:'+create_form.cleaned_data['name']+' Error'
+                                             )
         return redirect('/dashboard/volumes')
     else:
         return redirect('/dashboard/login')
@@ -315,7 +341,9 @@ def dashboard_network_view(request):
                 for network_id in network_ids:
                     try:
                         sys().client.networks.get(network_id).remove()
-                        messages.add_message(request, messages.SUCCESS, 'Removing networks:'+network_id+'.Please wait and refresh the page after a while.')
+                        messages.add_message(request, messages.SUCCESS,
+                                             'Removing networks:'+network_id+'.Please wait and refresh the page after a while.'
+                                             )
                     except:
                         messages.add_message(request, messages.WARNING, 'Removing networks:'+network_id+' Error')
 
@@ -328,9 +356,13 @@ def dashboard_network_view(request):
                             driver=create_form.cleaned_data['driver'],
                             scope=create_form.cleaned_data['scope']
                         )
-                        messages.add_message(request, messages.SUCCESS, 'Creating networks:' +create_form.cleaned_data['name']+ '.Please wait and refresh the page after a while.')
+                        messages.add_message(request, messages.SUCCESS,
+                                             'Creating networks:' +create_form.cleaned_data['name']+ '.Please wait and refresh the page after a while.'
+                                             )
                     except:
-                        messages.add_message(request, messages.WARNING, 'Creating networks:' + create_form.cleaned_data['name'] + ' Error')
+                        messages.add_message(request, messages.WARNING,
+                                             'Creating networks:' + create_form.cleaned_data['name'] + ' Error'
+                                             )
         return redirect('/dashboard/networks')
     else:
         return redirect('/dashboard/login')
@@ -426,6 +458,7 @@ def dashboard_add_update_view(request):
 
 class DetailView(LoginRequiredMixin, TemplateView):
     template_name = 'Dashboard/details.html'
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['user_last_login'] = self.request.user.last_login
