@@ -91,6 +91,7 @@ pip install -r requirement.txt
 
 ### Running DCMP in Docker 
 ```bash
+docker network create dcmp
 docker run -d --name dcmp-redis --net dcmp  redis  
 docker run -itd --name dcmp-server -v /var/run/docker.sock:/var/run/docker.sock --net dcmp -p 8000:8000 registry.cn-hangzhou.aliyuncs.com/geekcloud/dcmp:latest
 ```
