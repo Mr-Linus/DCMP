@@ -1,25 +1,23 @@
 from django.shortcuts import redirect, render
 from django.views.decorators.csrf import csrf_exempt
-#from django.contrib.auth import	authenticate,	login,	logout
 from django.contrib import messages
-from django.contrib.sessions.backends.db import SessionStore
-#from django.contrib.auth.decorators	import login_required
 from django.shortcuts import resolve_url
-from Dashboard.sys import sys,sys_swarm
+from Dashboard.sys import sys, sys_swarm
 from django.contrib.auth.views import LoginView, LogoutView
-from django.views.generic.base import TemplateView
+from django.views.generic.base import TemplateView, View
+from django.http import HttpResponse
 from django.contrib.auth.mixins import LoginRequiredMixin
 import time
-# from django.views.generic import ListView
-# from django.contrib.auth import logout
+
 
 from django.conf import settings
 import docker
-from  Dashboard.form import DeployForm, PullForm, CreateVolumeForm,CreateNetworkForm, ChangePasswordForm,UserCreationForm
-# from django.views.generic.base import RedirectView
+from Dashboard.form import DeployForm, PullForm, CreateVolumeForm, \
+    CreateNetworkForm, ChangePasswordForm, UserCreationForm
+
 import datetime
 from Dashboard.tasks import deploy, image_pull
-# from Dashboard.models import User
+
 # Create your views here.
 
 
@@ -32,31 +30,6 @@ class dashboard_login_view(LoginView):
         messages.add_message(self.request, messages.SUCCESS,
                              "Welcome to DCMP Dashboard - A beautiful Docker Container Management Platform.")
         return url or resolve_url(settings.LOGIN_REDIRECT_URL)
-
-
-# def dashboard_login(request):
-#     if request.method == 'POST':
-#         username = request.POST['username']
-#         password = request.POST['password']
-#         user = authenticate(username=username,password=password)
-#         if user is not  None :
-#             login(request, user)
-#             context = {
-#                 "sysinfo": sys(),
-#                 "user_last_login": request.user.last_login,
-#             }
-#             return render_to_response('Dashboard/index.html', context)
-#         else :
-#             messages.error(request, 'Invaild login !')
-#             return render(request, 'Dashboard/login.html')
-#     elif  request.user.is_authenticated:
-#         context = {
-#             "sysinfo": sys(),
-#             "user_last_login": request.user.last_login,
-#         }
-#         return render_to_response('Dashboard/index.html', context )
-#     else:
-#         return render(request, 'Dashboard/login.html')
 
 
 class dashboard_logout_view(LogoutView):
@@ -472,3 +445,21 @@ class DetailView(LoginRequiredMixin, TemplateView):
             return self.render_to_response(context=context)
         else:
             return redirect('/dashboard/login')
+
+
+class Update_ConNumView(LoginRequiredMixin, View):
+
+    def get(self, request, *args, **kwargs):
+        return HttpResponse(sys().con_num)
+
+
+class Update_CPUPerView(LoginRequiredMixin, View):
+
+    def get(self, request, *args, **kwargs):
+        return HttpResponse(str(sys().cpu_percent())+"%")
+
+
+class Update_MemPerView(LoginRequiredMixin, View):
+
+    def get(self, request, *args, **kwargs):
+        return HttpResponse(str(sys().mem_persent)+"%")

@@ -187,7 +187,7 @@
                                     <div class="col-xs-7">
                                         <div class="numbers">
                                             <p>Containers</p>
-                                            <a>{{ sysinfo.con_num | default:0 }} </a>
+                                            <a><div id="con_num">{{ sysinfo.con_num | default:0 }} </div></a>
                                         </div>
                                     </div>
                                 </div>
@@ -207,7 +207,7 @@
                                         <div class="numbers">
                                             <p>CPU Using:</p>
 
-                                           <a>{{ sysinfo.cpu_percent | default:"(N/A)" }} %</a>
+                                            <a><div id="cpu_per">N/A</div></a>
                                         </div>
                                     </div>
 
@@ -228,7 +228,7 @@
                                     <div class="col-xs-7">
                                         <div class="numbers">
                                             <p>Memory Using:</p>
-                                            <a>{{ sysinfo.mem_persent | default:"(N/A)" }} %</a>
+                                            <a><div id="mem_per">N/A</div></a>
                                         </div>
                                     </div>
                                 </div>
@@ -499,7 +499,40 @@
 
     <!-- Paper Dashboard Core javascript and methods for Demo purpose -->
 	<script src="{% static "Dashboard/js/paper-dashboard.js" %}"></script>
+    <script type="text/javascript">
+        $(setInterval(function update_con_num() {
+            xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                document.getElementById("con_num").innerHTML = xmlhttp.responseText;
+            };
+            xmlhttp.open("GET", "/dashboard/con_num", false);
+            xmlhttp.send();
+        },2000)
+        );
+    </script>
+    <script type="text/javascript">
+        $(setInterval(function update_cpu_per() {
+            xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                document.getElementById("cpu_per").innerHTML = xmlhttp.responseText;
+            };
+            xmlhttp.open("GET", "/dashboard/cpu_per", false);
+            xmlhttp.send();
+        },2000)
+        );
+    </script>
 
+    <script type="text/javascript">
+        $(setInterval(function update_mem_per() {
+            xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                document.getElementById("mem_per").innerHTML = xmlhttp.responseText;
+            };
+            xmlhttp.open("GET", "/dashboard/mem_per", false);
+            xmlhttp.send();
+        },2000)
+        );
+    </script>
 	<!-- Paper Dashboard DEMO methods, don't include it in your project! -->
 	<script src="{% static "Dashboard/js/demo.js" %}"></script>
     {% if messages %}
