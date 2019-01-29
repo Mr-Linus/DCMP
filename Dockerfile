@@ -2,9 +2,11 @@ FROM python:3.4-jessie
 
 ENV TZ="Asia/Shanghai"
 
-COPY ../DCMP/ /DCMP/
 
-RUN  cd DCMP && pip install -r requirements.txt
+
+RUN git clone https://github.com/Mr-Linus/DCMP.git
+    && cd DCMP
+    && pip install -r requirements.txt
 
 
 
