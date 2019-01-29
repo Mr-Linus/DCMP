@@ -1,4 +1,4 @@
-FROM python:3.4-jessie
+FROM python:3.6-jessie
 
 ENV TZ="Asia/Shanghai"
 
