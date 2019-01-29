@@ -4,8 +4,8 @@ ENV TZ="Asia/Shanghai"
 
 
 
-RUN git clone https://github.com/Mr-Linus/DCMP.git
-    && cd DCMP
+RUN git clone https://github.com/Mr-Linus/DCMP.git \
+    && cd DCMP \
     && pip install -r requirements.txt
 
 
