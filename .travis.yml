@@ -16,4 +16,5 @@ install:
   - pip install -r requirements.txt
 script: 
   - docker --version
-  - python manage.py test 
+  - python manage.py test
+  - /bin/bash push-images.sh
