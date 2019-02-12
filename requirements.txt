@@ -5,3 +5,4 @@ docker==3.3.0
 celery==4.2.1
 sqlalchemy==1.2.9
 redis==2.10.6
+uwsgi==2.0.17.1

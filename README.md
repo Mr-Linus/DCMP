@@ -108,6 +108,7 @@ docker run -itd --name dcmp-nginx \
        registry.cn-hangzhou.aliyuncs.com/geekcloud/dcmp:nginx
 ```
 > You can see DCMP: http://localhost:8000/
+>
 > username:admin password:dcmpdcmp123
 
 ### Usage
