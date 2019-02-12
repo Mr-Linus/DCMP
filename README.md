@@ -149,6 +149,8 @@ celery -A DCMP worker -l info
 
 ### Update Logs
 
+#### V3.2.0 Date :2019/2/12
+- Upgrade the struct of docker
 #### V3.1.0 Date :2019/1/26
 - Add ajax dynamic update function
 #### V3.0.1 Date :2018/8/17
