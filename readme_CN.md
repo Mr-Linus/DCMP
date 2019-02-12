@@ -99,7 +99,7 @@ docker run -itd --name dcmp-backend \
        registry.cn-hangzhou.aliyuncs.com/geekcloud/dcmp:backend
 # Run DCMP frontend
 docker run -itd --name dcmp-nginx \
-       -p 80:8000 \
+       -p 8000:80 \
        --net dcmp \
        registry.cn-hangzhou.aliyuncs.com/geekcloud/dcmp:nginx
 ```                                                                                                                                                              
