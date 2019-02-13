@@ -196,7 +196,8 @@
                                                     <input type="checkbox"  value="{{ image.tags.0 }}" name="image" />
                                             </td>
                                         	<td>{{ image.short_id }}</td>
-                                            <td>{% for tag in image.tags %}{{ tag }}</td>
+                                            {% if image.tags %}
+                                            <td>{% for tag in image.tags %}{{ tag | default:"(N/A)" }}</td>
                                                  <td>{% if tag in con_image_list %}
                                                         <div class="alert alert-success col-xs-6 text-center center">
                                                             Using
@@ -208,6 +209,14 @@
                                                 {% endif %}
                                                 </td>
                                                 {% endfor %}
+                                            {% else %}
+                                                <td>Null</td>
+                                                <td>
+                                                    <div class="alert alert-dismissable col-xs-6 text-center center">
+                                                            Unknown
+                                                        </div>
+                                                </td>
+                                            {% endif %}
                                             <td>{{ image.attrs.Created }}</td>
                                         </tr>
                                     {% empty %}
