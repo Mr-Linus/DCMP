@@ -86,7 +86,7 @@ Multiple mirroring, load balancing, high availability
 - celery
 > Install plugins:
 ```shell
-pip install -r requirement.txt
+pip install -r requirements.txt
 ```
 
 ### Running DCMP in Docker 

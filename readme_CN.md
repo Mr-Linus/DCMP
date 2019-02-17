@@ -82,7 +82,7 @@ Language:     [English](https://github.com/Mr-Linus/DCMP/blob/master/README.md) 
 - celery
 > 安装:
 ```shell
-pip install -r requirement.txt
+pip install -r requirements.txt
 ```
 
 ### Docker版启动
