@@ -1,4 +1,4 @@
-# DCMP System
+# DCMP (Docker Container Management Platform)
 
 DCMP :whale2: :sweat_drops: is a Docker Container Management Platform using the django framework and python language and it is suitable for internal network deployment.
 
