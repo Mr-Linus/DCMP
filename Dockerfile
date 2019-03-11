@@ -17,4 +17,4 @@ RUN  pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r /${PROJECT_NAME}
 
 EXPOSE 8000
 
-CMD [ "uwsgi", "--ini", "/DCMP/DCMP_uwsgi.ini" ]
+CMD [ "bash", "/DCMP/endpoint.sh" ]
