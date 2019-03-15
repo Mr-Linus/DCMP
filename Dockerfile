@@ -12,7 +12,7 @@ ENV PROJECT_NAME ${PROJECT_NAME}
 
 COPY . /${PROJECT_NAME}
 
-RUN  pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r /${PROJECT_NAME}/requirements.txt
+RUN  pip install -r /${PROJECT_NAME}/requirements.txt
 
 
 EXPOSE 8000
