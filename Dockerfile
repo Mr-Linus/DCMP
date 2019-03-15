@@ -1,4 +1,4 @@
-FROM python:3.6-slim
+FROM python:3.6-slim-jessie
 
 LABEL maintainer="Mr-Linus admin@geekfan.club"
 
