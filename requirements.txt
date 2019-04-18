@@ -3,6 +3,6 @@ django-bootstrap3==9.1.0
 psutil==5.4.5 
 docker==3.3.0
 celery==4.2.1
-sqlalchemy==1.2.9
+sqlalchemy==1.3.0
 redis==2.10.6
 uwsgi==2.0.17.1
