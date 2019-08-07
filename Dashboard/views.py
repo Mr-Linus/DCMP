@@ -27,16 +27,18 @@ class dashboard_login_view(LoginView):
 
     def get_success_url(self):
         url = self.get_redirect_url()
-        messages.add_message(self.request, messages.SUCCESS,
-                             "Welcome to DCMP Dashboard - A beautiful Docker Container Management Platform.")
+        messages.add_message(
+            self.request,
+            messages.SUCCESS,
+            "Welcome to DCMP Dashboard - A beautiful Docker Container Management Platform.")
         return url or resolve_url(settings.LOGIN_REDIRECT_URL)
 
 
 class dashboard_logout_view(LogoutView):
 
-     template_name = 'Dashboard/login.html'
+    template_name = 'Dashboard/login.html'
 
-     next_page = '/dashboard/login'
+    next_page = '/dashboard/login'
 
 # def dashboard_logout(request):
 #     logout(request)
@@ -99,39 +101,81 @@ class ContainersView(LoginRequiredMixin, TemplateView):
                 for con in con_name:
                     try:
                         sys().client.containers.get(con).start()
-                        messages.add_message(request, messages.SUCCESS, "Contianer: "+str(con)+" start Success")
-                    except:
-                        messages.add_message(request, messages.ERROR, "Contianer: "+str(con)+"  start Failed")
+                        messages.add_message(
+                            request,
+                            messages.SUCCESS,
+                            "Contianer: " +
+                            str(con) +
+                            " start Success")
+                    except BaseException:
+                        messages.add_message(
+                            request,
+                            messages.ERROR,
+                            "Contianer: " +
+                            str(con) +
+                            "  start Failed")
             elif 'stop'in request.POST:
                 for con in con_name:
                     try:
                         sys().client.containers.get(con).stop()
-                        messages.add_message(request, messages.WARNING, "Contianer: " + str(con) + " stop Success")
-                    except:
-                        messages.add_message(request, messages.ERROR, "Contianer: " + str(con) + "  stop Failed")
+                        messages.add_message(
+                            request,
+                            messages.WARNING,
+                            "Contianer: " +
+                            str(con) +
+                            " stop Success")
+                    except BaseException:
+                        messages.add_message(
+                            request,
+                            messages.ERROR,
+                            "Contianer: " +
+                            str(con) +
+                            "  stop Failed")
             elif 'restart' in request.POST:
                 for con in con_name:
                     try:
                         sys().client.containers.get(con).restart()
-                        messages.add_message(request, messages.SUCCESS, "Contianer: " + str(con) + " restart Success")
-                    except:
-                        messages.add_message(request, messages.ERROR, "Contianer: " + str(con) + "  restart Failed")
+                        messages.add_message(
+                            request,
+                            messages.SUCCESS,
+                            "Contianer: " +
+                            str(con) +
+                            " restart Success")
+                    except BaseException:
+                        messages.add_message(
+                            request,
+                            messages.ERROR,
+                            "Contianer: " +
+                            str(con) +
+                            "  restart Failed")
             elif 'remove'in request.POST:
                 for con in con_name:
                     try:
                         sys().client.containers.get(con).stop()
                         sys().client.containers.get(con).remove()
-                        messages.add_message(request, messages.SUCCESS, "Contianer: " + str(con) + " remove Success")
-                    except:
-                        messages.add_message(request, messages.ERROR, "Contianer: " + str(con) + "  remove Failed")
+                        messages.add_message(
+                            request,
+                            messages.SUCCESS,
+                            "Contianer: " +
+                            str(con) +
+                            " remove Success")
+                    except BaseException:
+                        messages.add_message(
+                            request,
+                            messages.ERROR,
+                            "Contianer: " +
+                            str(con) +
+                            "  remove Failed")
             context = {
                 "object_list": docker.from_env().containers.list(all=True),
                 "user_last_login": request.user.last_login,
                 "user": request.user.username,
             }
-            return render(self.request, template_name=self.template_name, context=context)
+            return render(
+                self.request,
+                template_name=self.template_name,
+                context=context)
         return redirect('/dashboard/login')
-
 
 
 @csrf_exempt
@@ -155,7 +199,10 @@ def dashboard_deploy_view(request):
                     privileged=form.cleaned_data['privileged'],
                     network=form.cleaned_data['network'],
                 )
-                messages.add_message(request, messages.INFO, 'Deloying the Container. Please wait and refresh the page after a while. ')
+                messages.add_message(
+                    request,
+                    messages.INFO,
+                    'Deloying the Container. Please wait and refresh the page after a while. ')
                 time.sleep(3)
                 return redirect('/dashboard/containers')
         if request.method == "GET":
@@ -163,8 +210,8 @@ def dashboard_deploy_view(request):
             return render(request,
                           template_name=template_name,
                           context={'form': form,
-                                   'user':request.user.username,
-                                   'user_last_login':request.user.last_login
+                                   'user': request.user.username,
+                                   'user_last_login': request.user.last_login
                                    }
                           )
     else:
@@ -181,21 +228,31 @@ def dashobard_swarm_view(request):
     }
     if request.user.is_authenticated and request.user.swarm_permission:
         if request.method == "GET":
-            return render(request, template_name=template_name, context=context)
+            return render(
+                request,
+                template_name=template_name,
+                context=context)
         if request.method == "POST":
             if 'reload' in request.POST:
                 try:
                     sys_swarm().reload()
-                    messages.add_message(request, messages.SUCCESS, 'Reloading the Swarm.')
-                except:
-                    messages.add_message(request, messages.ERROR, 'Reloading the Swarm Error.')
+                    messages.add_message(
+                        request, messages.SUCCESS, 'Reloading the Swarm.')
+                except BaseException:
+                    messages.add_message(
+                        request, messages.ERROR, 'Reloading the Swarm Error.')
             elif 'update' in request.POST:
                 try:
                     sys_swarm().update()
-                    messages.add_message(request, messages.SUCCESS, 'Updating the Swarm.')
-                except:
-                    messages.add_message(request, messages.ERROR, 'Updating the Swarm Error.')
-            return render(request, template_name=template_name, context=context)
+                    messages.add_message(
+                        request, messages.SUCCESS, 'Updating the Swarm.')
+                except BaseException:
+                    messages.add_message(
+                        request, messages.ERROR, 'Updating the Swarm Error.')
+            return render(
+                request,
+                template_name=template_name,
+                context=context)
     else:
         return redirect('/dashboard/login')
 
@@ -215,7 +272,10 @@ def dashobard_images_view(request):
     }
     if request.user.is_authenticated and request.user.images_permission:
         if request.method == "GET":
-            return render(request, template_name=template_name, context=context)
+            return render(
+                request,
+                template_name=template_name,
+                context=context)
         if request.method == "POST":
             if 'remove' in request.POST:
                 try:
@@ -226,7 +286,7 @@ def dashobard_images_view(request):
                                          messages.SUCCESS,
                                          'Removing images..Please wait.'
                                          )
-                except:
+                except BaseException:
                     messages.add_message(request,
                                          messages.WARNING,
                                          'Removing images failed.'
@@ -236,11 +296,11 @@ def dashobard_images_view(request):
                 if pull_form.is_valid():
                     try:
                         image_pull.delay(pull_form.cleaned_data['pull_image'])
-                        messages.add_message(request,
-                                             messages.SUCCESS,
-                                             'Pulling images.Please wait and refresh the page after a while.'
-                                             )
-                    except:
+                        messages.add_message(
+                            request,
+                            messages.SUCCESS,
+                            'Pulling images.Please wait and refresh the page after a while.')
+                    except BaseException:
                         messages.add_message(request,
                                              messages.WARNING,
                                              'Pulling images failed.'
@@ -261,20 +321,29 @@ def dashboard_volume_view(request):
     }
     if request.user.is_authenticated and request.user.volumes_permission:
         if request.method == "GET":
-            return render(request, template_name=template_name, context=context)
+            return render(
+                request,
+                template_name=template_name,
+                context=context)
         if request.method == "POST":
             if 'remove' in request.POST:
                 volume_names = request.POST.getlist('volume_name')
                 for volume_name in volume_names:
                     try:
                         sys().client.volumes.get(volume_name).remove()
-                        messages.add_message(request, messages.SUCCESS,
-                                             'Removing volumes:'+volume_name+'.Please wait and refresh the page after a while.'
-                                             )
-                    except:
-                        messages.add_message(request, messages.WARNING,
-                                             'Removing volumes:'+volume_name+' Error'
-                                             )
+                        messages.add_message(
+                            request,
+                            messages.SUCCESS,
+                            'Removing volumes:' +
+                            volume_name +
+                            '.Please wait and refresh the page after a while.')
+                    except BaseException:
+                        messages.add_message(
+                            request,
+                            messages.WARNING,
+                            'Removing volumes:' +
+                            volume_name +
+                            ' Error')
 
             if 'create' in request.POST:
                 create_form = CreateVolumeForm(request.POST)
@@ -284,13 +353,19 @@ def dashboard_volume_view(request):
                             name=create_form.cleaned_data['name'],
                             driver=create_form.cleaned_data['driver']
                         )
-                        messages.add_message(request, messages.SUCCESS,
-                                             'Creating volumes:'+create_form.cleaned_data['name']+'.Please wait and refresh the page after a while.'
-                                             )
-                    except:
-                        messages.add_message(request, messages.WARNING,
-                                             'Creating volumes:'+create_form.cleaned_data['name']+' Error'
-                                             )
+                        messages.add_message(
+                            request,
+                            messages.SUCCESS,
+                            'Creating volumes:' +
+                            create_form.cleaned_data['name'] +
+                            '.Please wait and refresh the page after a while.')
+                    except BaseException:
+                        messages.add_message(
+                            request,
+                            messages.WARNING,
+                            'Creating volumes:' +
+                            create_form.cleaned_data['name'] +
+                            ' Error')
         return redirect('/dashboard/volumes')
     else:
         return redirect('/dashboard/login')
@@ -307,18 +382,29 @@ def dashboard_network_view(request):
     }
     if request.user.is_authenticated & request.user.networks_permission:
         if request.method == "GET":
-            return render(request, template_name=template_name, context=context)
+            return render(
+                request,
+                template_name=template_name,
+                context=context)
         if request.method == "POST":
             if 'remove' in request.POST:
                 network_ids = request.POST.getlist('network_id')
                 for network_id in network_ids:
                     try:
                         sys().client.networks.get(network_id).remove()
-                        messages.add_message(request, messages.SUCCESS,
-                                             'Removing networks:'+network_id+'.Please wait and refresh the page after a while.'
-                                             )
-                    except:
-                        messages.add_message(request, messages.WARNING, 'Removing networks:'+network_id+' Error')
+                        messages.add_message(
+                            request,
+                            messages.SUCCESS,
+                            'Removing networks:' +
+                            network_id +
+                            '.Please wait and refresh the page after a while.')
+                    except BaseException:
+                        messages.add_message(
+                            request,
+                            messages.WARNING,
+                            'Removing networks:' +
+                            network_id +
+                            ' Error')
 
             if 'create' in request.POST:
                 create_form = CreateNetworkForm(request.POST)
@@ -329,13 +415,19 @@ def dashboard_network_view(request):
                             driver=create_form.cleaned_data['driver'],
                             scope=create_form.cleaned_data['scope']
                         )
-                        messages.add_message(request, messages.SUCCESS,
-                                             'Creating networks:' +create_form.cleaned_data['name']+ '.Please wait and refresh the page after a while.'
-                                             )
-                    except:
-                        messages.add_message(request, messages.WARNING,
-                                             'Creating networks:' + create_form.cleaned_data['name'] + ' Error'
-                                             )
+                        messages.add_message(
+                            request,
+                            messages.SUCCESS,
+                            'Creating networks:' +
+                            create_form.cleaned_data['name'] +
+                            '.Please wait and refresh the page after a while.')
+                    except BaseException:
+                        messages.add_message(
+                            request,
+                            messages.WARNING,
+                            'Creating networks:' +
+                            create_form.cleaned_data['name'] +
+                            ' Error')
         return redirect('/dashboard/networks')
     else:
         return redirect('/dashboard/login')
@@ -346,11 +438,15 @@ class dashboard_events_view(LoginRequiredMixin, TemplateView):
     permission_required = 'events_permission'
 
     def get_events_list(self):
-        event_list=[]
+        event_list = []
         count = 0
-        for event in docker.from_env().events(decode=True,
-                                              since=(datetime.datetime.now() - datetime.timedelta(days=5)),
-                                              until=datetime.datetime.now()):
+        for event in docker.from_env().events(
+                decode=True,
+                since=(
+                    datetime.datetime.now() -
+                    datetime.timedelta(
+                days=5)),
+                until=datetime.datetime.now()):
             event_list.append(event)
             count += 1
             if count == 5:
@@ -391,7 +487,10 @@ def dashboard_settings_view(request):
             "chpasswd_form": ChangePasswordForm(),
         }
         if request.method == "GET":
-            return render(request, template_name=template_name, context=context)
+            return render(
+                request,
+                template_name=template_name,
+                context=context)
         if request.method == "POST":
             if 'change' in request.POST:
                 password_form = ChangePasswordForm(request.POST)
@@ -418,12 +517,15 @@ def dashboard_add_update_view(request):
             "add_update_form": UserCreationForm(),
         }
         if request.method == "GET":
-            return render(request, template_name=template_name, context=context)
+            return render(
+                request,
+                template_name=template_name,
+                context=context)
         if request.method == "POST":
-                add_update_form = UserCreationForm(request.POST)
-                if add_update_form.is_valid():
-                    if add_update_form.confirm_password():
-                        add_update_form.save(commit=True)
+            add_update_form = UserCreationForm(request.POST)
+            if add_update_form.is_valid():
+                if add_update_form.confirm_password():
+                    add_update_form.save(commit=True)
         return redirect('/dashboard/index')
     else:
         return redirect('/dashboard/login')
@@ -436,7 +538,8 @@ class DetailView(LoginRequiredMixin, TemplateView):
         context = super().get_context_data(**kwargs)
         context['user_last_login'] = self.request.user.last_login
         context['user'] = self.request.user.username
-        context['con'] = docker.from_env().containers.get(self.request.path.split('containers/')[1])
+        context['con'] = docker.from_env().containers.get(
+            self.request.path.split('containers/')[1])
         return context
 
     def get(self, request, *args, **kwargs):
@@ -456,10 +559,10 @@ class Update_ConNumView(LoginRequiredMixin, View):
 class Update_CPUPerView(LoginRequiredMixin, View):
 
     def get(self, request, *args, **kwargs):
-        return HttpResponse(str(sys().cpu_percent())+"%")
+        return HttpResponse(str(sys().cpu_percent()) + "%")
 
 
 class Update_MemPerView(LoginRequiredMixin, View):
 
     def get(self, request, *args, **kwargs):
-        return HttpResponse(str(sys().mem_persent)+"%")
+        return HttpResponse(str(sys().mem_persent) + "%")

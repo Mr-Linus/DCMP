@@ -20,19 +20,17 @@ class DashboardUserManager(UserManager):
             raise ValueError('Superuser must have is_superuser=True.')
         return self._create_user(username, email, password, **extra_fields)
 
+
 class User(AbstractUser):
-    dashboard_permission = models.BooleanField(default=True,
-                                               verbose_name="Dashboard Permission"
-                                               )
-    containers_permission = models.BooleanField(default=False,
-                                                verbose_name="Containers Permission"
-                                                )
+    dashboard_permission = models.BooleanField(
+        default=True, verbose_name="Dashboard Permission")
+    containers_permission = models.BooleanField(
+        default=False, verbose_name="Containers Permission")
     images_permission = models.BooleanField(default=False,
                                             verbose_name="Images Permission"
                                             )
-    networks_permission = models.BooleanField(default=False,
-                                              verbose_name="Networks Permission"
-                                              )
+    networks_permission = models.BooleanField(
+        default=False, verbose_name="Networks Permission")
     volumes_permission = models.BooleanField(default=False,
                                              verbose_name="Volumes Permission"
                                              )

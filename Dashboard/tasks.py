@@ -3,9 +3,20 @@ from celery import shared_task
 from Dashboard.sys import sys
 
 
-
 @shared_task
-def deploy(image, command, auto_remove, tty, ports, volumes, name, hostname, cpu, mem, privileged, network ):
+def deploy(
+        image,
+        command,
+        auto_remove,
+        tty,
+        ports,
+        volumes,
+        name,
+        hostname,
+        cpu,
+        mem,
+        privileged,
+        network):
     try:
         sys().client.containers.run(
             image=image,
@@ -23,7 +34,7 @@ def deploy(image, command, auto_remove, tty, ports, volumes, name, hostname, cpu
         )
         return True
 
-    except:
+    except BaseException:
 
         return False
 
@@ -34,5 +45,5 @@ def image_pull(image):
         sys().image.pull(image)
         return True
 
-    except:
+    except BaseException:
         return False

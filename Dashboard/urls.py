@@ -4,7 +4,7 @@ from django.views.decorators.csrf import csrf_exempt
 app_name = 'Dashboard'
 urlpatterns = [
     path('', views.dashboard_index_view.as_view()),
-    path('login/',views.dashboard_login_view.as_view()),
+    path('login/', views.dashboard_login_view.as_view()),
     path('logout/', views.dashboard_logout_view.as_view()),
     path('index/', views.dashboard_index_view.as_view()),
     path('containers/', csrf_exempt(views.ContainersView.as_view())),
